@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Catamaran", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  color: #191453;
+}
+
+.features {
+  background-image: url(./images/vector_11.png);
+  background-size: 80% 80%;
+  background-repeat: no-repeat;
+  background-position: 0 -35%;
+}
+.build-info-img{
+  background-image: url(./images/womensWithButton.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 421px;
+}
+/* typing animation */
+.writeit {
+  color: black;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 38px;
+  text-align: left;
+  min-height: 130px;
+}
+.writeit span{
+  color: #E18C5F !important;
+}
+  
+.after {
+-webkit-animation-delay: 500ms; -moz-animation-delay: 500ms; -ms-animation-delay: 500ms; -o-animation-delay: 500ms; animation-delay: 500ms;
+  animation: blink 1.3s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+  to { opacity: 1;}
+}
+
