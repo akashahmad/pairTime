@@ -23,11 +23,11 @@
     <!------------------------------------------------------------------------->
     <header class="overflow-hidden relative">
       <div
-        class="bg-[rgb(255,243,228)] rounded-b-[50%] w-[150vw] -translate-x-[17%] flex flex-col justify-center items-center overflow-hidden"
+        class="bg-[rgb(255,243,228)] rounded-b-[50%] w-[150vw] -translate-x-[25vw] flex flex-col justify-center items-center overflow-hidden relative"
       >
         <!-- on less than medium screens hamburger -->
-        <!-- <nav
-          class="w-[110rem] max-w-[62%] flex justify-between items-center h-[15vh]"
+        <nav
+          class="w-[110rem] max-w-[60%] flex md:hidden justify-between items-center h-[11vh]"
         >
           <figure class="h-12">
             <img
@@ -38,27 +38,38 @@
             />
           </figure>
 
-          <button class="text-[orange]">
+          <button class="text-[orange]" id="nav-open-btn">
             <i class="fas fa-bars text-4xl"></i>
           </button>
-        </nav> -->
+        </nav>
 
         <!-- nav above medium screens -->
         <nav
-          class="md:flex hidden md:justify-between items-center h-[15vh] w-[110rem] max-w-[62%] overflow-hidden"
+          class="flex flex-col fixed z-10 bg-[rgb(255,243,228)] top-0 left-[25vw] w-[25rem] h-full shadow-card -translate-x-[25rem] transition-all ease-in md:translate-x-0 md:shadow-none md:justify-between md:flex-row md:items-center md:h-[15vh] md:w-[110rem] md:max-w-[60%] md:left-auto md:relative"
+          id="nav-small-screen"
         >
-          <!-- <button>
-            <i class="fas fa-times"></i>
-          </button> -->
-          <figure class="h-12">
-            <img
-              src="./images/pair-time.svg"
-              alt="Company Logo"
-              loading="lazy"
-              class="w-full h-full cursor-pointer"
-            />
-          </figure>
-          <ul class="flex justify-between items-center gap-16">
+          <div
+            class="flex justify-between items-center mt-5 px-5 md:mt-0 md:px-0"
+          >
+            <figure class="md:h-12 h-10">
+              <img
+                src="./images/pair-time.svg"
+                alt="Company Logo"
+                loading="lazy"
+                class="w-full h-full cursor-pointer"
+              />
+            </figure>
+            <button
+              class="text-4xl text-orange-500 md:hidden"
+              id="nav-close-btn"
+            >
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <ul
+            class="flex flex-col items-start mt-16 pl-10 md:mt-0 md:pl-0 md:justify-between md:flex-row md:items-center gap-16"
+          >
             <li class="text-2xl hover:text-orange-500">
               <a href="">Live Requests</a>
             </li>
@@ -70,7 +81,7 @@
             </li>
             <a href="">
               <li
-                class="rounded-[8rem] px-14 py-4 bg-[#F48C06] text-white text-xl shadow-xl hover:scale-10 hover:scale-105 transition ease-in-out"
+                class="rounded-[8rem] px-14 py-4 bg-[#F48C06] text-white text-xl shadow-xl hover:scale-105 active:scale-[0.8] transition ease-in-out"
               >
                 Login
               </li>
@@ -79,7 +90,7 @@
         </nav>
 
         <section
-          class="flex lg:justify-between lg:flex-row flex-col items-center gap-12 mt-36 w-[110rem] mb-72 max-w-[62%] overflow-hidden"
+          class="flex lg:justify-between lg:flex-row flex-col items-center gap-12 mt-36 w-[110rem] mb-72 max-w-[60%]"
         >
           <div
             data-aos="fade-right"
@@ -87,7 +98,7 @@
             class="flex-1 typeAnimation"
           >
             <div
-              class="writeit min-h-[18.5rem] text-center lg:text-left md:text-[3rem] text-[1.8rem]"
+              class="writeit min-h-[18.5rem] text-center lg:text-left md:text-[3rem] text-[2.2rem] -mt-12 sm:mt-0 mb-8 sm:mb-0"
             ></div>
             <p
               class="text-[#191453]-300 text-2xl leading-10 text-center lg:text-left"
@@ -154,8 +165,8 @@
     <main>
       <!--------------------- Features Section Starts Here ---------------------->
       <!------------------------------------------------------------------------->
-      <section class="py-36 features overflow-hidden">
-        <div class="w-[110rem] max-w-[95%] mx-auto">
+      <section class="py-36 overflow-hidden features">
+        <div class="w-[110rem] max-w-[90%] mx-auto">
           <h2 class="font-bold text-5xl mb-6 text-center lg:text-left">
             How does it <span class="text-[#E18C5F]">work?</span>
           </h2>
@@ -166,9 +177,11 @@
             tools needed to run a successful pair time.
           </p>
 
-          <div class="flex flex-wrap-reverse justify-between -mt-4 relative">
+          <div
+            class="flex lg:justify-between lg:flex-row flex-col-reverse lg:-mt-4 mt-24 relative"
+          >
             <div
-              class="text-9xl absolute lg:left-[37.5%] lg:top-52 left-[96%] top-[56%] -z-10 text-[#00000030]"
+              class="text-9xl absolute lg:left-[37.5%] lg:top-52 left-[96%] top-[52%] -z-10 text-[#00000030]"
               data-aos="fade-right"
               data-aos-duration="500"
             >
@@ -178,7 +191,7 @@
             <div
               data-aos="fade-right"
               data-aos-duration="500"
-              class="self-end shadow-card lg:w-2/5 w-full px-12 pb-12 pt-20 rounded-3xl relative bg-white mt-[8rem] mb-[8rem] lg:mb-0 lg:mt-[168px]"
+              class="shadow-card lg:w-2/5 w-full px-12 pb-12 pt-20 rounded-3xl relative bg-white mt-[8rem] mb-[8rem] lg:mb-0 lg:mt-[168px]"
             >
               <figure class="h-36 absolute -top-16 left-0">
                 <img
@@ -216,13 +229,18 @@
             <div
               data-aos="fade-left"
               data-aos-duration="500"
-              class="shadow-card lg:w-3/6 w-full self-start px-12 pb-12 pt-20 rounded-3xl relative bg-white mt-24 lg:mt-0"
+              class="shadow-card lg:w-3/6 w-full self-start px-12 pb-12 pt-20 rounded-3xl relative bg-white"
             >
               <div class="text-9xl absolute -left-8 -top-16 -z-10 opacity-20">
                 1
               </div>
               <figure class="h-20 absolute -top-12 left-8">
-                <img src="./images/icon-4.svg" alt="" class="h-full w-full" />
+                <img
+                  src="./images/icon-4.svg"
+                  alt="icon"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
               </figure>
               <h4 class="font-semibold text-3xl mb-6">
                 You are protected by the platform.
@@ -264,123 +282,127 @@
 
       <!--------------------- Facilities Section Starts Here ---------------------->
       <!------------------------------------------------------------------------->
-      <section class="w-[110rem] max-w-[95%] mx-auto py-36 overflow-hidden">
-        <h2 class="font-bold text-5xl mb-6 text-center lg:text-left">
-          Need
-          <span class="text-[#E18C5F]">Pairing?</span>
-        </h2>
-
+      <section>
         <div
-          class="flex lg:justify-between lg:flex-row flex-col-reverse gap-10 mt-16 pl-12"
+          class="w-[110rem] max-w-[90%] mx-auto lg:py-36 py-0 -mt-20 sm:mt-0"
         >
-          <ul
-            data-aos="fade-right"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine"
-            class="relative flex-1 -mt-24 md:mt-0"
+          <h2 class="font-bold text-5xl mb-6 text-center lg:text-left">
+            Need
+            <span class="text-[#E18C5F]">Pairing?</span>
+          </h2>
+
+          <div
+            class="flex flex-col-reverse lg:justify-between lg:flex-row gap-10 mt-16 lg:pl-12 p-0"
           >
-            <figure class="absolute top-10 left-0 -z-10 h-[60%]">
-              <img
-                src="./images/vector_12.png"
-                alt="icon"
-                loading="lazy"
-                class="h-full w-full"
-              />
-            </figure>
-
-            <li class="flex items-center gap-10 mb-10">
-              <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+            <ul
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              class="relative flex-1 lg:mt-0"
+            >
+              <figure class="absolute top-10 left-0 -z-10 h-[30rem]">
                 <img
-                  src="./images/icon-3.png"
-                  alt="icon"
+                  src="./images/vector_12.png"
+                  alt="Vector Curve"
                   loading="lazy"
                   class="h-full w-full"
                 />
               </figure>
-              <p class="text-2xl flex-1 leading-10">
-                Create a minimal profile that your pair will see.
-              </p>
-            </li>
 
-            <li class="flex items-center gap-10 mb-10">
-              <figure class="h-20 w-[5rem] shadow-icon rounded-full">
-                <img
-                  src="./images/icon-4.png"
-                  alt="icon"
-                  loading="lazy"
-                  class="h-full w-full"
-                />
-              </figure>
-              <p class="text-2xl flex-1 leading-10">
-                If you want to use paid pairing services, you also need a
-                billing profile visible only to us.
-              </p>
-            </li>
+              <li class="flex items-center gap-10 mb-10">
+                <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+                  <img
+                    src="./images/icon-3.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  Create a minimal profile that your pair will see.
+                </p>
+              </li>
 
-            <li class="flex items-center gap-10 mb-10">
-              <figure class="h-20 w-[5rem] shadow-icon rounded-full">
-                <img
-                  src="./images/icon-5.png"
-                  alt="icon"
-                  loading="lazy"
-                  class="h-full w-full"
-                />
-              </figure>
-              <p class="text-2xl flex-1 leading-10">
-                Create a post describing what you want to achieve with your
-                pair, and with your time and budget. Share only public
-                information in it.
-              </p>
-            </li>
+              <li class="flex items-center gap-10 mb-10">
+                <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+                  <img
+                    src="./images/icon-4.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  If you want to use paid pairing services, you also need a
+                  billing profile visible only to us.
+                </p>
+              </li>
 
-            <li class="flex items-center gap-10 mb-10">
-              <figure class="h-20 w-[5rem] shadow-icon rounded-full">
-                <img
-                  src="./images/icon-6.png"
-                  alt="icon"
-                  loading="lazy"
-                  class="h-full w-full"
-                />
-              </figure>
-              <p class="text-2xl flex-1 leading-10">
-                Wait for offers to come. You will get emails. When you accept
-                one, the pairing session is scheduled, and you will get an email
-                with an event calendar.
-              </p>
-            </li>
+              <li class="flex items-center gap-10 mb-10">
+                <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+                  <img
+                    src="./images/icon-5.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  Create a post describing what you want to achieve with your
+                  pair, and with your time and budget. Share only public
+                  information in it.
+                </p>
+              </li>
 
-            <li class="flex items-center gap-10 mb-10">
-              <figure
-                class="h-20 w-[5rem] shadow-icon rounded-full self-start mt-6"
-              >
-                <img
-                  src="./images/icon-7.png"
-                  alt="icon"
-                  loading="lazy"
-                  class="h-full w-full"
-                />
-              </figure>
-              <p class="text-2xl flex-1 leading-10">
-                After the session, credits will immediately move from your
-                account to your pair's. The amount is calculated based on the
-                actual meeting time and your pair's hourly rate. If your session
-                is taking longer than what your balance would allow, we allow
-                you to continue the meeting. You will be redirected to a top-up
-                page after the meeting.
-              </p>
-            </li>
-          </ul>
+              <li class="flex items-center gap-10 mb-10">
+                <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+                  <img
+                    src="./images/icon-6.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  Wait for offers to come. You will get emails. When you accept
+                  one, the pairing session is scheduled, and you will get an
+                  email with an event calendar.
+                </p>
+              </li>
 
-          <div data-aos="zoom-in-up" class="flex-1">
-            <div>
-              <figure class="lg:h-full h-[60rem]">
-                <img
-                  src="./images/guy-with-phone.png"
-                  alt="Guy with phone"
-                  loading="lazy"
-                  class="h-full w-full"
-                />
-              </figure>
+              <li class="flex items-center gap-10 mb-10">
+                <figure
+                  class="h-20 w-[5rem] shadow-icon rounded-full self-start mt-6"
+                >
+                  <img
+                    src="./images/icon-7.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  After the session, credits will immediately move from your
+                  account to your pair's. The amount is calculated based on the
+                  actual meeting time and your pair's hourly rate. If your
+                  session is taking longer than what your balance would allow,
+                  we allow you to continue the meeting. You will be redirected
+                  to a top-up page after the meeting.
+                </p>
+              </li>
+            </ul>
+
+            <div data-aos="zoom-in-up" class="flex-1">
+              <div class="flex justify-center">
+                <figure class="w-[35rem] lg:w-full">
+                  <img
+                    src="./images/guy-with-phone.png"
+                    alt="Guy with phone"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+              </div>
             </div>
           </div>
         </div>
@@ -388,138 +410,141 @@
 
       <!--------------------- Offers Section Starts Here ---------------------->
       <!------------------------------------------------------------------------->
-      <section class="w-[110rem] max-w-[95%] mx-auto overflow-hidden">
-        <h2 class="font-bold text-5xl mb-6 text-center">
-          Offer <span class="text-[#E18C5F]">Pairing?</span>
-        </h2>
+      <section class="overflow-hidden">
+        <div class="w-[110rem] max-w-[90%] mx-auto md:py-36 mt-20 sm:mt-0">
+          <h2 class="font-bold text-5xl mb-6 text-center">
+            Offer <span class="text-[#E18C5F]">Pairing?</span>
+          </h2>
 
-        <div
-          class="flex lg:justify-between lg:flex-row flex-col-reverse gap-10 mt-16 pl-12"
-        >
-          <div data-aos="fade-left" class="relative flex-1 order-2">
-            <figure class="absolute top-20 left-8 -z-10 h-[80%]">
-              <img
-                src="./images/vector_13.png"
-                alt="Vector Curve"
-                loading="lazy"
-                class="h-full w-full"
-              />
-            </figure>
-
-            <div class="flex items-center gap-10 mb-10">
-              <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+          <div
+            class="flex lg:justify-between lg:flex-row flex-col gap-10 mt-16 lg:pl-12 p-0"
+          >
+            <div data-aos="fade-left" class="relative flex-1 order-2">
+              <figure class="absolute top-20 left-8 -z-10 h-[80%]">
                 <img
-                  src="./images/icon-3.png"
-                  alt="icon"
+                  src="./images/vector_13.png"
+                  alt="Vector Curve"
                   loading="lazy"
                   class="h-full w-full"
                 />
               </figure>
-              <p class="text-2xl flex-1 leading-10">
-                You need a service profile besides your base profile to receive
-                relevant recommendations.
-              </p>
+
+              <div class="flex items-center gap-10 mb-10">
+                <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+                  <img
+                    src="./images/icon-3.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  You need a service profile besides your base profile to
+                  receive relevant recommendations.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-10 mb-10">
+                <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+                  <img
+                    src="./images/icon-4.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  You don't need a billing profile to start providing paid
+                  services. You can't cash out until you have finished the
+                  verification steps.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-10 mb-10">
+                <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+                  <img
+                    src="./images/icon-5.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  You can see new requests that match your service profile under
+                  "View service requests". You can also browse all live posts if
+                  you want.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-10 mb-10">
+                <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+                  <img
+                    src="./images/icon-6.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  You can submit your offers to requests that you want to help
+                  with. When your offer has been accepted, the pairing session
+                  is scheduled and you will get an email with an event calendar.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-10 mb-10">
+                <figure
+                  class="h-20 w-[5rem] shadow-icon rounded-full self-start mt-6"
+                >
+                  <img
+                    src="./images/icon-7.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  After the session, credits will immediately move from your
+                  pair's account to yours if there is enough balance. The amount
+                  is calculated based on the actual meeting time and your hourly
+                  rate. If your pair's account doesn't have enough to pay, we
+                  will redirect your pair to a top-up page after the meeting. We
+                  will eventually guarantee you always get what you've worked
+                  for.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-10 mb-10">
+                <figure
+                  class="h-20 w-[5rem] shadow-icon rounded-full self-start mt-6"
+                >
+                  <img
+                    src="./images/icon-7.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  When you cash out, we immediately send a recipient created
+                  invoice to you, but you will receive the money (including tax
+                  whenever applicable) on your bank account in about a week
+                  because Stripe payout has to follow a weekly or monthly cycle.
+                </p>
+              </div>
             </div>
 
-            <div class="flex items-center gap-10 mb-10">
-              <figure class="h-20 w-[5rem] shadow-icon rounded-full">
-                <img
-                  src="./images/icon-4.png"
-                  alt="icon"
-                  loading="lazy"
-                  class="h-full w-full"
-                />
-              </figure>
-              <p class="text-2xl flex-1 leading-10">
-                You don't need a billing profile to start providing paid
-                services. You can't cash out until you have finished the
-                verification steps.
-              </p>
-            </div>
-
-            <div class="flex items-center gap-10 mb-10">
-              <figure class="h-20 w-[5rem] shadow-icon rounded-full">
-                <img
-                  src="./images/icon-5.png"
-                  alt="icon"
-                  loading="lazy"
-                  class="h-full w-full"
-                />
-              </figure>
-              <p class="text-2xl flex-1 leading-10">
-                You can see new requests that match your service profile under
-                "View service requests". You can also browse all live posts if
-                you want.
-              </p>
-            </div>
-
-            <div class="flex items-center gap-10 mb-10">
-              <figure class="h-20 w-[5rem] shadow-icon rounded-full">
-                <img
-                  src="./images/icon-6.png"
-                  alt="icon"
-                  loading="lazy"
-                  class="h-full w-full"
-                />
-              </figure>
-              <p class="text-2xl flex-1 leading-10">
-                You can submit your offers to requests that you want to help
-                with. When your offer has been accepted, the pairing session is
-                scheduled and you will get an email with an event calendar.
-              </p>
-            </div>
-
-            <div class="flex items-center gap-10 mb-10">
-              <figure
-                class="h-20 w-[5rem] shadow-icon rounded-full self-start mt-6"
-              >
-                <img
-                  src="./images/icon-7.png"
-                  alt="icon"
-                  loading="lazy"
-                  class="h-full w-full"
-                />
-              </figure>
-              <p class="text-2xl flex-1 leading-10">
-                After the session, credits will immediately move from your
-                pair's account to yours if there is enough balance. The amount
-                is calculated based on the actual meeting time and your hourly
-                rate. If your pair's account doesn't have enough to pay, we will
-                redirect your pair to a top-up page after the meeting. We will
-                eventually guarantee you always get what you've worked for.
-              </p>
-            </div>
-
-            <div class="flex items-center gap-10 mb-10">
-              <figure
-                class="h-20 w-[5rem] shadow-icon rounded-full self-start mt-6"
-              >
-                <img
-                  src="./images/icon-7.png"
-                  alt="icon"
-                  loading="lazy"
-                  class="h-full w-full"
-                />
-              </figure>
-              <p class="text-2xl flex-1 leading-10">
-                When you cash out, we immediately send a recipient created
-                invoice to you, but you will receive the money (including tax
-                whenever applicable) on your bank account in about a week
-                because Stripe payout has to follow a weekly or monthly cycle.
-              </p>
-            </div>
-          </div>
-
-          <div class="flex-1">
-            <div data-aos="fade-right">
-              <figure class="h-full w-[90%]">
-                <img
-                  src="./images/laughing-girl.png"
-                  alt="Girl Smiling"
-                  loading="lazy"
-                  class="h-full w-full"
-                />
-              </figure>
+            <div class="flex-1 flex justify-center">
+              <div data-aos="fade-right">
+                <figure class="h-[90%] lg:w-[90%] w-[35rem]">
+                  <img
+                    src="./images/laughing-girl.png"
+                    alt="Girl Smiling"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+              </div>
             </div>
           </div>
         </div>
@@ -527,9 +552,9 @@
 
       <!--------------------- Build Section Starts Here ---------------------->
       <!------------------------------------------------------------------------->
-      <section class="py-36 overflow-hidden">
+      <section class="overflow-hidden">
         <div
-          class="flex lg:justify-between lg:flex-row flex-col-reverse w-[110rem] max-w-[95%] mx-auto"
+          class="flex lg:justify-between lg:flex-row flex-col-reverse w-[110rem] max-w-[90%] mx-auto"
         >
           <div
             data-aos="fade-up"
@@ -538,7 +563,7 @@
           >
             <div class="w-[100%]">
               <div class="build-info-img relative">
-                <div class="flex absolute sm:bottom-[11rem] bottom-[4rem]">
+                <div class="flex absolute sm:bottom-[11rem] bottom-[25%]">
                   <button
                     class="bg-[#3465E1] text-2xl font-bold text-white rounded-[5rem] tracking-wider sm:w-[123px] w-[10rem] py-4 cursor-pointer mr-3 border-[0.375rem] border-[translate] hover:scale-105 transition ease-in-out"
                   >
@@ -549,7 +574,7 @@
                   >
                     <img
                       style="height: 13px; width: 12px"
-                      src="./images/Vector (7).png"
+                      src="./images/vector_14.png"
                       alt="Vector Curve"
                       loading="lazy"
                       class="mr-4"
@@ -561,7 +586,7 @@
             </div>
           </div>
 
-          <div data-aos="fade-left" class="flex-2/5 mt-20 ml-12">
+          <div data-aos="fade-left" class="flex-2/5 mt-20 lg:ml-12 ml:0">
             <h2 class="font-bold text-5xl mb-6 text-center lg:text-left">
               Why we <span class="text-[#E18C5F]">build it?</span>
             </h2>
@@ -588,9 +613,9 @@
 
       <!--------------------- Testimonials Section Starts Here ---------------------->
       <!------------------------------------------------------------------------->
-      <section class="w-full py-16 overflow-hidden">
+      <section class="w-full pt-28 overflow-hidden">
         <div
-          class="w-[110rem] max-w-[95%] mx-auto flex lg:justify-between lg:flex-row flex-col"
+          class="w-[110rem] max-w-[90%] mx-auto flex lg:justify-between lg:flex-row flex-col mb-20 sm:mb-0"
         >
           <div
             data-aos="fade-right"
@@ -599,7 +624,9 @@
             <h4
               class="flex items-center justify-center lg:justify-start uppercase tracking-[2px] text-xl"
             >
-              <span class="w-20 h-[0.05rem] block bg-gray-400 mr-10"></span>
+              <span
+                class="w-20 h-[0.05rem] lg:block hidden bg-gray-400 mr-10"
+              ></span>
               Testimonial
             </h4>
             <h2 class="font-bold text-5xl mb-12 mt-8">
@@ -634,14 +661,14 @@
             class="relative overflow-hidden sm:w-[47rem] w-[30rem] mx-auto"
           >
             <button
-              class="absolute h-[5rem] w-[10rem] top-[12rem] sm:left-[25.4rem] left-[20rem] z-10"
+              class="absolute h-[5rem] w-[10rem] top-[12rem] sm:left-[25.4rem] left-[20rem] z-10 border-none outline-none"
               id="carousel-btn"
             >
               <img src="./images/icon-3.svg" alt="icon" loading="lazy" />
             </button>
 
             <div
-              class="w-full flex gap-[7rem] carousel"
+              class="w-full flex gap-[7rem] carousel-container"
               id="carousel-container"
             >
               <div class="client-card">
@@ -730,7 +757,7 @@
       <!------------------------------------------------------------------------->
       <section class="overflow-hidden">
         <div
-          class="relative min-h-[30rem] flex justify-center items-center p-10 md:p-0"
+          class="relative min-h-[30rem] flex justify-center items-center p-10 md:p-0 charges-container"
         >
           <figure class="absolute top-0 left-0 h-full w-full">
             <img
@@ -743,7 +770,7 @@
 
           <div
             data-aos="zoom-in"
-            class="w-[110rem] max-w-[95%] mx-auto relative z-10 text-center text-white"
+            class="w-[110rem] max-w-[90%] mx-auto relative z-10 text-center text-white"
           >
             <h2 class="font-bold text-5xl mb-6">
               How we <span class="text-[#E18C5F]">Charge?</span>
@@ -767,12 +794,14 @@
     <!------------------------------------------------------------------------->
 
     <footer class="relative overflow-hidden">
-      <div class="w-[110rem] max-w-[95%] mx-auto">
+      <div class="w-[110rem] max-w-[90%] mx-auto">
         <div
           data-aos="zoom-in-up"
-          class="flex justify-center gap-10 flex-wrap my-36"
+          class="flex justify-between gap-10 flex-wrap sm:my-36 my-20"
         >
-          <div class="flex-1">
+          <div
+            class="lg:w-72 w-full flex flex-col items-center lg:items-start lg:justify-start"
+          >
             <figure class="w-[12rem] mb-6">
               <img
                 src="./images/pair-time.svg"
@@ -780,114 +809,140 @@
                 loading="lazy"
               />
             </figure>
-            <p class="text-lg leading-10">
+            <p class="text-lg leading-10 text-center lg:text-left">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy
             </p>
           </div>
 
-          <div class="flex-1 flex justify-center">
-            <ul class="flex flex-col justify-between">
-              <h3 class="font-bold text-2xl">Company</h3>
-              <li class="text-xl hover:text-orange-500">
-                <a href="">Live Requests</a>
-              </li>
-              <li class="text-xl hover:text-orange-500 transition ease-in-out">
-                <a href="">Visible Profiles</a>
-              </li>
-              <li class="text-xl hover:text-orange-500 transition ease-in-out">
-                <a href="">User Slack Group</a>
-              </li>
-            </ul>
-          </div>
+          <div class="flex justify-between flex-wrap sm:flex-nowrap flex-1">
+            <div
+              class="sm:flex-1 flex-[33%] flex lg:justify-center justify-start"
+            >
+              <ul class="flex flex-col justify-between">
+                <h3 class="font-bold text-2xl">Company</h3>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out py-4"
+                >
+                  <a href="">Live Requests</a>
+                </li>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out py-4"
+                >
+                  <a href="">Visible Profiles</a>
+                </li>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out pt-4"
+                >
+                  <a href="">User Slack Group</a>
+                </li>
+              </ul>
+            </div>
 
-          <div class="flex-1 flex justify-center">
-            <ul class="flex flex-col justify-between">
-              <h3 class="font-bold text-2xl">Contact</h3>
-              <li class="text-xl hover:text-orange-500 transition ease-in-out">
-                <a href="">Help/FAQ</a>
-              </li>
-              <li class="text-xl hover:text-orange-500 transition ease-in-out">
-                <a href="">About Us</a>
-              </li>
-              <li class="text-xl hover:text-orange-500 transition ease-in-out">
-                <a href="">Contact</a>
-              </li>
-            </ul>
-          </div>
+            <div class="sm:flex-1 flex-[33%] flex justify-center">
+              <ul class="flex flex-col justify-between">
+                <h3 class="font-bold text-2xl">Contact</h3>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out"
+                >
+                  <a href="">Help/FAQ</a>
+                </li>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out"
+                >
+                  <a href="">About Us</a>
+                </li>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out"
+                >
+                  <a href="">Contact</a>
+                </li>
+              </ul>
+            </div>
 
-          <div class="flex-1 flex justify-center">
-            <ul class="flex flex-col justify-between">
-              <h3 class="font-bold text-2xl">More</h3>
-              <li class="text-xl hover:text-orange-500 transition ease-in-out">
-                <a href="">Pairing</a>
-              </li>
-              <li class="text-xl hover:text-orange-500 transition ease-in-out">
-                <a href="">How we work?</a>
-              </li>
-              <li class="text-xl hover:text-orange-500 transition ease-in-out">
-                <a href="">Testimonials</a>
-              </li>
-            </ul>
-          </div>
+            <div
+              class="sm:flex-1 flex-[33%] flex sm:justify-center justify-end"
+            >
+              <ul class="flex flex-col justify-between">
+                <h3 class="font-bold text-2xl">More</h3>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out"
+                >
+                  <a href="">Pairing</a>
+                </li>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out"
+                >
+                  <a href="">How we work?</a>
+                </li>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out"
+                >
+                  <a href="">Testimonials</a>
+                </li>
+              </ul>
+            </div>
 
-          <div class="flex flex-col w-[18rem] ml-16 mt-10 md:mt-0">
-            <ul class="flex justify-between">
-              <li>
-                <a href="" class="m-0">
-                  <img
-                    src="./images/facebook-icon.png"
-                    alt="Facebook Icon"
-                    loading="lazy"
-                    class="shadow-iconSocial rounded-full hover:scale-10 hover:scale-105 transition ease-in-out"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img
-                    src="./images/instagram.png"
-                    alt="Instagram Icon"
-                    loading="lazy"
-                    class="shadow-iconSocial rounded-full hover:scale-10 hover:scale-105 transition ease-in-out"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img
-                    src="./images/twitter.png"
-                    alt="Twitter Icon"
-                    loading="lazy"
-                    class="shadow-iconSocial rounded-full hover:scale-10 hover:scale-105 transition ease-in-out"
-                  />
-                </a>
-              </li>
-            </ul>
-            <div class="mt-12">
-              <h3 class="text-xl mb-4">Discover our app</h3>
-              <ul class="flex justify-between gap-4">
+            <div class="flex flex-col w-[18rem] mt-24 sm:ml-28 sm:mt-0 mx-auto">
+              <ul class="flex justify-between">
                 <li>
-                  <a href="">
+                  <a href="" class="m-0">
                     <img
-                      class="hover:scale-10 hover:scale-105 transition ease-in-out"
-                      src="./images/play-store.png"
-                      alt="Google Play Store Icon"
+                      src="./images/facebook-icon.png"
+                      alt="Facebook Icon"
                       loading="lazy"
+                      class="shadow-iconSocial rounded-full hover:scale-10 hover:scale-105 transition ease-in-out"
                     />
                   </a>
                 </li>
                 <li>
                   <a href="">
                     <img
-                      class="hover:scale-10 hover:scale-105 transition ease-in-out"
-                      src="./images/apple-store.svg"
-                      alt="Apple Store Icon"
+                      src="./images/instagram.png"
+                      alt="Instagram Icon"
                       loading="lazy"
+                      class="shadow-iconSocial rounded-full hover:scale-10 hover:scale-105 transition ease-in-out"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img
+                      src="./images/twitter.png"
+                      alt="Twitter Icon"
+                      loading="lazy"
+                      class="shadow-iconSocial rounded-full hover:scale-10 hover:scale-105 transition ease-in-out"
                     />
                   </a>
                 </li>
               </ul>
+              <div class="mt-12">
+                <h3 class="text-xl mb-4 text-center lg:text-left">
+                  Discover our app
+                </h3>
+                <ul class="flex justify-between gap-4">
+                  <li>
+                    <a href="">
+                      <img
+                        class="hover:scale-10 hover:scale-105 transition ease-in-out"
+                        src="./images/play-store.png"
+                        alt="Google Play Store Icon"
+                        loading="lazy"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img
+                        class="hover:scale-10 hover:scale-105 transition ease-in-out"
+                        src="./images/apple-store.svg"
+                        alt="Apple Store Icon"
+                        loading="lazy"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -914,23 +969,9 @@
               icon: "0px 15px 44px rgba(13, 15, 28, 0.12)",
               client: "2px 4px 60px rgba(41, 44, 124, 0.1)",
               iconSocial: "0px 2px 10px rgba(0, 0, 0, 0.1)",
+              guyPhone:
+                "0px 92.691px 190.916px rgba(0, 0, 0, 0.07), 0px 34.2227px 72.2657px rgba(0, 0, 0, 0.0529883), 0px 14.8528px 33.8133px rgba(0, 0, 0, 0.0474983)",
             },
-            // screens: {
-            //   "2xl": { max: "1535px" },
-            //   // => @media (max-width: 1535px) { ... }
-
-            //   xl: { max: "1279px" },
-            //   // => @media (max-width: 1279px) { ... }
-
-            //   lg: { max: "1023px" },
-            //   // => @media (max-width: 1023px) { ... }
-
-            //   md: { max: "767px" },
-            //   // => @media (max-width: 767px) { ... }
-
-            //   sm: { max: "639px" },
-            //   // => @media (max-width: 639px) { ... }
-            // },
           },
         },
       };

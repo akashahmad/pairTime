@@ -12,6 +12,22 @@ html {
   color: #191453;
 }
 
+@media only screen and (max-width: 26.5626em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* @media only screen and (max-width: 22.5em) {
+  html {
+    font-size: 55%;
+  }
+} */
+
+button {
+  outline: none;
+}
+
 .features {
   background-image: url(./images/vector_11.png);
   background-size: 80% 80%;
@@ -19,26 +35,26 @@ html {
   background-position: 0 -35%;
 }
 
-.carousel {
+@media only screen and (max-width: 48em) {
+  .features {
+    background: none;
+  }
+}
+
+.carousel-container {
   transition: all 0.3s;
 }
 
 .build-info-img {
   background-image: url(./images/womensWithButton.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   width: 100%;
   min-height: 421px;
 }
 
-@media only screen and (max-width: 600px) {
-  .build-info-img {
-    min-height: 270px;
-  }
-}
-
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 425px) {
   .build-info-img {
     min-height: 250px;
   }

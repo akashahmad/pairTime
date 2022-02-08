@@ -54,15 +54,30 @@ carouselBtn.addEventListener("click", slide);
 
 function slide() {
   currentIndex++;
+  const carouselWidth = carouselContainer.offsetWidth;
 
   if (currentIndex < clientCard.length) {
     if (window.innerWidth < 640) {
       carouselContainer.style.transform = `translateX(calc(-37rem * ${currentIndex}))`;
     } else {
-      carouselContainer.style.transform = `translateX(calc(-47rem * ${currentIndex}))`;
+      carouselContainer.style.transform = `translateX(calc(-${carouselWidth}px * ${currentIndex}))`;
     }
   } else {
     carouselContainer.style.transform = `translateX(0)`;
     currentIndex = 0;
   }
 }
+
+///////////// Nvigation small screen animation functionality
+const navOpenBtn = document.getElementById("nav-open-btn");
+const navCloseBtn = document.getElementById("nav-close-btn");
+const navbarEl = document.getElementById("nav-small-screen");
+
+navOpenBtn.addEventListener("click", () => {
+  navbarEl.style.transform = "translateX(0)";
+});
+
+navCloseBtn.addEventListener("click", () => {
+  const navbarWidth = navbarEl.offsetWidth;
+  navbarEl.style.transform = `translateX(-${navbarWidth}px)`;
+});
