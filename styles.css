@@ -18,7 +18,12 @@ html {
   background-repeat: no-repeat;
   background-position: 0 -35%;
 }
-.build-info-img{
+
+.carousel {
+  transition: all 0.3s;
+}
+
+.build-info-img {
   background-image: url(./images/womensWithButton.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,26 +31,47 @@ html {
   width: 100%;
   min-height: 421px;
 }
+
+@media only screen and (max-width: 600px) {
+  .build-info-img {
+    min-height: 270px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .build-info-img {
+    min-height: 250px;
+  }
+}
+
 /* typing animation */
 .writeit {
   color: black;
-  font-size: 3rem;
+  /* font-size: 3rem; */
   font-weight: 700;
-  line-height: 38px;
+  line-height: 38px !important;
   text-align: left;
   min-height: 130px;
 }
-.writeit span{
-  color: #E18C5F !important;
+
+.writeit span {
+  color: #e18c5f !important;
 }
-  
+
 .after {
--webkit-animation-delay: 500ms; -moz-animation-delay: 500ms; -ms-animation-delay: 500ms; -o-animation-delay: 500ms; animation-delay: 500ms;
+  -webkit-animation-delay: 500ms;
+  -moz-animation-delay: 500ms;
+  -ms-animation-delay: 500ms;
+  -o-animation-delay: 500ms;
+  animation-delay: 500ms;
   animation: blink 1.3s infinite;
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
-  to { opacity: 1;}
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-

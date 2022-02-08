@@ -9,6 +9,12 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <title>Pair Time</title>
   </head>
 
@@ -19,7 +25,31 @@
       <div
         class="bg-[rgb(255,243,228)] rounded-b-[50%] w-[150vw] -translate-x-[17%] flex flex-col justify-center items-center overflow-hidden"
       >
-        <nav class="flex justify-between items-center h-[15vh] w-[110rem]">
+        <!-- on less than medium screens hamburger -->
+        <!-- <nav
+          class="w-[110rem] max-w-[62%] flex justify-between items-center h-[15vh]"
+        >
+          <figure class="h-12">
+            <img
+              src="./images/pair-time.svg"
+              alt="Company Logo"
+              loading="lazy"
+              class="w-full h-full cursor-pointer"
+            />
+          </figure>
+
+          <button class="text-[orange]">
+            <i class="fas fa-bars text-4xl"></i>
+          </button>
+        </nav> -->
+
+        <!-- nav above medium screens -->
+        <nav
+          class="md:flex hidden md:justify-between items-center h-[15vh] w-[110rem] max-w-[62%] overflow-hidden"
+        >
+          <!-- <button>
+            <i class="fas fa-times"></i>
+          </button> -->
           <figure class="h-12">
             <img
               src="./images/pair-time.svg"
@@ -49,15 +79,19 @@
         </nav>
 
         <section
-          class="flex justify-between items-center gap-12 mt-36 w-[110rem] mb-72"
+          class="flex lg:justify-between lg:flex-row flex-col items-center gap-12 mt-36 w-[110rem] mb-72 max-w-[62%] overflow-hidden"
         >
           <div
             data-aos="fade-right"
             data-aos-duration="900"
             class="flex-1 typeAnimation"
           >
-            <div class="writeit min-h-[18.5rem]"></div>
-            <p class="text-[#191453]-300 text-2xl leading-10">
+            <div
+              class="writeit min-h-[18.5rem] text-center lg:text-left md:text-[3rem] text-[1.8rem]"
+            ></div>
+            <p
+              class="text-[#191453]-300 text-2xl leading-10 text-center lg:text-left"
+            >
               Register an account to start using it. Or, first see the live
               requests or visible profiles You can also join our user group
               Slack to get customer support or help us build a better product.
@@ -69,7 +103,7 @@
               data-aos="fade-left"
               data-aos-easing="linear"
               data-aos-duration="800"
-              class="w-[46rem] px-10 py-14 rounded-2xl bg-white shadow-card"
+              class="sm:w-[46rem] w-[100%] px-10 py-14 rounded-2xl bg-white shadow-card"
             >
               <input
                 type="email"
@@ -94,8 +128,10 @@
                   >Cookie Policy.</a
                 >
               </p>
-              <div class="flex justify-between items-end">
-                <p class="text-xl">
+              <div
+                class="flex justify-between flex-col sm:flex-row sm:items-end items:center"
+              >
+                <p class="sm:text-xl text-lg">
                   Already have an account?
                   <a
                     href="#"
@@ -104,7 +140,7 @@
                   >
                 </p>
                 <button
-                  class="bg-[#250CED] text-white text-lg px-10 py-4 rounded-2xl shadow-card -mb-3 hover:scale-105 transition ease-in-out"
+                  class="bg-[#250CED] text-white text-lg px-10 py-4 rounded-2xl shadow-card -mb-3 hover:scale-105 transition ease-in-out mt-6 sm:mt-0"
                 >
                   Register for PairTime
                 </button>
@@ -120,28 +156,37 @@
       <!------------------------------------------------------------------------->
       <section class="py-36 features overflow-hidden">
         <div class="w-[110rem] max-w-[95%] mx-auto">
-          <h2 class="font-bold text-5xl mb-6">
+          <h2 class="font-bold text-5xl mb-6 text-center lg:text-left">
             How does it <span class="text-[#E18C5F]">work?</span>
           </h2>
-          <p class="text-2xl max-w-3xl leading-relaxed">
+          <p
+            class="text-2xl lg:max-w-3xl leading-relaxed text-center lg:text-left"
+          >
             PairTime is one powerful online software suite that combines all the
             tools needed to run a successful pair time.
           </p>
 
-          <div class="text-9xl absolute left-5 top-14 -z-10 opacity-20">2</div>
-
-          <div class="flex justify-between -mt-4 relative">
-            <div class="text-9xl absolute left-[37.5%] top-52 -z-10 opacity-20">
+          <div class="flex flex-wrap-reverse justify-between -mt-4 relative">
+            <div
+              class="text-9xl absolute lg:left-[37.5%] lg:top-52 left-[96%] top-[56%] -z-10 text-[#00000030]"
+              data-aos="fade-right"
+              data-aos-duration="500"
+            >
               2
             </div>
 
             <div
               data-aos="fade-right"
               data-aos-duration="500"
-              class="self-end shadow-card w-2/5 px-12 pb-12 pt-20 rounded-3xl relative bg-white mt-[168px]"
+              class="self-end shadow-card lg:w-2/5 w-full px-12 pb-12 pt-20 rounded-3xl relative bg-white mt-[8rem] mb-[8rem] lg:mb-0 lg:mt-[168px]"
             >
               <figure class="h-36 absolute -top-16 left-0">
-                <img src="./images/icon-1.svg" alt="" class="h-full w-full" />
+                <img
+                  src="./images/icon-1.svg"
+                  alt="icon"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
               </figure>
               <h4 class="font-semibold text-3xl mb-6">
                 We are a revenue generator for both individuals and companies.
@@ -171,7 +216,7 @@
             <div
               data-aos="fade-left"
               data-aos-duration="500"
-              class="shadow-card w-3/6 self-start px-12 pb-12 pt-20 rounded-3xl relative bg-white"
+              class="shadow-card lg:w-3/6 w-full self-start px-12 pb-12 pt-20 rounded-3xl relative bg-white mt-24 lg:mt-0"
             >
               <div class="text-9xl absolute -left-8 -top-16 -z-10 opacity-20">
                 1
@@ -220,24 +265,37 @@
       <!--------------------- Facilities Section Starts Here ---------------------->
       <!------------------------------------------------------------------------->
       <section class="w-[110rem] max-w-[95%] mx-auto py-36 overflow-hidden">
-        <h2 class="font-bold text-5xl mb-6">
-          Need <span class="text-[#E18C5F]">Pairing?</span>
+        <h2 class="font-bold text-5xl mb-6 text-center lg:text-left">
+          Need
+          <span class="text-[#E18C5F]">Pairing?</span>
         </h2>
 
-        <div class="flex justify-between gap-10 mt-16 pl-12">
+        <div
+          class="flex lg:justify-between lg:flex-row flex-col-reverse gap-10 mt-16 pl-12"
+        >
           <ul
             data-aos="fade-right"
             data-aos-offset="300"
             data-aos-easing="ease-in-sine"
-            class="relative flex-1"
+            class="relative flex-1 -mt-24 md:mt-0"
           >
             <figure class="absolute top-10 left-0 -z-10 h-[60%]">
-              <img src="./images/vector_12.png" alt="" class="h-full w-full" />
+              <img
+                src="./images/vector_12.png"
+                alt="icon"
+                loading="lazy"
+                class="h-full w-full"
+              />
             </figure>
 
             <li class="flex items-center gap-10 mb-10">
               <figure class="h-20 w-[5rem] shadow-icon rounded-full">
-                <img src="./images/icon-3.png" alt="" class="h-full w-full" />
+                <img
+                  src="./images/icon-3.png"
+                  alt="icon"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
               </figure>
               <p class="text-2xl flex-1 leading-10">
                 Create a minimal profile that your pair will see.
@@ -246,7 +304,12 @@
 
             <li class="flex items-center gap-10 mb-10">
               <figure class="h-20 w-[5rem] shadow-icon rounded-full">
-                <img src="./images/icon-4.png" alt="" class="h-full w-full" />
+                <img
+                  src="./images/icon-4.png"
+                  alt="icon"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
               </figure>
               <p class="text-2xl flex-1 leading-10">
                 If you want to use paid pairing services, you also need a
@@ -256,7 +319,12 @@
 
             <li class="flex items-center gap-10 mb-10">
               <figure class="h-20 w-[5rem] shadow-icon rounded-full">
-                <img src="./images/icon-5.png" alt="" class="h-full w-full" />
+                <img
+                  src="./images/icon-5.png"
+                  alt="icon"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
               </figure>
               <p class="text-2xl flex-1 leading-10">
                 Create a post describing what you want to achieve with your
@@ -267,7 +335,12 @@
 
             <li class="flex items-center gap-10 mb-10">
               <figure class="h-20 w-[5rem] shadow-icon rounded-full">
-                <img src="./images/icon-6.png" alt="" class="h-full w-full" />
+                <img
+                  src="./images/icon-6.png"
+                  alt="icon"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
               </figure>
               <p class="text-2xl flex-1 leading-10">
                 Wait for offers to come. You will get emails. When you accept
@@ -280,7 +353,12 @@
               <figure
                 class="h-20 w-[5rem] shadow-icon rounded-full self-start mt-6"
               >
-                <img src="./images/icon-7.png" alt="" class="h-full w-full" />
+                <img
+                  src="./images/icon-7.png"
+                  alt="icon"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
               </figure>
               <p class="text-2xl flex-1 leading-10">
                 After the session, credits will immediately move from your
@@ -295,10 +373,11 @@
 
           <div data-aos="zoom-in-up" class="flex-1">
             <div>
-              <figure class="h-full">
+              <figure class="lg:h-full h-[60rem]">
                 <img
                   src="./images/guy-with-phone.png"
-                  alt=""
+                  alt="Guy with phone"
+                  loading="lazy"
                   class="h-full w-full"
                 />
               </figure>
@@ -314,15 +393,27 @@
           Offer <span class="text-[#E18C5F]">Pairing?</span>
         </h2>
 
-        <div class="flex justify-between gap-10 mt-16 pl-12">
+        <div
+          class="flex lg:justify-between lg:flex-row flex-col-reverse gap-10 mt-16 pl-12"
+        >
           <div data-aos="fade-left" class="relative flex-1 order-2">
             <figure class="absolute top-20 left-8 -z-10 h-[80%]">
-              <img src="./images/vector_13.png" alt="" class="h-full w-full" />
+              <img
+                src="./images/vector_13.png"
+                alt="Vector Curve"
+                loading="lazy"
+                class="h-full w-full"
+              />
             </figure>
 
             <div class="flex items-center gap-10 mb-10">
               <figure class="h-20 w-[5rem] shadow-icon rounded-full">
-                <img src="./images/icon-3.png" alt="" class="h-full w-full" />
+                <img
+                  src="./images/icon-3.png"
+                  alt="icon"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
               </figure>
               <p class="text-2xl flex-1 leading-10">
                 You need a service profile besides your base profile to receive
@@ -332,7 +423,12 @@
 
             <div class="flex items-center gap-10 mb-10">
               <figure class="h-20 w-[5rem] shadow-icon rounded-full">
-                <img src="./images/icon-4.png" alt="" class="h-full w-full" />
+                <img
+                  src="./images/icon-4.png"
+                  alt="icon"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
               </figure>
               <p class="text-2xl flex-1 leading-10">
                 You don't need a billing profile to start providing paid
@@ -343,7 +439,12 @@
 
             <div class="flex items-center gap-10 mb-10">
               <figure class="h-20 w-[5rem] shadow-icon rounded-full">
-                <img src="./images/icon-5.png" alt="" class="h-full w-full" />
+                <img
+                  src="./images/icon-5.png"
+                  alt="icon"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
               </figure>
               <p class="text-2xl flex-1 leading-10">
                 You can see new requests that match your service profile under
@@ -354,7 +455,12 @@
 
             <div class="flex items-center gap-10 mb-10">
               <figure class="h-20 w-[5rem] shadow-icon rounded-full">
-                <img src="./images/icon-6.png" alt="" class="h-full w-full" />
+                <img
+                  src="./images/icon-6.png"
+                  alt="icon"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
               </figure>
               <p class="text-2xl flex-1 leading-10">
                 You can submit your offers to requests that you want to help
@@ -367,7 +473,12 @@
               <figure
                 class="h-20 w-[5rem] shadow-icon rounded-full self-start mt-6"
               >
-                <img src="./images/icon-7.png" alt="" class="h-full w-full" />
+                <img
+                  src="./images/icon-7.png"
+                  alt="icon"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
               </figure>
               <p class="text-2xl flex-1 leading-10">
                 After the session, credits will immediately move from your
@@ -383,7 +494,12 @@
               <figure
                 class="h-20 w-[5rem] shadow-icon rounded-full self-start mt-6"
               >
-                <img src="./images/icon-7.png" alt="" class="h-full w-full" />
+                <img
+                  src="./images/icon-7.png"
+                  alt="icon"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
               </figure>
               <p class="text-2xl flex-1 leading-10">
                 When you cash out, we immediately send a recipient created
@@ -399,7 +515,8 @@
               <figure class="h-full w-[90%]">
                 <img
                   src="./images/laughing-girl.png"
-                  alt=""
+                  alt="Girl Smiling"
+                  loading="lazy"
                   class="h-full w-full"
                 />
               </figure>
@@ -410,24 +527,31 @@
 
       <!--------------------- Build Section Starts Here ---------------------->
       <!------------------------------------------------------------------------->
-      <section class="w-[110rem] max-w-[95%] mx-auto py-36">
-        <div class="flex">
-          <div data-aos="fade-up" data-aos-duration="900" class="w-[90%]">
+      <section class="py-36 overflow-hidden">
+        <div
+          class="flex lg:justify-between lg:flex-row flex-col-reverse w-[110rem] max-w-[95%] mx-auto"
+        >
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            class="w-full mt-16 lg:mt-0"
+          >
             <div class="w-[100%]">
               <div class="build-info-img relative">
-                <div class="flex absolute bottom-[11rem]">
+                <div class="flex absolute sm:bottom-[11rem] bottom-[4rem]">
                   <button
-                    class="bg-[#3465E1] text-2xl font-bold text-white rounded-[5rem] tracking-wider w-[123px] py-4 cursor-pointer mr-3 border-[0.375rem] border-[translate] hover:scale-105 transition ease-in-out"
+                    class="bg-[#3465E1] text-2xl font-bold text-white rounded-[5rem] tracking-wider sm:w-[123px] w-[10rem] py-4 cursor-pointer mr-3 border-[0.375rem] border-[translate] hover:scale-105 transition ease-in-out"
                   >
                     Present
                   </button>
                   <button
-                    class="bg-[#E13468] text-2xl font-bold text-white rounded-[5rem] tracking-wider w-[123px] py-4 flex justify-center items-center cursor-pointer border-[0.375rem] border-[#F2C6D0] hover:scale-105 transition ease-in-out"
+                    class="bg-[#E13468] text-2xl font-bold text-white rounded-[5rem] tracking-wider sm:w-[123px] w-[10rem] py-4 flex justify-center items-center cursor-pointer border-[0.375rem] border-[#F2C6D0] hover:scale-105 transition ease-in-out"
                   >
                     <img
                       style="height: 13px; width: 12px"
                       src="./images/Vector (7).png"
-                      alt=""
+                      alt="Vector Curve"
+                      loading="lazy"
                       class="mr-4"
                     />
                     Cal
@@ -438,17 +562,23 @@
           </div>
 
           <div data-aos="fade-left" class="flex-2/5 mt-20 ml-12">
-            <h2 class="font-bold text-5xl mb-6">
+            <h2 class="font-bold text-5xl mb-6 text-center lg:text-left">
               Why we <span class="text-[#E18C5F]">build it?</span>
             </h2>
-            <p class="text-2xl flex-1 leading-10 mb-12 text-[#696984]">
+            <p
+              class="text-2xl flex-1 leading-10 mb-12 text-[#696984] text-center lg:text-left"
+            >
               The founder wanted to make his work more productive by having
               easier access to an expert pair in urgent situations.
             </p>
-            <p class="text-2xl flex-1 leading-10 mb-12 text-[#696984]">
+            <p
+              class="text-2xl flex-1 leading-10 mb-12 text-[#696984] text-center lg:text-left"
+            >
               So why not have a free market where everyone can participate?
             </p>
-            <p class="text-2xl flex-1 leading-10 text-[#696984]">
+            <p
+              class="text-2xl flex-1 leading-10 text-[#696984] text-center lg:text-left"
+            >
               We are trying hard to build an open and transparent platform for
               pair problem solving and interactive learning.
             </p>
@@ -459,9 +589,16 @@
       <!--------------------- Testimonials Section Starts Here ---------------------->
       <!------------------------------------------------------------------------->
       <section class="w-full py-16 overflow-hidden">
-        <div class="w-[110rem] max-w-[95%] mx-auto flex">
-          <div data-aos="fade-right" class="flex-1 pr-52">
-            <h4 class="flex items-center uppercase tracking-[2px] text-xl">
+        <div
+          class="w-[110rem] max-w-[95%] mx-auto flex lg:justify-between lg:flex-row flex-col"
+        >
+          <div
+            data-aos="fade-right"
+            class="flex-1 lg:pr-52 text-center lg:text-left mb-[5rem] lg:[mb-0]"
+          >
+            <h4
+              class="flex items-center justify-center lg:justify-start uppercase tracking-[2px] text-xl"
+            >
               <span class="w-20 h-[0.05rem] block bg-gray-400 mr-10"></span>
               Testimonial
             </h4>
@@ -477,7 +614,7 @@
             </p>
             <p class="text-2xl flex-1 leading-10 mb-12">Are you too? Join us</p>
 
-            <div class="flex">
+            <div class="flex justify-center lg:justify-start">
               <button
                 class="border border-orange-500 rounded-full text-xl text-[#E18C5F] pl-8 pr-28 h-16 shadow hover:shadow-lg"
               >
@@ -492,17 +629,23 @@
             </div>
           </div>
 
-          <div data-aos="fade-left" class="w-[45%]">
-            <div class="relative flex gap-40 overflow-hidden">
-              <button
-                class="absolute h-[5rem] w-[10rem] top-[12rem] left-[25.4rem]"
-              >
-                <img src="./images/icon-3.svg" alt="" />
-              </button>
+          <div
+            data-aos="fade-left"
+            class="relative overflow-hidden sm:w-[47rem] w-[30rem] mx-auto"
+          >
+            <button
+              class="absolute h-[5rem] w-[10rem] top-[12rem] sm:left-[25.4rem] left-[20rem] z-10"
+              id="carousel-btn"
+            >
+              <img src="./images/icon-3.svg" alt="icon" loading="lazy" />
+            </button>
 
-              <!-- client card  -->
-              <div>
-                <figure class="w-[30rem]">
+            <div
+              class="w-full flex gap-[7rem] carousel"
+              id="carousel-container"
+            >
+              <div class="client-card">
+                <figure class="sm:w-[30rem] w-[25rem]">
                   <img
                     src="./images/happy-girl.svg"
                     alt="Happy Customer Image"
@@ -511,7 +654,7 @@
                   />
                 </figure>
                 <div
-                  class="self-end bg-white w-[40rem] shadow-client rounded-2xl px-12 py-8 border-l-8 border-orange-500 translate-x-[15%] -translate-y-40"
+                  class="self-end bg-white sm:w-[40rem] w-[30rem] shadow-client rounded-2xl px-12 py-8 border-l-8 border-orange-500 sm:translate-x-[15%] sm:-translate-y-40"
                 >
                   <p class="border-l-2 pl-8 py-4 text-xl leading-10 mb-12">
                     Lorem Ipsum is simply dummy text of the printing and
@@ -527,16 +670,17 @@
                 </div>
               </div>
 
-              <div>
-                <figure class="w-[30rem] border-2">
+              <div class="client-card">
+                <figure class="sm:w-[30rem] w-[25rem]">
                   <img
                     src="./images/happy-girl.svg"
-                    alt=""
+                    alt="Happy Customer Image"
+                    loading="lazy"
                     class="w-full h-full"
                   />
                 </figure>
                 <div
-                  class="self-end bg-white w-[40rem] shadow-client rounded-t-2xl px-12 py-8 border-l-8 border-orange-500 translate-x-[15%] -translate-y-40"
+                  class="self-end bg-white sm:w-[40rem] w-[30rem] shadow-client rounded-2xl px-12 py-8 border-l-8 border-orange-500 sm:translate-x-[15%] sm:-translate-y-40"
                 >
                   <p class="border-l-2 pl-8 py-4 text-xl leading-10 mb-12">
                     Lorem Ipsum is simply dummy text of the printing and
@@ -545,7 +689,35 @@
                   </p>
                   <div class="flex justify-between items-center">
                     <h3 class="text-2xl font-bold">Gloria Rose</h3>
-                    <p class="text-[#80819A] text-lg">12 review at Yelp</p>
+                    <p class="text-[#80819A] text-lg cursor-pointer">
+                      12 review at Yelp
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="client-card">
+                <figure class="sm:w-[30rem] w-[25rem]">
+                  <img
+                    src="./images/happy-girl.svg"
+                    alt="Happy Customer Image"
+                    loading="lazy"
+                    class="w-full h-full"
+                  />
+                </figure>
+                <div
+                  class="self-end bg-white sm:w-[40rem] w-[30rem] shadow-client rounded-2xl px-12 py-8 border-l-8 border-orange-500 sm:translate-x-[15%] sm:-translate-y-40"
+                >
+                  <p class="border-l-2 pl-8 py-4 text-xl leading-10 mb-12">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an .
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-2xl font-bold">Gloria Rose</h3>
+                    <p class="text-[#80819A] text-lg cursor-pointer">
+                      12 review at Yelp
+                    </p>
                   </div>
                 </div>
               </div>
@@ -557,7 +729,9 @@
       <!--------------------- Charges Section Starts Here ---------------------->
       <!------------------------------------------------------------------------->
       <section class="overflow-hidden">
-        <div class="relative min-h-[30rem] flex justify-center items-center">
+        <div
+          class="relative min-h-[30rem] flex justify-center items-center p-10 md:p-0"
+        >
           <figure class="absolute top-0 left-0 h-full w-full">
             <img
               src="./images/bg-black.png"
@@ -594,7 +768,10 @@
 
     <footer class="relative overflow-hidden">
       <div class="w-[110rem] max-w-[95%] mx-auto">
-        <div data-aos="zoom-in-up" class="flex justify-between my-36">
+        <div
+          data-aos="zoom-in-up"
+          class="flex justify-center gap-10 flex-wrap my-36"
+        >
           <div class="flex-1">
             <figure class="w-[12rem] mb-6">
               <img
@@ -654,7 +831,7 @@
             </ul>
           </div>
 
-          <div class="flex flex-col w-[18rem] ml-16">
+          <div class="flex flex-col w-[18rem] ml-16 mt-10 md:mt-0">
             <ul class="flex justify-between">
               <li>
                 <a href="" class="m-0">
@@ -738,6 +915,22 @@
               client: "2px 4px 60px rgba(41, 44, 124, 0.1)",
               iconSocial: "0px 2px 10px rgba(0, 0, 0, 0.1)",
             },
+            // screens: {
+            //   "2xl": { max: "1535px" },
+            //   // => @media (max-width: 1535px) { ... }
+
+            //   xl: { max: "1279px" },
+            //   // => @media (max-width: 1279px) { ... }
+
+            //   lg: { max: "1023px" },
+            //   // => @media (max-width: 1023px) { ... }
+
+            //   md: { max: "767px" },
+            //   // => @media (max-width: 767px) { ... }
+
+            //   sm: { max: "639px" },
+            //   // => @media (max-width: 639px) { ... }
+            // },
           },
         },
       };
