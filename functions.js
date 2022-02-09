@@ -7,7 +7,7 @@ var txt2write = new Array(
 );
 
 // Variables
-var speed = 60; // You can set the speed here. + is slower
+var speed = 20; // You can set the speed here. + is slower
 var index = 0;
 text_pos = 0;
 var str_length = txt2write[0].length;
@@ -75,9 +75,18 @@ const navbarEl = document.getElementById("nav-small-screen");
 
 navOpenBtn.addEventListener("click", () => {
   navbarEl.style.transform = "translateX(0)";
+  document.body.style.overflow = "hidden";
 });
 
 navCloseBtn.addEventListener("click", () => {
   const navbarWidth = navbarEl.offsetWidth;
   navbarEl.style.transform = `translateX(-${navbarWidth}px)`;
+  document.body.style.overflow = "auto";
 });
+
+// window.addEventListener("click", (e) => {
+//   if (e.target !== navbarEl && e.target !== navOpenBtn) {
+//     const navbarWidth = navbarEl.offsetWidth;
+//     navbarEl.style.transform = `translateX(-${navbarWidth}px)`;
+//   }
+// });
