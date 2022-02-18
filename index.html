@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./Assets/styles/styles.css" />
+    <title>Pair Time</title>
+  </head>
+
+  <body>
+    <!--------------------- Header Section Starts Here ---------------------->
+    <!------------------------------------------------------------------------->
+    <header class="overflow-hidden relative">
+      <div
+        class="bg-[rgb(255,243,228)] rounded-b-[50%] w-[150vw] -ml-[25vw] flex flex-col justify-center items-center overflow-hidden"
+      >
+        <!-- on less than medium screens hamburger -->
+        <nav
+          class="w-[110rem] max-w-[60%] flex md:hidden justify-between items-center h-[11vh]"
+        >
+          <figure class="h-12">
+            <img
+              src="./Assets/images/pair-time.svg"
+              alt="Company Logo"
+              loading="lazy"
+              class="w-full h-full cursor-pointer"
+            />
+          </figure>
+
+          <button class="text-[orange]">
+            <i class="fas fa-bars text-4xl" id="nav-open-btn"></i>
+          </button>
+        </nav>
+
+        <!-- nav above medium screens -->
+        <nav
+          class="flex flex-col fixed z-10 bg-[rgb(255,243,228)] top-0 left-0 w-full h-full shadow-card transition-all ease-in -translate-x-[100%] md:translate-x-0 md:shadow-none md:justify-between md:flex-row md:items-center md:h-[15vh] md:w-[110rem] md:max-w-[60%] md:left-auto md:relative"
+          id="nav-small-screen"
+        >
+          <div
+            class="flex justify-between items-center mt-8 px-5 md:mt-0 md:px-0"
+          >
+            <figure class="md:h-12 h-12">
+              <img
+                src="./Assets/images/pair-time.svg"
+                alt="Company Logo"
+                loading="lazy"
+                class="w-full h-full cursor-pointer"
+              />
+            </figure>
+            <button
+              class="text-4xl text-[#FF5F1F] font-normal md:hidden"
+              id="nav-close-btn"
+            >
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <ul
+            class="flex flex-col items-center mt-44 md:mt-0 md:justify-between md:flex-row md:items-center gap-16"
+          >
+            <li class="md:text-2xl text-4xl hover:text-orange-500">
+              <a href="">Live Requests</a>
+            </li>
+            <li class="md:text-2xl text-4xl hover:text-orange-500">
+              <a href="show-all.html">Visible Profiles</a>
+            </li>
+            <li class="md:text-2xl text-4xl hover:text-orange-500">
+              <a href="">User Group Slack</a>
+            </li>
+            <a href="dashboard.html">
+              <li
+                class="rounded-[8rem] md:px-14 px-24 py-4 bg-[#F48C06] text-white md:text-xl text-4xl shadow-xl hover:scale-105 active:scale-[0.8] transition ease-in-out"
+              >
+                Login
+              </li>
+            </a>
+          </ul>
+        </nav>
+
+        <section
+          class="flex lg:justify-between lg:flex-row flex-col items-center gap-12 mt-36 w-[110rem] sm:mb-72 mb-44 max-w-[60%]"
+        >
+          <div
+            data-aos="fade-right"
+            data-aos-duration="900"
+            class="flex-1 typeAnimation"
+          >
+            <div
+              class="writeit min-h-[18.5rem] text-center lg:text-left md:text-[3rem] lg:text-[2.6rem] xl:text-[3rem] text-[2.2rem] -mt-12 sm:mt-0 mb-8 sm:mb-0 text-[#191453]"
+            ></div>
+            <p
+              class="text-[#191453]-300 text-2xl leading-10 text-center lg:text-left w-[85%] lg:w-auto mx-auto"
+            >
+              Register an account to start using it. Or, first see the live
+              requests or visible profiles You can also join our user group
+              Slack to get customer support or help us build a better product.
+            </p>
+          </div>
+
+          <div class="flex-1 flex justify-end">
+            <form
+              data-aos="fade-left"
+              data-aos-easing="linear"
+              data-aos-duration="800"
+              class="sm:w-[46rem] px-10 py-14 rounded-2xl bg-white shadow-card"
+            >
+              <input
+                type="email"
+                placeholder="Enter Email"
+                class="w-full p-5 shadow-card text-xl rounded-2xl outline-none"
+              />
+              <p class="text-xl my-6">
+                By clicking "Register for PairTime" you agree to the PairTime
+                <a
+                  href="#"
+                  class="text-[#250CED] underline hover:no-underline transaction ease-in-out font-semibold"
+                  >User Agreement</a
+                >,
+                <a
+                  href="#"
+                  class="text-[#250CED] underline hover:no-underline transaction ease-in-out font-semibold"
+                  >Privacy Policy</a
+                >, and
+                <a
+                  href="#"
+                  class="text-[#250CED] underline hover:no-underline transaction ease-in-out font-semibold"
+                  >Cookie Policy.</a
+                >
+              </p>
+              <div
+                class="flex justify-between flex-col sm:flex-row sm:items-end items:center"
+              >
+                <p class="sm:text-xl text-lg">
+                  Already have an account?
+                  <a
+                    href="#"
+                    class="text-[#250CED] underline hover:no-underline"
+                    >Log in.</a
+                  >
+                </p>
+                <button
+                  class="bg-[#250CED] text-white text-lg px-10 py-4 rounded-2xl shadow-card -mb-3 hover:scale-105 transition ease-in-out mt-6 sm:mt-0"
+                >
+                  Register for PairTime
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <main>
+      <!--------------------- Features Section Starts Here ---------------------->
+      <!------------------------------------------------------------------------->
+      <section class="py-36 overflow-hidden features">
+        <div class="w-[110rem] max-w-[90%] mx-auto">
+          <h2 class="font-bold text-5xl mb-6 text-center lg:text-left">
+            How does it <span class="text-[#E18C5F]">work?</span>
+          </h2>
+          <p
+            class="text-2xl lg:max-w-3xl leading-relaxed text-center lg:text-left"
+          >
+            PairTime is one powerful online software suite that combines all the
+            tools needed to run a successful pair time.
+          </p>
+
+          <div
+            class="flex lg:justify-between lg:flex-row flex-col-reverse lg:-mt-4 mt-24 relative"
+          >
+            <div
+              class="text-9xl absolute lg:left-[37.5%] lg:top-52 left-[96%] top-[52%] -z-10 text-[#00000030]"
+              data-aos="fade-right"
+              data-aos-duration="500"
+            >
+              2
+            </div>
+
+            <div
+              data-aos="fade-right"
+              data-aos-duration="500"
+              class="shadow-card lg:w-2/5 w-full px-12 pb-12 pt-20 rounded-3xl relative bg-white mt-[8rem] mb-[8rem] lg:mb-0 lg:mt-[168px]"
+            >
+              <figure class="h-36 absolute -top-16 left-0 animtaion-infinite">
+                <img
+                  src="./Assets/images/icon-1.svg"
+                  alt="icon"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
+              </figure>
+              <h4 class="font-semibold text-3xl mb-6">
+                We are a revenue generator for both individuals and companies.
+              </h4>
+              <div>
+                <p class="text-2xl text-[#696984] leading-10">
+                  We want to build a community of quality and trust.
+                </p>
+                <p class="text-2xl text-[#696984] leading-10">
+                  Users can choose to go through our verification process, and
+                  they will appear as verified users to others.
+                </p>
+                <p class="text-2xl text-[#696984] leading-10">
+                  We can take legal action in case of fraud, harassment, or any
+                  other crimes from a verified user.
+                </p>
+                <p class="text-2xl text-[#696984] leading-10">
+                  Users can still have pairing sessions with unverified users
+                  but at a higher risk.
+                </p>
+                <p class="text-2xl text-[#696984] leading-10">
+                  To cash out, users have to finish the verification steps.
+                </p>
+              </div>
+            </div>
+
+            <div
+              data-aos="fade-left"
+              data-aos-duration="500"
+              class="shadow-card lg:w-3/6 w-full self-start px-12 pb-12 pt-20 rounded-3xl relative bg-white"
+            >
+              <div class="text-9xl absolute -left-8 -top-16 -z-10 opacity-20">
+                1
+              </div>
+              <figure class="h-20 absolute -top-12 left-8 animtaion-infinite">
+                <img
+                  src="./Assets/images/icon-4.svg"
+                  alt="icon"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
+              </figure>
+              <h4 class="font-semibold text-3xl mb-6">
+                You are protected by the platform.
+              </h4>
+              <ul>
+                <li class="text-2xl text-[#696984] leading-10">
+                  No other users can see your sensitive information such as
+                  email and address.
+                </li>
+                <li class="text-2xl text-[#696984] leading-10">
+                  As a buyer or seller, you are technically exchanging services
+                  with PairTime.
+                </li>
+                <li class="text-2xl text-[#696984] leading-10">
+                  PairTime will be your counterparty on invoices and
+                  contracts(coming soon).
+                </li>
+                <li class="text-2xl text-[#696984] leading-10">
+                  When you top up your account, you buy pairing credits from
+                  PairTime, and pay tax on it when applicable.
+                </li>
+                <li class="text-2xl text-[#696984] leading-10">
+                  The tax rate is calculated based on your billing profile.
+                </li>
+                <li class="text-2xl text-[#696984] leading-10">
+                  When you cash out, you technically sell pairing credits back
+                  to PairTime (after PairTime deducting 10.0% as a service fee.)
+                </li>
+                <li class="text-2xl text-[#696984] leading-10">
+                  On those credit buybacks, PairTime will pay the VAT or sales
+                  tax to you when applicable. Again, the tax rate is calculated
+                  based on your billing profile.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--------------------- Facilities Section Starts Here ---------------------->
+      <!------------------------------------------------------------------------->
+      <section>
+        <div
+          class="w-[110rem] max-w-[90%] mx-auto lg:py-36 py-0 -mt-20 sm:mt-0"
+        >
+          <h2 class="font-bold text-5xl mb-6 text-center lg:text-left">
+            Need
+            <span class="text-[#E18C5F]">Pairing?</span>
+          </h2>
+
+          <div
+            class="flex flex-col-reverse lg:justify-between lg:flex-row gap-10 mt-16 lg:pl-12 p-0"
+          >
+            <ul
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              class="relative flex-1 lg:mt-0"
+            >
+              <figure class="absolute top-10 left-0 -z-10 h-[65%]">
+                <img
+                  src="./Assets/images/vector_12.png"
+                  alt="Vector Curve"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
+              </figure>
+
+              <li class="flex items-center gap-10 mb-10">
+                <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+                  <img
+                    src="./Assets/images/icon-3.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  Create a minimal profile that your pair will see.
+                </p>
+              </li>
+
+              <li class="flex items-center gap-10 mb-10">
+                <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+                  <img
+                    src="./Assets/images/icon-4.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  If you want to use paid pairing services, you also need a
+                  billing profile visible only to us.
+                </p>
+              </li>
+
+              <li class="flex items-center gap-10 mb-10">
+                <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+                  <img
+                    src="./Assets/images/icon-5.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  Create a post describing what you want to achieve with your
+                  pair, and with your time and budget. Share only public
+                  information in it.
+                </p>
+              </li>
+
+              <li class="flex items-center gap-10 mb-10">
+                <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+                  <img
+                    src="./Assets/images/icon-6.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  Wait for offers to come. You will get emails. When you accept
+                  one, the pairing session is scheduled, and you will get an
+                  email with an event calendar.
+                </p>
+              </li>
+
+              <li class="flex items-center gap-10 mb-10">
+                <figure
+                  class="h-20 w-[5rem] shadow-icon rounded-full self-start mt-6"
+                >
+                  <img
+                    src="./Assets/images/icon-7.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  After the session, credits will immediately move from your
+                  account to your pair's. The amount is calculated based on the
+                  actual meeting time and your pair's hourly rate. If your
+                  session is taking longer than what your balance would allow,
+                  we allow you to continue the meeting. You will be redirected
+                  to a top-up page after the meeting.
+                </p>
+              </li>
+            </ul>
+
+            <div
+              data-aos="zoom-in-up"
+              class="flex-1 flex justify-center items-center"
+            >
+              <!-- <div class="flex justify-center">
+                <figure class="w-[35rem] lg:w-full">
+                  <img
+                    src="./Assets/images/guy-with-phone.png"
+                    alt="Guy with phone"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+              </div> -->
+
+              <div class="w-[30rem] lg:w-[45rem] relative">
+                <div
+                  class="h-[75%] w-[75%] absolute top-[20%] left-[18%] rounded-full bg-white -z-10 shadow-guyPhone"
+                ></div>
+                <figure class="h-full w-full">
+                  <img src="./Assets/images/guy.png" alt="" class="h-full w-full" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--------------------- Offers Section Starts Here ---------------------->
+      <!------------------------------------------------------------------------->
+      <section class="overflow-hidden">
+        <div class="w-[110rem] max-w-[90%] mx-auto md:py-36 mt-20 sm:mt-0">
+          <h2 class="font-bold text-5xl mb-6 text-center">
+            Offer <span class="text-[#E18C5F]">Pairing?</span>
+          </h2>
+
+          <div
+            class="flex lg:justify-between lg:flex-row flex-col gap-10 mt-16 lg:pl-12 p-0"
+          >
+            <div data-aos="fade-left" class="relative flex-1 order-2">
+              <figure class="absolute top-20 left-8 -z-10 h-[80%]">
+                <img
+                  src="./Assets/images/vector_13.png"
+                  alt="Vector Curve"
+                  loading="lazy"
+                  class="h-full w-full"
+                />
+              </figure>
+
+              <div class="flex items-center gap-10 mb-10">
+                <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+                  <img
+                    src="./Assets/images/icon-3.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  You need a service profile besides your base profile to
+                  receive relevant recommendations.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-10 mb-10">
+                <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+                  <img
+                    src="./Assets/images/icon-4.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  You don't need a billing profile to start providing paid
+                  services. You can't cash out until you have finished the
+                  verification steps.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-10 mb-10">
+                <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+                  <img
+                    src="./Assets/images/icon-5.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  You can see new requests that match your service profile under
+                  "View service requests". You can also browse all live posts if
+                  you want.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-10 mb-10">
+                <figure class="h-20 w-[5rem] shadow-icon rounded-full">
+                  <img
+                    src="./Assets/images/icon-6.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  You can submit your offers to requests that you want to help
+                  with. When your offer has been accepted, the pairing session
+                  is scheduled and you will get an email with an event calendar.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-10 mb-10">
+                <figure
+                  class="h-20 w-[5rem] shadow-icon rounded-full self-start mt-6"
+                >
+                  <img
+                    src="./Assets/images/icon-7.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  After the session, credits will immediately move from your
+                  pair's account to yours if there is enough balance. The amount
+                  is calculated based on the actual meeting time and your hourly
+                  rate. If your pair's account doesn't have enough to pay, we
+                  will redirect your pair to a top-up page after the meeting. We
+                  will eventually guarantee you always get what you've worked
+                  for.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-10 mb-10">
+                <figure
+                  class="h-20 w-[5rem] shadow-icon rounded-full self-start mt-6"
+                >
+                  <img
+                    src="./Assets/images/icon-7.png"
+                    alt="icon"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+                <p class="text-2xl flex-1 leading-10">
+                  When you cash out, we immediately send a recipient created
+                  invoice to you, but you will receive the money (including tax
+                  whenever applicable) on your bank account in about a week
+                  because Stripe payout has to follow a weekly or monthly cycle.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex-1 flex justify-center">
+              <div data-aos="fade-right">
+                <figure class="h-[90%] lg:w-[90%] w-[35rem]">
+                  <img
+                    src="./Assets/images/laughing-girl.png"
+                    alt="Girl Smiling"
+                    loading="lazy"
+                    class="h-full w-full"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--------------------- Build Section Starts Here ---------------------->
+      <!------------------------------------------------------------------------->
+      <section class="overflow-hidden">
+        <div
+          class="flex lg:justify-between lg:flex-row flex-col-reverse w-[110rem] max-w-[90%] mx-auto"
+        >
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            class="w-full mt-16 lg:mt-0"
+          >
+            <div class="w-[100%]">
+              <div class="build-info-img relative">
+                <div class="flex absolute sm:bottom-[11rem] bottom-[25%]">
+                  <button
+                    data-aos="zoom-in"
+                    class="bg-[#3465E1] text-2xl font-bold text-white rounded-[5rem] tracking-wider sm:w-[123px] w-[10rem] py-4 cursor-pointer mr-3 border-[0.375rem] border-[translate] hover:scale-105 transition ease-in-out"
+                    id="present-btn"
+                  >
+                    Present
+                  </button>
+                  <button
+                    data-aos="zoom-in"
+                    class="bg-[#E13468] text-2xl font-bold text-white rounded-[5rem] tracking-wider sm:w-[123px] w-[10rem] py-4 flex justify-center items-center cursor-pointer border-[0.375rem] border-[#F2C6D0] hover:scale-105 transition ease-in-out"
+                    id="call-btn"
+                  >
+                    <img
+                      style="height: 13px; width: 12px"
+                      src="./Assets/images/vector_14.png"
+                      alt="Vector Curve"
+                      loading="lazy"
+                      class="mr-4"
+                    />
+                    Cal
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-left" class="flex-2/5 mt-20 lg:ml-12 ml:0">
+            <h2 class="font-bold text-5xl mb-6 text-center lg:text-left">
+              Why we <span class="text-[#E18C5F]">build it?</span>
+            </h2>
+            <p
+              class="text-2xl flex-1 leading-10 mb-12 text-[#696984] text-center lg:text-left"
+            >
+              The founder wanted to make his work more productive by having
+              easier access to an expert pair in urgent situations.
+            </p>
+            <p
+              class="text-2xl flex-1 leading-10 mb-12 text-[#696984] text-center lg:text-left"
+            >
+              So why not have a free market where everyone can participate?
+            </p>
+            <p
+              class="text-2xl flex-1 leading-10 text-[#696984] text-center lg:text-left"
+            >
+              We are trying hard to build an open and transparent platform for
+              pair problem solving and interactive learning.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--------------------- Testimonials Section Starts Here ---------------------->
+      <!------------------------------------------------------------------------->
+      <section class="w-full pt-28 overflow-hidden">
+        <div
+          class="w-[110rem] max-w-[90%] mx-auto flex lg:justify-between lg:flex-row flex-col"
+        >
+          <div
+            data-aos="fade-right"
+            class="flex-1 lg:pr-52 text-center lg:text-left mb-[5rem] lg:[mb-0]"
+          >
+            <h4
+              class="flex items-center justify-center lg:justify-start uppercase tracking-[2px] text-xl"
+            >
+              <span
+                class="w-20 h-[0.05rem] lg:block hidden bg-gray-400 mr-10"
+              ></span>
+              Testimonial
+            </h4>
+            <h2 class="font-bold text-5xl mb-12 mt-8">
+              What They <span class="text-[#E18C5F]">Say?</span>
+            </h2>
+            <p class="text-2xl flex-1 leading-10 mb-12">
+              PairTime has got more than 100k positive ratings from our users
+              around the world.
+            </p>
+            <p class="text-2xl flex-1 leading-10 mb-12">
+              All of the buyers and sellers were greatly helped by the PairTime.
+            </p>
+            <p class="text-2xl flex-1 leading-10 mb-12">Are you too? Join us</p>
+
+            <div class="flex justify-center lg:justify-start">
+              <button
+                class="border border-orange-500 rounded-full text-xl text-[#E18C5F] pl-8 pr-28 h-16 shadow hover:shadow-lg"
+              >
+                See more Reviews
+              </button>
+
+              <figure
+                class="h-16 w-16 bg-white -ml-16 border text-3xl text-[#E18C5F] border-orange-500 rounded-full m-0 cursor-pointer flex justify-center items-center"
+              >
+                &#8594;
+              </figure>
+            </div>
+          </div>
+
+          <div
+            data-aos="fade-left"
+            class="relative overflow-hidden sm:w-[50rem] w-[36.5rem] mx-auto"
+          >
+            <button
+              class="absolute h-[5rem] w-[10rem] top-[12rem] sm:left-[25.4rem] left-[20rem] z-50 border-none outline-none"
+              id="carousel-btn"
+            >
+              <img src="./Assets/images/icon-3.svg" alt="icon" loading="lazy" />
+            </button>
+
+            <div
+              class="w-full flex gap-[6.5rem] sm:gap-[10rem] carousel-container"
+              id="carousel-container"
+            >
+              <div class="client-card">
+                <figure class="sm:w-[30rem] w-[25rem]">
+                  <img
+                    src="./Assets/images/happy-girl.svg"
+                    alt="Happy Customer Image"
+                    loading="lazy"
+                    class="w-full h-full"
+                  />
+                </figure>
+                <div
+                  class="self-end bg-white sm:w-[40rem] w-[30rem] sm:shadow-client shadow-client_sm rounded-2xl px-12 py-8 border-l-8 border-orange-500 translate-x-[15%] -translate-y-20 sm:-translate-y-40"
+                >
+                  <p class="border-l-2 pl-8 py-4 text-xl leading-10 mb-12">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an .
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-2xl font-bold">Gloria Rose</h3>
+                    <p class="text-[#80819A] text-lg cursor-pointer">
+                      12 review at Yelp
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="client-card">
+                <figure class="sm:w-[30rem] w-[25rem]">
+                  <img
+                    src="./Assets/images/happy-girl.svg"
+                    alt="Happy Customer Image"
+                    loading="lazy"
+                    class="w-full h-full"
+                  />
+                </figure>
+                <div
+                  class="self-end bg-white sm:w-[40rem] w-[30rem] sm:shadow-client shadow-client_sm rounded-2xl px-12 py-8 border-l-8 border-orange-500 translate-x-[15%] -translate-y-20 sm:-translate-y-40"
+                >
+                  <p class="border-l-2 pl-8 py-4 text-xl leading-10 mb-12">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an .
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-2xl font-bold">Gloria Rose</h3>
+                    <p class="text-[#80819A] text-lg cursor-pointer">
+                      12 review at Yelp
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="client-card">
+                <figure class="sm:w-[30rem] w-[25rem]">
+                  <img
+                    src="./Assets/images/happy-girl.svg"
+                    alt="Happy Customer Image"
+                    loading="lazy"
+                    class="w-full h-full"
+                  />
+                </figure>
+                <div
+                  class="self-end bg-white sm:w-[40rem] w-[30rem] sm:shadow-client shadow-client_sm rounded-2xl px-12 py-8 border-l-8 border-orange-500 translate-x-[15%] -translate-y-20 sm:-translate-y-40"
+                >
+                  <p class="border-l-2 pl-8 py-4 text-xl leading-10 mb-12">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an .
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-2xl font-bold">Gloria Rose</h3>
+                    <p class="text-[#80819A] text-lg cursor-pointer">
+                      12 review at Yelp
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--------------------- Charges Section Starts Here ---------------------->
+      <!------------------------------------------------------------------------->
+      <section>
+        <div
+          class="relative min-h-[30rem] flex justify-center items-center p-10 md:p-0 charges-container"
+        >
+          <figure
+            class="md:flex hidden absolute top-0 left-0 -z-10 h-full w-full"
+          >
+            <img
+              src="./Assets/images/bg-black.png"
+              alt="Background Dark Color"
+              loading="lazy"
+              class="h-full w-full"
+            />
+          </figure>
+
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="500"
+            class="w-[110rem] max-w-[90%] mx-auto text-center text-white py-12"
+          >
+            <h2 class="font-bold text-5xl mb-6">
+              How we <span class="text-[#E18C5F]">Charge?</span>
+            </h2>
+            <p class="text-2xl flex-1 leading-[4rem]">
+              We charge you only when you want to convert credits earned on
+              PairTime to money on your bank account. We take 10.0% as a service
+              fee.
+            </p>
+            <p class="text-2xl flex-1 leading-[4rem]">
+              There are absolutely zero charges on any credit transaction on
+              PairTime itself, which means no cost for you to spend what you
+              have earned or to donate to our scholarship program.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--------------------- Footer Section Starts Here ---------------------->
+    <!------------------------------------------------------------------------->
+
+    <footer class="relative overflow-hidden">
+      <div class="w-[110rem] max-w-[90%] mx-auto">
+        <div
+          data-aos="zoom-in-up"
+          data-aos-duration="700"
+          class="flex justify-between gap-10 flex-wrap sm:my-36 my-20"
+        >
+          <div
+            class="lg:w-72 w-full flex flex-col items-center lg:items-start lg:justify-start"
+          >
+            <figure class="w-[12rem] mb-6">
+              <img
+                src="./Assets/images/pair-time.svg"
+                alt="Company Logo"
+                loading="lazy"
+              />
+            </figure>
+            <p class="text-lg leading-10 text-center lg:text-left">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy
+            </p>
+          </div>
+
+          <div class="flex justify-between flex-wrap sm:flex-nowrap flex-1">
+            <div
+              class="sm:flex-1 flex-[33%] flex lg:justify-center justify-start"
+            >
+              <ul class="flex flex-col justify-between">
+                <h3 class="font-bold text-2xl">Company</h3>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out py-4"
+                >
+                  <a href="">Live Requests</a>
+                </li>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out py-4"
+                >
+                  <a href="show-all.html">Visible Profiles</a>
+                </li>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out pt-4"
+                >
+                  <a href="">User Slack Group</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sm:flex-1 flex-[33%] flex justify-center">
+              <ul class="flex flex-col justify-between">
+                <h3 class="font-bold text-2xl">Contact</h3>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out"
+                >
+                  <a href="">Help/FAQ</a>
+                </li>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out"
+                >
+                  <a href="">About Us</a>
+                </li>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out"
+                >
+                  <a href="">Contact</a>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="sm:flex-1 flex-[33%] flex sm:justify-center justify-end"
+            >
+              <ul class="flex flex-col justify-between">
+                <h3 class="font-bold text-2xl">More</h3>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out"
+                >
+                  <a href="">Pairing</a>
+                </li>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out"
+                >
+                  <a href="">How we work?</a>
+                </li>
+                <li
+                  class="text-xl hover:text-orange-500 transition ease-in-out"
+                >
+                  <a href="">Testimonials</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="flex flex-col w-[18rem] mt-24 sm:ml-28 sm:mt-0 mx-auto">
+              <ul class="flex justify-between">
+                <li>
+                  <a href="" class="m-0">
+                    <img
+                      src="./Assets/images/facebook-icon.png"
+                      alt="Facebook Icon"
+                      loading="lazy"
+                      class="shadow-iconSocial rounded-full hover:scale-10 hover:scale-105 transition ease-in-out"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img
+                      src="./Assets/images/instagram.png"
+                      alt="Instagram Icon"
+                      loading="lazy"
+                      class="shadow-iconSocial rounded-full hover:scale-10 hover:scale-105 transition ease-in-out"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img
+                      src="./Assets/images/twitter.png"
+                      alt="Twitter Icon"
+                      loading="lazy"
+                      class="shadow-iconSocial rounded-full hover:scale-10 hover:scale-105 transition ease-in-out"
+                    />
+                  </a>
+                </li>
+              </ul>
+              <div class="mt-12">
+                <h3 class="text-xl mb-4 text-center lg:text-left">
+                  Discover our app
+                </h3>
+                <ul class="flex justify-between gap-4">
+                  <li>
+                    <a href="">
+                      <img
+                        class="hover:scale-10 hover:scale-105 transition ease-in-out"
+                        src="./Assets/images/play-store.png"
+                        alt="Google Play Store Icon"
+                        loading="lazy"
+                      />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img
+                        class="hover:scale-10 hover:scale-105 transition ease-in-out"
+                        src="./Assets/images/apple-store.svg"
+                        alt="Apple Store Icon"
+                        loading="lazy"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p
+          class="mx-24 py-10 border-t border-t-orange-100 text-2xl text-center text-[#B2B3CF]"
+        >
+          © 2021 PairTime Inc.
+        </p>
+      </div>
+
+      <div
+        class="absolute -bottom-[10rem] -right-[20rem] w-[30rem] h-[30rem] rounded-full bg-[#250CED] blur-[25rem]"
+      ></div>
+    </footer>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            boxShadow: {
+              card: "0px 10px 60px rgba(38, 45, 118, 0.08)",
+              input: "-10px 30px 70px rgba(219, 222, 225, 0.4)",
+              icon: "0px 15px 44px rgba(13, 15, 28, 0.12)",
+              client: "2px 3px 30px rgba(41, 44, 124, 0.1)",
+              client_sm: "2px 2px 20px rgba(41, 44, 124, 0.1)",
+              iconSocial: "0px 2px 10px rgba(0, 0, 0, 0.1)",
+              guyPhone:
+                "0px 92.691px 190.916px rgba(0, 0, 0, 0.07), 0px 34.2227px 72.2657px rgba(0, 0, 0, 0.0529883), 0px 14.8528px 33.8133px rgba(0, 0, 0, 0.0474983), 0px 6.04018px 15.9177px rgba(0, 0, 0, 0.0432167), 0px 1.8272px 6.64643px rgba(0, 0, 0, 0.0377011), 0px 0.132325px 1.94727px rgba(0, 0, 0, 0.0279548)",
+            },
+            colors: {
+              clr_black: "#191453",
+              clr_blue: "#250CED",
+            },
+          },
+        },
+      };
+    </script>
+    <script>
+      AOS.init({
+        useClassNames: true,
+        initClassName: false,
+        animatedClassName: "animated",
+      });
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>
