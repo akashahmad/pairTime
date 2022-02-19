@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-  <title>Show All - PairTime</title>
+  <title>Live Request</title>
 </head>
 
 <body>
@@ -115,134 +115,40 @@
           </div>
 
           <div class="center h-[88vh] md:ml-[210px]">
-            <p class="text-clr_black text-2xl  flex">PairTime > Visible Profile <span class="hidden text-clr_black text-2xl "
-                id="show-profiles-link">  > Show All </span></p>
+            <p class="text-clr_black text-2xl  flex">PairTime > Live requests</p>
             <div class="flex flex-col md:flex-row justify-between items-center mt-12 md:mt-0">
               <p class="text-clr_black text-4xl font-bold mt-4 mb-6 flex-1 ">
-                You have no services available!
+                Browse posts by tag
               </p>
-              <p class="mr-4 text-xl">
-                You have <span class="font-bold">(124)</span> services
-                available in this action
-              </p>
-              <button class="bg-clr_blue text-xl py-3 px-6 text-white rounded-2xl hover:shadow-btn mt-6 md:mt-0"
-                onclick="displayToggle([`all-services-list`,`show-profiles-link`])
-                displayNone(`bubble-yellow`)">
-                <a>
-                  Show All
-                </a>
-              </button>
-            </div>
-            <div class="services-listing hidden" id="all-services-list">
-              <div class="single-service bg-white rounded-lg px-9 py-6 mt-8">
-                <div class="flex md:flex-row justify-between flex-col-reverse items-center">
-                  <div class="flex">
-                    <div>
-                      <img src="./Assets/images/service-provider.png" alt="service-provider" />
-                    </div>
-                    <div class="pl-12 w-[100%]">
-                      <p class="text-lg "><span
-                          class="text-clr_blue_light font-extrabold opacity-40 pr-1 ">Username: </span><span
-                          class="text-clr_blue font-extrabold underline">Zhenhao Li</span></p>
-                      <div class="flex">
-                        <p><span
-                            class="text-clr_blue_light font-extrabold opacity-40 pr-1 text-lg ">Bio:</span>
-                        </p>
-                        <p class="text-lg text-clr_black capitalize "><span
-                            class="text-clr_blue underline opacity-90 text-lg "> Zhenhao</span> is the
-                          founder of PairTime. He contributed to a few open source projects, but is a maintainer of
-                          none.Zhenhao is the founder of PairTime. He contributed to a few open source projects, but is
-                          a maintainer of none.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="md:w-[35%] w-[100%] text-right">
-                    <button class="bg-clr_blue text-xl py-3 px-6 text-white rounded-2xl hover:shadow-btn">
-                      Request a Pairing session
-                    </button>
-                  </div>
-                </div>
-                <p class="text-lg text-clr_black capitalize pt-2 ">In 2015,<span
-                    class="text-clr_blue underline opacity-90 text-lg">Zhenhao </span>dropped out of his PhD program in
-                  mathematical logic to explore the tech world.</br>
-                  He worked as a junior consultant at Accenture for 1.5 years, helping clients with their data
-                  challenges using Spark, Flink, and Kafka. Then, he worked as a data scientist and data engineer at
-                  Connecterra, an AI startup in Amsterdam, for more than 2 years, putting ML models into production and
-                  building ETL pipelines and feature engineering pipelines.
-                </p>
-                <p class="text-lg text-clr_black capitalize pt-10 ">
-                  In 2019, Zhenhao became an independent consultant to bootstrap his startup project PairTime, the
-                  product you are using now.
-                </p>
-                <ul class="text-lg text-clr_black capitalize pt-4 pl-10 ">
-                  <p>Areas that<span
-                      class="text-clr_blue underline opacity-90 text-lg "> Zhenhao</span> can help you with:
-                  </p>
-                  <li>
-                    1. big data tech such as Spark, Flink, and Kafka</li>
-                  <li> 2. machine learning applications</li>
-                  <li>3. domain driven design</li>
-                  <li>4. event driven architecture</li>
-                  <li> 5. event sourcing</li>
-                  <li> 6. distributed systems and Akka</li>
-                  <li> 7. functional programming and the actor model</li>
-                </ul>
-              </div>
-              <div class="single-service bg-white rounded-lg px-9 py-6 mt-12">
-                <div class="flex md:flex-row justify-between flex-col-reverse items-center">
-                  <div class="flex">
-                    <div>
-                      <img src="./Assets/images/service-provider-second.png" alt="service-provider" />
-                    </div>
-                    <div class="pl-12 w-[100%]">
-                      <p class="text-lg "><span
-                          class="text-clr_blue_light font-extrabold opacity-50 pr-1">Username: </span><span
-                          class="text-clr_blue font-extrabold underline">Robert Hensing</span></p>
-                      <div class="flex">
-                        <p><span
-                            class="text-clr_blue_light font-extrabold opacity-50 pr-1 text-lg ">Bio:</span>
-                        </p>
-                        <p class="text-lg text-clr_black capitalize "><span
-                            class="text-clr_blue underline opacity-90 text-lg "> Robert Hensing</span> is
-                          the founder of PairTime. He contributed to a few open source projects, but is a maintainer of
-                          none.Zhenhao is the founder of PairTime. He contributed to a few open source projects, but is
-                          a maintainer of none.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="md:w-[35%] w-[100%] text-right">
-                    <button class="bg-clr_blue text-xl py-3 px-6 text-white rounded-2xl hover:shadow-btn">
-                      Request a Pairing session
-                    </button>
-                  </div>
-                </div>
-                <p class="text-lg text-clr_black capitalize pt-2 ">In 2015,<span
-                    class="text-clr_blue underline opacity-90 text-lg">Robert Hensing </span>dropped out of his PhD
-                  program in mathematical logic to explore the tech world.</br>
-                  He worked as a junior consultant at Accenture for 1.5 years, helping clients with their data
-                  challenges using Spark, Flink, and Kafka. Then, he worked as a data scientist and data engineer at
-                  Connecterra, an AI startup in Amsterdam, for more than 2 years, putting ML models into production and
-                  building ETL pipelines and feature engineering pipelines.
-                </p>
-                <p class="text-lg text-clr_black capitalize pt-10 ">
-                  In 2019, Robert Hensing became an independent consultant to bootstrap his startup project PairTime,
-                  the product you are using now.
-                </p>
-                <ul class="text-lg text-clr_black capitalize pt-4 pl-10 ">
-                  <p>Areas that<span
-                      class="text-clr_blue underline opacity-90 text-lg "> Zhenhao</span> can help you with:
-                  </p>
-                  <li>
-                    1. big data tech such as Spark, Flink, and Kafka</li>
-                  <li> 2. machine learning applications</li>
-                  <li>3. domain driven design</li>
-                  <li>4. event driven architecture</li>
-                  <li> 5. event sourcing</li>
-                  <li> 6. distributed systems and Akka</li>
-                  <li> 7. functional programming and the actor model</li>
-                </ul>
+              <div class="search-bar relative">
+                <input type="text" placeholder="Filter tags"
+                  class="w-96 pl-12 pr-4 py-4 text-lg rounded-2xl border-none outline-none  placeholder-primary" />
+                <img src="./Assets/images/search.svg" alt="Search Icon" loading="lazy" class="absolute top-4 left-4" />
               </div>
             </div>
+          <div class="w-[80%] mx-auto flex flex-wrap justify-between">
+              <div class="bg-white w-[23%] py-12 px-5 rounded-xl mt-8">
+                <p class="text-clr_black text-2xl font-semibold">knowledge work</p>
+                <p class="text-clr_black text-xl font-normal pt-4"><span class="font-semibold">124 </span>post</p>
+              </div>
+              <div class="bg-white w-[23%] py-12 px-5 rounded-xl mt-8">
+                <p class="text-clr_black text-2xl font-semibold">group-held knowledge</p>
+                <p class="text-clr_black text-xl font-normal pt-4"><span class="font-semibold">124 </span>post</p>
+              </div>
+              <div class="bg-white w-[23%] py-12 px-5 rounded-xl mt-8">
+                <p class="text-clr_black text-2xl font-semibold">value</p>
+                <p class="text-clr_black text-xl font-normal pt-4"><span class="font-semibold">124 </span>post</p>
+              </div>
+              <div class="bg-white w-[23%] py-12 px-5 rounded-xl mt-8">
+                <p class="text-clr_black text-2xl font-semibold">records</p>
+                <p class="text-clr_black text-xl font-normal pt-4"><span class="font-semibold">124 </span>post</p>
+              </div>
+              <div class="bg-white w-[23%] py-12 px-5 rounded-xl mt-8">
+                <p class="text-clr_black text-2xl font-semibold">korolevk</p>
+                <p class="text-clr_black text-xl font-normal pt-4"><span class="font-semibold">124 </span>post</p>
+              </div>
+              
+          </div>
           </div>
         </div>
 
