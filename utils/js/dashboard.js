@@ -1,16 +1,16 @@
-const dashboardOpenBtn = document.getElementById("dashb-nav-openBtn");
-const dashboardCloseBtn = document.getElementById("dashb-nav-closeBtn");
+const dashboardNavOpenBtn = document.getElementById("dashb-nav-openBtn");
+const dashboardNavCloseBtn = document.getElementById("dashb-nav-closeBtn");
 const sidebar = document.getElementById("sidebar");
 
-console.log(dashboardOpenBtn);
+console.log(dashboardNavOpenBtn);
+console.log(dashboardNavCloseBtn);
+console.log(sidebar);
 
-dashboardOpenBtn.addEventListener("click", (e) => {
-  console.log("clicked", e);
+dashboardNavOpenBtn.addEventListener("click", (e) => {
+  console.log(e.target);
   sidebar.style.left = "0";
 });
 
-dashboardCloseBtn.addEventListener("click", () => {
+dashboardNavCloseBtn.addEventListener("click", () => {
   sidebar.style.left = "-100%";
 });
-
-console.log("dashboard");
