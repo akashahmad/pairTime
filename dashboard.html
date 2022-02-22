@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./utils/css/styles.css" />
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./utils/css/styles.css" />
 
     <title>Dashboard - PairTime</title>
   </head>
@@ -62,9 +62,9 @@
                     class="h-12 md:w-12 w-10"
                   />
                 </a>
-                <!-- <button class="text-clr_bluehidden" id="dashb-nav-openBtn">
-                  <i class="fas fa-bars text-4xl" id="nav-open-btn"></i>
-                </button> -->
+                <button class="text-clr_blue" id="dashb-nav-openBtn">
+                  <i class="fas fa-bars text-4xl"></i>
+                </button>
               </div>
             </div>
             <div
@@ -152,7 +152,7 @@
 
         <section class="w-full relative overflow-hidden">
           <div class="w-[90%] mx-auto">
-            <div class="top h-[12vh] flex justify-between items-center">
+            <div class="h-[12vh] flex justify-between items-center pt-6">
               <div class="search-bar relative">
                 <input
                   type="text"
@@ -191,20 +191,20 @@
               </div>
             </div>
 
-            <div class="center h-[88vh] flex justify-center items-center">
+            <div class="center min-h-[88vh] flex justify-center items-center">
               <div
                 class="content text-center flex flex-col items-center relative"
               >
-                <p class="text-[#707EAE] font-bold text-4xl py-2">
+                <p class="text-[#707EAE] font-bold text-xl py-1">
                   Hi, Jorje Doe
                 </p>
-                <p class="text-[#191453] text-6xl font-bold py-2">Welcome to</p>
-                <p class="text-[#e18c5f] text-5xl font-bold py-2 mb-2">
+                <p class="text-[#191453] text-4xl font-bold py-1">Welcome to</p>
+                <p class="text-[#e18c5f] text-3xl font-bold py-1 mb-1">
                   PairTime
                 </p>
                 <a href="create-post.html">
                   <button
-                    class="bg-clr_blue text-white text-xl font-semibold flex items-center py-4 px-6 rounded-2xl gap-4 hover:shadow-btn"
+                    class="bg-clr_blue text-white text-sm font-semibold flex items-center py-3 px-4 rounded-xl gap-3 hover:shadow-btn"
                   >
                     <img
                       src="./utils/images/icon-10.svg"
@@ -217,18 +217,18 @@
                 </a>
                 <a
                   href="service-profile.html"
-                  class="text-[#5A5881] font-semibold text-xl underline py-4 hover:text-clr_blue"
+                  class="text-[#5A5881] font-semibold text-sm underline py-2 hover:text-clr_blue"
                   >Create Service Profile</a
                 >
 
-                <div class="absolute -right-60 -top-8">
-                  <figure class="w-44 animtaion-infinite">
+                <div class="absolute -right-40 -top-2">
+                  <figure class="w-28 animtaion-infinite">
                     <img src="./utils/images/icon-16.svg" alt="" />
                   </figure>
                 </div>
 
-                <div class="absolute -left-52 -top-20">
-                  <figure class="w-44 animtaion-infinite">
+                <div class="absolute -left-40 -top-12">
+                  <figure class="w-28 animtaion-infinite">
                     <img src="./utils/images/icon-15.svg" alt="" />
                   </figure>
                 </div>
@@ -236,12 +236,12 @@
             </div>
           </div>
 
-          <div class="circle absolute -left-12 -bottom-16 animtaion-infinite">
+          <div class="circle absolute -left-8 -bottom-10 animtaion-infinite">
             <div
-              class="circle-1 absolute left-8 bottom-[9.5rem] bg-[#33D9EF] w-8 h-8 rounded-full"
+              class="circle-1 absolute left-5 bottom-[6.2rem] bg-[#33D9EF] w-5 h-5 rounded-full"
             ></div>
             <div
-              class="circle-1 bg-[#F48C06] w-44 h-44 relative z-10 rounded-full"
+              class="circle-1 bg-[#F48C06] w-28 h-28 relative z-10 rounded-full"
             ></div>
           </div>
         </section>
@@ -266,6 +266,6 @@
         },
       };
     </script>
-    <script src="./dashboard.js"></script>
+    <script src="./utils/js/dashboard.js"></script>
   </body>
 </html>

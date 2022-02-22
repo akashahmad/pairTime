@@ -9,14 +9,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Catamaran", sans-serif !important;
-}
-html {
-  color: #191453;
 }
 
-html.dashboard {
-  font-family: "Poppins", sans-serif;
+body {
+  font-family: "Catamaran", sans-serif;
+  color: #191453;
 }
 
 .active-nav {
@@ -63,7 +60,7 @@ button {
   min-height: 421px;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 26.5625em) {
   .build-info-img {
     min-height: 250px;
   }
@@ -103,6 +100,9 @@ button {
 
 /* ///////////////////////// STYLING APPLICABLE TO DASHBOARD ///////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////////////////////////////// */
+html.dashboard body {
+  font-family: "Poppins", sans-serif;
+}
 
 .display-block {
   display: block !important;
