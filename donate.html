@@ -20,7 +20,7 @@
     <main class="min-h-screen bg-[#F7F8FB]">
       <div class="h-screen mx-auto flex">
         <aside
-          class="h-screen absolute top-0 -left-full z-50 w-full bg-[#00000080] md:relative md:top-0 md:left-0 md:w-[16rem] lg:w-80 transition-all ease-in"
+          class="h-screen absolute top-0 -left-full z-50 w-full bg-[#00000080] md:fixed md:top-0 md:left-0 md:w-[12rem] lg:w-64 transition-all ease-in"
           id="sidebar"
         >
           <button
@@ -31,11 +31,11 @@
           </button>
 
           <nav
-            class="w-[70%] bg-white h-screen flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
+            class="w-[70%] bg-white h-full flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
           >
             <div class="flex justify-between items-center">
               <a href="dashboard.html">
-                <figure class="w-full px-5 py-6">
+                <figure class="w-full px-3 py-6">
                   <img
                     src="./utils/images/pair-time.svg"
                     alt="Company Logo"
@@ -80,7 +80,7 @@
                     alt="Icon"
                     loading="lazy"
                   />
-                  <span class="ml-2 text-xs lg:text-sm font-semibold"
+                  <span class="ml-2 text-xs lg:text-sm font-medium"
                     >Create A Post</span
                   >
                 </a>
@@ -96,7 +96,7 @@
                     alt="Icon"
                     loading="lazy"
                   />
-                  <span class="ml-2 text-xs lg:text-sm font-semibold"
+                  <span class="ml-2 text-xs lg:text-sm font-medium"
                     >Fill Out Your Service Profile</span
                   >
                 </a>
@@ -112,7 +112,7 @@
                     alt="Icon"
                     loading="lazy"
                   />
-                  <span class="ml-2 text-xs lg:text-sm font-semibold"
+                  <span class="ml-2 text-xs lg:text-sm font-medium"
                     >Live Request</span
                   >
                 </a>
@@ -128,7 +128,7 @@
                     alt="Icon"
                     loading="lazy"
                   />
-                  <span class="ml-2 text-xs lg:text-sm font-semibold"
+                  <span class="ml-2 text-xs lg:text-sm font-medium"
                     >Visible Profiles</span
                   >
                 </a>
@@ -145,16 +145,20 @@
                     loading="lazy"
                   />
                   <span
-                    class="ml-2 text-xs lg:text-sm font-semibold text-[#FF5223]"
+                    class="ml-2 text-xs lg:text-sm font-medium text-[#FF5223]"
                     >Logout</span
                   >
                 </a>
               </li>
             </ul>
           </nav>
+
+          <div
+            class="absolute -z-10 -right-2 -bottom-1 bg-[#33D9EF] w-4 h-4 rounded-full animtaion-infinite"
+          ></div>
         </aside>
 
-        <section class="w-full relative overflow-hidden">
+        <section class="w-full relative md:ml-[12rem] lg:ml-64 min-h-screen">
           <div class="w-[90%] mx-auto">
             <div
               class="md:h-[12vh] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
@@ -214,41 +218,50 @@
               </div>
             </div>
 
-            <div class="center h-[88vh]">
-              <p class="text-clr_black text-2xl font-light">
+            <div class="center pt-5 lg:pt-2 h-full pb-8">
+              <p class="text-clr_black text-xs lg:text-sm font-light">
                 PairTime <span class="font-extrabold">></span> Account
                 <span class="font-extrabold">></span> Donate
               </p>
-              <p class="text-clr_black text-4xl font-semibold mt-4 mb-6">
+              <p
+                class="text-clr_black text-base lg:text-xl font-semibold mt-2 mb-4"
+              >
                 Donate to the scholarship pool.
               </p>
-              <div class="border-b-[0.5px] opacity-60 w-3/5"></div>
-              <p class="text-clr_black text-xl font-semibold mt-6 mb-8">
+              <div class="border-b-[0.5px] opacity-60 lg:w-3/5"></div>
+              <p class="text-clr_black text-xs font-semibold mt-4 mb-5">
                 Select Currency and you can directly donate the amount.
               </p>
 
-              <div class="input-group mb-10">
-                <label class="block text-xl text-clr_black font-semibold mb-2"
+              <div class="input-group mb-6">
+                <label class="block text-xs text-clr_black font-semibold mb-2"
                   >Currency Type
                 </label>
-                <div class="flex gap-4">
-                  <select
-                    class="py-3 px-4 rounded-xl text-gl placeholder-primary w-1/5"
-                  >
-                    <option value="">USD</option>
-                    <option value="">CAD</option>
-                    <option value="">EUR</option>
-                  </select>
+                <div class="md:flex gap-4">
+                  <div class="md:w-2/5 lg:w-1/5 w-full relative">
+                    <select
+                      class="py-3 px-4 rounded-lg text-xs placeholder-primary w-full mb-3 md:mb-0"
+                    >
+                      <option value="">USD</option>
+                      <option value="">CAD</option>
+                      <option value="">EUR</option>
+                    </select>
+                    <span
+                      class="drop-icon absolute right-3 top-[12%] bg-white px-2 pointer-events-none"
+                    >
+                      <i class="fas fa-sort-down"></i>
+                    </span>
+                  </div>
                   <input
                     type="text"
                     placeholder="$ 143.97"
-                    class="py-3 px-4 rounded-xl w-2/5 text-lg placeholder-primary"
+                    class="py-3 px-4 rounded-lg lg:w-2/5 md:w-3/5 w-full text-xs placeholder-primary font-semibold"
                   />
                 </div>
               </div>
 
               <button
-                class="bg-clr_blue text-xl py-3 px-8 text-white rounded-2xl hover:shadow-btn"
+                class="bg-clr_blue text-sm py-2 px-5 text-white rounded-2xl hover:shadow-btn w-full sm:w-auto"
               >
                 Donate
               </button>
@@ -256,11 +269,11 @@
           </div>
 
           <!-- <div class="circle absolute -left-12 -bottom-16"> -->
-          <div
+          <!-- <div
             class="absolute -left-4 -bottom-4 bg-[#33D9EF] w-8 h-8 rounded-full"
-          ></div>
+          ></div> -->
           <div
-            class="bg-[#F48C06] w-44 h-44 absolute -bottom-20 -right-20 rounded-full"
+            class="bg-[#F48C06] w-24 h-24 fixed top-[40%] -right-20 lg:-right-10 rounded-full animtaion-infinite"
           ></div>
           <!-- </div> -->
         </section>

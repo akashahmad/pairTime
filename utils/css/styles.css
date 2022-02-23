@@ -1,9 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
 * {
   margin: 0;
@@ -35,20 +35,12 @@ button {
   background-position: 0 -35%;
 }
 
-@media only screen and (max-width: 48em) {
-  .features {
-    background: none;
-  }
-
-  .charges-container {
-    background: url("../images/bg-black-sm-screen.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-}
-
 .carousel-container {
   transition: all 0.3s;
+}
+
+.offer-para {
+  line-height: 2rem;
 }
 
 .build-info-img {
@@ -58,12 +50,6 @@ button {
   background-position: center;
   width: 100%;
   min-height: 421px;
-}
-
-@media only screen and (max-width: 26.5625em) {
-  .build-info-img {
-    min-height: 250px;
-  }
 }
 
 /* typing animation */
@@ -98,22 +84,51 @@ button {
   }
 }
 
+@media only screen and (max-width: 48em) {
+  .features {
+    background: none;
+  }
+
+  .charges-container {
+    background: url("../images/bg-black-sm-screen.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .offer-para {
+    line-height: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 26.5625em) {
+  .build-info-img {
+    min-height: 250px;
+  }
+}
+
 /* ///////////////////////// STYLING APPLICABLE TO DASHBOARD ///////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////////////////////////////// */
 html.dashboard body {
   font-family: "Poppins", sans-serif;
 }
 
-.display-block {
+/* .display-block {
   display: block !important;
 }
 .display-none {
   display: none !important;
-}
+} */
+
 input,
 textarea,
 select {
   outline: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 /* Animations */
@@ -165,4 +180,21 @@ select {
 }
 .radio-style:checked {
   background-color: #191453;
+}
+
+/* width */
+.services-listing::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+.services-listing::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+/* Handle */
+.services-listing::-webkit-scrollbar-thumb {
+  background: #efefef;
+  border-radius: 10px;
 }

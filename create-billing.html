@@ -18,20 +18,20 @@
 
   <body>
     <main class="bg-[#F7F8FB] overflow-hidden">
-      <div class="flex overflow-hidden">
+      <div class="flex">
         <aside
-          class="h-screen absolute top-0 -left-full z-50 w-full bg-[#00000080] md:relative md:top-0 md:left-0 md:w-[16rem] lg:w-80 transition-all ease-in"
+          class="h-screen absolute top-0 -left-full z-50 w-full bg-[#00000080] md:fixed md:top-0 md:left-0 md:w-[12rem] lg:w-64 transition-all ease-in"
           id="sidebar"
         >
           <button
             class="text-clr_blue absolute right-4 top-4"
             id="dashb-nav-closeBtn"
           >
-            <i class="fas fa-times text-sm text-white"></i>
+            <i class="fas fa-times text-xl text-white"></i>
           </button>
 
           <nav
-            class="w-[70%] bg-white h-screen flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
+            class="w-[70%] bg-white h-full flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
           >
             <div class="flex justify-between items-center">
               <a href="dashboard.html">
@@ -80,7 +80,7 @@
                     alt="Icon"
                     loading="lazy"
                   />
-                  <span class="ml-2 text-xs lg:text-sm font-semibold"
+                  <span class="ml-2 text-xs lg:text-sm font-medium"
                     >Create A Post</span
                   >
                 </a>
@@ -96,7 +96,7 @@
                     alt="Icon"
                     loading="lazy"
                   />
-                  <span class="ml-2 text-xs lg:text-sm font-semibold"
+                  <span class="ml-2 text-xs lg:text-sm font-medium"
                     >Fill Out Your Service Profile</span
                   >
                 </a>
@@ -112,7 +112,7 @@
                     alt="Icon"
                     loading="lazy"
                   />
-                  <span class="ml-2 text-xs lg:text-sm font-semibold"
+                  <span class="ml-2 text-xs lg:text-sm font-medium"
                     >Live Request</span
                   >
                 </a>
@@ -128,7 +128,7 @@
                     alt="Icon"
                     loading="lazy"
                   />
-                  <span class="ml-2 text-xs lg:text-sm font-semibold"
+                  <span class="ml-2 text-xs lg:text-sm font-medium"
                     >Visible Profiles</span
                   >
                 </a>
@@ -145,16 +145,20 @@
                     loading="lazy"
                   />
                   <span
-                    class="ml-2 text-xs lg:text-sm font-semibold text-[#FF5223]"
+                    class="ml-2 text-xs lg:text-sm font-medium text-[#FF5223]"
                     >Logout</span
                   >
                 </a>
               </li>
             </ul>
           </nav>
+
+          <div
+            class="absolute -z-10 -right-2 -bottom-1 bg-[#33D9EF] w-4 h-4 rounded-full animtaion-infinite"
+          ></div>
         </aside>
 
-        <section class="w-full relative">
+        <section class="w-full relative md:ml-[12rem] lg:ml-64 min-h-screen">
           <div class="w-[90%] mx-auto">
             <div
               class="md:h-[12vh] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
@@ -194,7 +198,7 @@
                     />
                   </a>
                   <button class="text-clr_blue md:hidden">
-                    <i class="fas fa-bars text-sm" id="dashb-nav-openBtn"></i>
+                    <i class="fas fa-bars text-xl" id="dashb-nav-openBtn"></i>
                   </button>
                 </div>
               </div>
@@ -214,17 +218,19 @@
               </div>
             </div>
 
-            <div class="center pt-2 pb-16">
-              <p class="text-clr_black text-sm font-light">
+            <div class="center pt-5 lg:pt-2 h-full pb-8">
+              <p class="text-clr_black text-xs lg:text-sm font-light">
                 PairTime <span class="font-extrabold">></span> Account
                 <span class="font-extrabold">></span> Create Billing Profile
               </p>
-              <p class="text-clr_black text-xl font-semibold mt-2 mb-4">
+              <p
+                class="text-clr_black text-base lg:text-xl font-semibold mt-2 mb-4"
+              >
                 This information is visible to only you and the platform.
               </p>
-              <div class="border-b-[0.5px] opacity-60 w-3/5"></div>
+              <div class="border-b-[0.5px] opacity-60 lg:w-3/5"></div>
 
-              <form class="lg:w-3/5 w-[90%]">
+              <form class="lg:w-3/5 w-full">
                 <p class="text-clr_black text-xs font-semibold mt-4 mb-5">
                   We need this for tax calculation and invoicing.
                 </p>
@@ -233,43 +239,57 @@
                   <label class="block text-xs text-clr_black font-semibold mb-2"
                     >Country
                   </label>
-                  <div class="flex gap-2">
+                  <div class="md:flex gap-2">
                     <input
                       type="text"
                       placeholder="find your country"
-                      class="py-3 px-3 rounded-lg w-2/5 text-xs placeholder-primary"
+                      class="py-[14px] md:py-3 px-3 rounded-lg md:w-2/5 w-full text-xs placeholder-primary mb-3 md:mb-0"
                     />
-                    <select
-                      class="py-3 px-3 rounded-lg text-xs w-3/5 placeholder-primary"
-                    >
-                      <option value="">United Arab Emirates</option>
-                      <option value="">United States of America</option>
-                      <option value="">Saudi Arabia</option>
-                    </select>
+                    <div class="md:w-3/5 w-full relative">
+                      <select
+                        class="py-3 px-3 rounded-lg text-xs w-full placeholder-primary"
+                      >
+                        <option value="">United Arab Emirates</option>
+                        <option value="">United States of America</option>
+                        <option value="">Saudi Arabia</option>
+                      </select>
+                      <span
+                        class="drop-icon absolute right-3 top-[12%] bg-white px-2 pointer-events-none"
+                      >
+                        <i class="fas fa-sort-down"></i>
+                      </span>
+                    </div>
                   </div>
                 </div>
 
-                <p class="text-clr_black text-xs mb-4 font-light">
+                <p class="text-clr_black text-xs mb-6 font-light">
                   If your country is not among the list, that means Stripe
                   doesn't support it. We are working on supporting more
                   countries.
                 </p>
 
-                <div class="input-group mb-8">
+                <div class="input-group mb-4 md:mb-6">
                   <label class="block text-xs text-clr_black font-semibold mb-2"
                     >Account Type
                   </label>
 
-                  <select
-                    class="py-3 px-3 rounded-lg text-xs w-2/5 placeholder-primary"
-                  >
-                    <option value="">Individual</option>
-                    <option value="">Group</option>
-                  </select>
+                  <div class="md:w-2/5 w-full relative">
+                    <select
+                      class="py-3 px-3 rounded-lg text-xs w-full placeholder-primary"
+                    >
+                      <option value="">Individual</option>
+                      <option value="">Group</option>
+                    </select>
+                    <span
+                      class="drop-icon absolute right-3 top-[12%] bg-white px-2 pointer-events-none"
+                    >
+                      <i class="fas fa-sort-down"></i>
+                    </span>
+                  </div>
                 </div>
 
-                <div class="input-group mb-8 flex gap-2">
-                  <div class="flex-1">
+                <div class="input-group mb-4 md:mb-6 md:flex gap-2">
+                  <div class="flex-1 mb-4 md:mb-0">
                     <label
                       class="block text-xs text-clr_black font-semibold mb-2"
                       >First Name
@@ -293,8 +313,8 @@
                   </div>
                 </div>
 
-                <div class="input-group mb-8 flex gap-2">
-                  <div class="flex-1">
+                <div class="input-group mb-4 md:mb-6 md:flex gap-2">
+                  <div class="flex-1 mb-4 md:mb-0">
                     <label
                       class="block text-xs text-clr_black font-semibold mb-2"
                       >Address Line 1
@@ -318,8 +338,8 @@
                   </div>
                 </div>
 
-                <div class="input-group mb-8 flex gap-2">
-                  <div class="w-3/4">
+                <div class="input-group mb-4 md:mb-6 md:flex gap-2">
+                  <div class="md:w-3/4 mb-4 md:mb-0">
                     <label
                       class="block text-xs text-clr_black font-semibold mb-2"
                       >City
@@ -330,7 +350,7 @@
                       class="py-3 px-3 rounded-lg w-full text-xs placeholder-primary"
                     />
                   </div>
-                  <div class="w-1/4">
+                  <div class="md:w-1/4">
                     <label
                       class="block text-xs text-clr_black font-semibold mb-2"
                       >ZIP code/Postcode
@@ -343,12 +363,13 @@
                   </div>
                 </div>
 
-                <div class="input-group mb-8">
+                <div class="input-group mb-6">
                   <div>
                     <label
-                      class="text-xs text-clr_black font-semibold mb-2 flex justify-between"
+                      class="text-xs text-clr_black font-semibold mb-2 flex justify-between items-center gap-3"
                       >State/Province/Region
-                      <span class="opacity-[0.5] text-[11px]"
+                      <span
+                        class="opacity-[0.7] text-[9px] md:text-[11px] font-normal"
                         >You can leave it empty if it doesn’t apply to
                         you.</span
                       >
@@ -363,7 +384,7 @@
                 </div>
 
                 <button
-                  class="bg-clr_blue text-sm py-2 px-5 text-white rounded-xl hover:shadow-btn"
+                  class="bg-clr_blue text-sm py-2 px-5 text-white rounded-2xl hover:shadow-btn w-full sm:w-auto"
                 >
                   Save
                 </button>
@@ -372,11 +393,11 @@
           </div>
 
           <!-- <div class="circle absolute -left-12 -bottom-16"> -->
-          <div
+          <!-- <div
             class="absolute -left-4 -bottom-4 bg-[#33D9EF] w-8 h-8 rounded-full"
-          ></div>
+          ></div> -->
           <div
-            class="bg-[#F48C06] w-24 h-24 fixed top-[40%] -right-10 rounded-full"
+            class="bg-[#F48C06] w-24 h-24 fixed top-[40%] -right-20 lg:-right-10 rounded-full animtaion-infinite"
           ></div>
           <!-- </div> -->
         </section>

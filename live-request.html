@@ -20,7 +20,7 @@
     <main class="bg-[#F7F8FB] overflow-hidden">
       <div class="h-full flex">
         <aside
-          class="h-screen absolute top-0 -left-full z-50 w-full bg-[#00000080] md:relative md:top-0 md:left-0 md:w-[16rem] lg:w-80 transition-all ease-in"
+          class="h-screen absolute top-0 -left-full z-50 w-full bg-[#00000080] md:fixed md:top-0 md:left-0 md:w-[12rem] lg:w-64 transition-all ease-in"
           id="sidebar"
         >
           <button
@@ -31,11 +31,11 @@
           </button>
 
           <nav
-            class="w-[70%] bg-white h-screen flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
+            class="w-[70%] bg-white h-full flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
           >
             <div class="flex justify-between items-center">
               <a href="dashboard.html">
-                <figure class="w-full px-5 py-6">
+                <figure class="w-full px-3 py-6">
                   <img
                     src="./utils/images/pair-time.svg"
                     alt="Company Logo"
@@ -80,7 +80,7 @@
                     alt="Icon"
                     loading="lazy"
                   />
-                  <span class="ml-2 text-xs lg:text-sm font-semibold"
+                  <span class="ml-2 text-xs lg:text-sm font-medium"
                     >Create A Post</span
                   >
                 </a>
@@ -96,7 +96,7 @@
                     alt="Icon"
                     loading="lazy"
                   />
-                  <span class="ml-2 text-xs lg:text-sm font-semibold"
+                  <span class="ml-2 text-xs lg:text-sm font-medium"
                     >Fill Out Your Service Profile</span
                   >
                 </a>
@@ -112,7 +112,7 @@
                     alt="Icon"
                     loading="lazy"
                   />
-                  <span class="ml-2 text-xs lg:text-sm font-semibold"
+                  <span class="ml-2 text-xs lg:text-sm font-medium"
                     >Live Request</span
                   >
                 </a>
@@ -128,7 +128,7 @@
                     alt="Icon"
                     loading="lazy"
                   />
-                  <span class="ml-2 text-xs lg:text-sm font-semibold"
+                  <span class="ml-2 text-xs lg:text-sm font-medium"
                     >Visible Profiles</span
                   >
                 </a>
@@ -145,16 +145,20 @@
                     loading="lazy"
                   />
                   <span
-                    class="ml-2 text-xs lg:text-sm font-semibold text-[#FF5223]"
+                    class="ml-2 text-xs lg:text-sm font-medium text-[#FF5223]"
                     >Logout</span
                   >
                 </a>
               </li>
             </ul>
           </nav>
+
+          <div
+            class="absolute -z-10 -right-2 -bottom-1 bg-[#33D9EF] w-4 h-4 rounded-full animtaion-infinite"
+          ></div>
         </aside>
 
-        <section class="w-full relative overflow-y-scroll">
+        <section class="w-full relative md:ml-[12rem] lg:ml-64 min-h-screen">
           <div class="w-[90%] mx-auto">
             <div
               class="md:h-[12vh] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
@@ -214,7 +218,7 @@
               </div>
             </div>
 
-            <div class="center h-[88vh] md:ml-[210px]">
+            <div class="center pt-5 lg:pt-2 h-full pb-8">
               <p class="text-clr_black text-2xl flex">
                 PairTime > Live requests
               </p>
