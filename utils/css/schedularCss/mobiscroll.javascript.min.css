@@ -1045,7 +1045,7 @@
   padding-left: 0.25em;
 }
 .mbsc-ios.mbsc-primary .mbsc-toast-background {
-  background:blue;
+  background: blue;
   color: #fff;
 }
 .mbsc-ios.mbsc-secondary .mbsc-toast-background {
@@ -1061,7 +1061,7 @@
   color: #fff;
 }
 .mbsc-ios.mbsc-warning .mbsc-toast-background {
-  background:blue;
+  background: blue;
   color: #fff;
 }
 .mbsc-ios.mbsc-info .mbsc-toast-background {
@@ -16350,38 +16350,39 @@ mbsc-datetime {
     display: none;
   }
 }
-.mbsc-ios.mbsc-button-flat{
-    color:#191453 !important;
+.mbsc-ios.mbsc-button-flat {
+  color: #191453 !important;
 }
-.mbsc-icon > svg{
-    background-color: #250CED;
-    color: white;
-    border-radius: 4px;
-    padding: 3px 3px;
+.mbsc-icon > svg {
+  background-color: #250ced;
+  color: white;
+  border-radius: 4px;
+  padding: 3px 3px;
 }
 /* .mbsc-flex{
     background-color: #F7F8FB;
 } */
-#demo-desktop-day-view{
-    height: 680px !important;
-    overflow-y: hidden !important;
-    border-radius: 12px;
+#demo-desktop-day-view {
+  overflow-y: hidden !important;
+  border-radius: 12px;
 }
-.mbsc-ios.mbsc-schedule-header, .mbsc-ios.mbsc-schedule-header-item{
-    background-color: white !important;
+.mbsc-ios.mbsc-schedule-header,
+.mbsc-ios.mbsc-schedule-header-item {
+  background-color: white !important;
 }
-.mbsc-ios.mbsc-calendar-controls{
-    background-color: white;
-    border-radius: 8px;
+.mbsc-ios.mbsc-calendar-controls {
+  background-color: white;
+  border-radius: 8px;
 }
-.mbsc-schedule-header-item{
-    display: flex;
-    justify-content: center;
-    margin:10px 0px;
+.mbsc-schedule-header-item {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px;
 }
-.mbsc-ios.mbsc-schedule-header, .mbsc-ios.mbsc-schedule-header-item{
-background-color: unset !important;
+.mbsc-ios.mbsc-schedule-header,
+.mbsc-ios.mbsc-schedule-header-item {
+  background-color: unset !important;
 }
-.mbsc-schedule-time-col-empty{
-    display: none !important;
+.mbsc-schedule-time-col-empty {
+  display: none !important;
 }

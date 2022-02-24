@@ -183,18 +183,25 @@ select {
 }
 
 /* width */
-.services-listing::-webkit-scrollbar {
+.services-listing::-webkit-scrollbar,
+.editor::-webkit-scrollbar {
   width: 7px;
 }
 
 /* Track */
-.services-listing::-webkit-scrollbar-track {
+.services-listing::-webkit-scrollbar-track,
+.editor::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 10px;
 }
 
 /* Handle */
-.services-listing::-webkit-scrollbar-thumb {
+.services-listing::-webkit-scrollbar-thumb,
+.editor::-webkit-scrollbar-thumb {
   background: #efefef;
   border-radius: 10px;
+}
+
+#demo-desktop-day-view {
+  height: 620px !important;
 }
