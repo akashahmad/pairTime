@@ -10,22 +10,25 @@ dashboardNavCloseBtn.addEventListener("click", () => {
   sidebar.style.left = "-100%";
 });
 
-////// Show All page functionality of Dashboard
-const showAllBtn = document.getElementById("show-all-btn");
-const allServicesContainer = document.getElementById("all-services-list");
-const circleEl = document.getElementById("big-circle");
-const showAllLink = document.getElementById("show-profiles-link");
+/////// Modal Working
+const modalEl = document.getElementById("modal");
+const previewBtn = document.getElementById("preview-btn");
+const closeBtn = document.getElementById("close-btn");
+const crossBtn = document.getElementById("cross-btn");
 
-showAllBtn.addEventListener("click", (e) => {
-  if (e.target.textContent === "Show All") {
-    allServicesContainer.style.display = "block";
-    showAllBtn.textContent = "Show Less";
-    circleEl.style.display = "none";
-    showAllLink.style.display = "block";
-  } else if (e.target.textContent === "Show Less") {
-    allServicesContainer.style.display = "none";
-    showAllBtn.textContent = "Show All";
-    circleEl.style.display = "block";
-    showAllLink.style.display = "none";
-  }
+closeBtn.addEventListener("click", closeModal);
+crossBtn.addEventListener("click", closeModal);
+
+previewBtn.addEventListener("click", () => {
+  modalEl.style.transform = "scale(1.0)";
+  previewBtn.style.backgroundColor = "#250CED";
+  previewBtn.style.color = "#fff";
 });
+
+function closeModal() {
+  modalEl.style.transform = "scale(0)";
+  previewBtn.style.backgroundColor = "transparent";
+  previewBtn.style.color = "#250CED";
+}
+
+

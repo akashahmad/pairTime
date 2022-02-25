@@ -1,19 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
   font-family: "Catamaran", sans-serif;
   color: #191453;
+}
+
+::marker {
+  color: #260ded;
 }
 
 .active-nav {
@@ -39,7 +43,31 @@ button {
   transition: all 0.3s;
 }
 
-.offer-para {
+/* .offer-para {
+  line-height: 2rem;
+} */
+
+#offer-para-1 {
+  line-height: 2rem;
+}
+
+#offer-para-2 {
+  line-height: 2rem;
+}
+
+#offer-para-3 {
+  line-height: 2rem;
+}
+
+#offer-para-4 {
+  line-height: 2rem;
+}
+
+#offer-para-5 {
+  line-height: 2rem;
+}
+
+#offer-para-6 {
   line-height: 2rem;
 }
 
@@ -93,10 +121,6 @@ button {
     background: url("../images/bg-black-sm-screen.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-  }
-
-  .offer-para {
-    line-height: 1.4rem;
   }
 }
 
@@ -173,8 +197,8 @@ select {
   box-shadow: 0 0 0 1px #191453;
   appearance: none;
   border-radius: 5px;
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   background-color: #fff;
   transition: all ease-in 0.2s;
 }
@@ -184,24 +208,44 @@ select {
 
 /* width */
 .services-listing::-webkit-scrollbar,
-.editor::-webkit-scrollbar {
+.editor::-webkit-scrollbar,
+.chat::-webkit-scrollbar {
   width: 7px;
 }
 
 /* Track */
 .services-listing::-webkit-scrollbar-track,
-.editor::-webkit-scrollbar-track {
+.editor::-webkit-scrollbar-track,
+.chat::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 10px;
 }
 
 /* Handle */
 .services-listing::-webkit-scrollbar-thumb,
-.editor::-webkit-scrollbar-thumb {
+.editor::-webkit-scrollbar-thumb,
+.chat::-webkit-scrollbar-thumb {
   background: #efefef;
   border-radius: 10px;
+}
+
+.chat::-webkit-scrollbar,
+.chat::-webkit-scrollbar-track,
+.chat::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.chat-box:hover .chat::-webkit-scrollbar,
+.chat-box:hover .chat::-webkit-scrollbar-track,
+.chat-box:hover .chat::-webkit-scrollbar-thumb {
+  display: block;
 }
 
 #demo-desktop-day-view {
   height: 620px !important;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind base;

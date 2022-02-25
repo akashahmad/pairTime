@@ -38,7 +38,7 @@
             class="w-[70%] bg-white h-full flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
           >
             <div class="flex justify-between items-center">
-              <a href="dashboard.html">
+              <a href="./index.html">
                 <figure class="w-full px-3 py-6">
                   <img
                     src="./utils/images/pair-time.svg"
@@ -163,12 +163,12 @@
         </aside>
 
         <section class="w-full relative md:ml-[12rem] lg:ml-64 min-h-screen">
-          <div class="w-[90%] mx-auto">
+          <div class="w-[95%] mx-auto">
             <div
               class="md:h-[12vh] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
             >
               <div class="flex justify-between">
-                <a href="dashboard.html">
+                <a href="./index.html">
                   <figure class="w-full md:px-5 py-6">
                     <img
                       src="./utils/images/pair-time.svg"
@@ -211,7 +211,7 @@
                 <input
                   type="text"
                   placeholder="Search Anything"
-                  class="sm:w-56 lg:w-72 w-full pl-8 pr-2 py-3 text-xs rounded-lg border-none outline-none placeholder-primary"
+                  class="sm:w-56 lg:w-72 w-full pl-9 pr-2 py-3 text-xs rounded-lg border-none outline-none placeholder-primary"
                 />
                 <img
                   src="./utils/images/search.svg"
@@ -223,11 +223,11 @@
             </div>
 
             <div class="center pt-5 lg:pt-2 h-full pb-8">
-              <p class="text-clr_black text-xs lg:text-sm font-light">
-                PairTime <span class="font-extrabold">></span> Visible Profile
-                <span class="font-extrabold">></span> Search
-                <span class="font-extrabold">></span> Zhenhao Li
-                <span class="font-extrabold">></span> Details
+              <p class="text-clr_black text-xs lg:text-sm">
+                PairTime <span class="font-light">></span> Visible Profile
+                <span class="font-light">></span> Search
+                <span class="font-light">></span> Zhenhao Li
+                <span class="font-light">></span> Details
               </p>
 
               <div class="flex justify-between items-center">
@@ -238,7 +238,8 @@
                 </p>
 
                 <button
-                  class="text-clr_blue bg-transparent text-sm py-2 px-5 rounded-2xl border-2 border-blue-700 hover:shadow-btn font-semibold"
+                  class="text-clr_blue bg-transparent text-sm py-2 px-5 rounded-2xl border-2 border-blue-700 hover:shadow-btn font-semibold transition-all ease-in"
+                  id="preview-btn"
                 >
                   <a> Preview </a>
                 </button>
@@ -282,8 +283,10 @@
                       class="placeholder:text-clr_gray_light placeholder:text-xs w-full px-3 py-3 rounded-lg"
                     />
                   </div>
-                  <p class="text-xs font-semibold text-clr_black pb-2">
-                    Recommended Tags:
+                  <p class="text-xs pb-2">
+                    <span class="font-semibold text-clr_black"
+                      >Recommended Tags:</span
+                    >
                     <span class="text-clr_gray_light ml-3"
                       >No predicitions yet</span
                     >
@@ -362,28 +365,19 @@
                         class="placeholder:text-clr_gray_light placeholder:text-xs px-3 py-3 rounded-lg"
                       />
                     </div>
-                    <div class="relative">
+                    <div class="w-[15rem] relative">
                       <select
-                        class="block appearance-none w-full bg-white placeholder:text-clr_gray_light text-xs rounded-lg px-3 py-4"
+                        class="py-4 px-3 rounded-lg text-xs text-[#191453] w-full appearance-none"
                       >
                         <option>Asia/Karachi (currently +5:00)</option>
-                        <option>Asia/islamabad (currently +5:00)</option>
-                        <option>Africa/Abidjan (Canonica +00:00)</option>
-                        <option>Africa/Addis_Ababa (Link +03:00)</option>
+                        <option>Asia/Karachi (currently +5:00)</option>
+                        <option>Asia/Karachi (currently +5:00)</option>
                       </select>
-                      <div
-                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-clr_gray_light"
+                      <span
+                        class="drop-icon absolute right-2 top-[18%] bg-white px-2 pointer-events-none"
                       >
-                        <svg
-                          class="fill-current h-4 w-4"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                          />
-                        </svg>
-                      </div>
+                        <i class="fas fa-sort-down"></i>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -407,13 +401,13 @@
                       <p
                         class="pl-6 flex justify-between text-xs font-medium capitalize mb-4"
                       >
-                        minimum hourly rate:
+                        Eur hourly rate:
                         <span class="font-semibold text-sm">$120.00/h</span>
                       </p>
                       <p
                         class="pl-6 flex justify-between text-xs font-medium capitalize mb-2"
                       >
-                        maximum hourly rate:
+                        USD hourly rate:
                         <span class="font-semibold text-sm">$100.00/h</span>
                       </p>
                     </div>
@@ -467,10 +461,8 @@
                     </div>
                   </div>
                   <div
-                    class="half-circle absolute right-0 mt-12 animtaion-infinite"
-                  >
-                    <img src="./utils/images/half-circle.png" />
-                  </div>
+                    class="half-circle bg-[#F48C06] w-24 h-24 fixed top-[50%] -right-20 lg:-right-20 rounded-full animtaion-infinite"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -478,14 +470,16 @@
         </section>
       </div>
 
-      <!-- <section
-        class="modal bg-[#00000020] flex justify-center items-center h-[100vh] fixed inset-0 z-50"
+      <section
+        class="modal bg-[#00000050] flex justify-center items-center h-[100vh] fixed inset-0 z-50 scale-0 transition-all ease-in"
+        id="modal"
       >
         <div
           class="container bg-white w-3/5 h-3/5 rounded-lg px-6 py-5 flex flex-col relative"
         >
           <figure
             class="absolute right-4 top-3 h-4 w-4 flex justify-center items-center rounded-full bg-red-600 cursor-pointer"
+            id="cross-btn"
           >
             <img
               src="./utils/images/cross-sign.png"
@@ -501,11 +495,12 @@
           <p class="flex-1 text-xs">no content yet</p>
           <button
             class="bg-clr_blue text-xs py-2 px-3 text-white font-semibold rounded-lg hover:shadow-btn w-full sm:w-auto self-center"
+            id="close-btn"
           >
             Close
           </button>
         </div>
-      </section> -->
+      </section>
     </main>
 
     <script>
