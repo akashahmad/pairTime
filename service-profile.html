@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dashboard">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,7 +20,7 @@
     <title>Service Profile - Dashboard</title>
   </head>
 
-  <body>
+  <body class="dashboard">
     <main class="bg-[#F7F8FB] overflow-hidden">
       <div class="h-full flex">
         <aside
@@ -38,7 +38,7 @@
             class="w-[70%] bg-white h-full flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
           >
             <div class="flex justify-between items-center">
-              <a href="./index.html">
+              <a href="/">
                 <figure class="w-full px-3 py-6">
                   <img
                     src="./utils/images/pair-time.svg"
@@ -91,7 +91,7 @@
               </li>
 
               <li class="relative">
-                <a href="create-post.html" class="bg-green-600">
+                <a href="service-profile.html" class="bg-green-600">
                   <div
                     class="bg-clr_blue absolute top-1 -left-1 w-2 h-[80%] rounded-2xl"
                   ></div>
@@ -108,22 +108,6 @@
                   </button>
                 </a>
               </li>
-
-              <!-- <li>
-                <a
-                  href="./service-profile.html"
-                  class="flex items-center pl-6 py-3 lg:py-5 hover:text-clr_blue"
-                >
-                  <img
-                    src="./utils/images/icon-11.svg"
-                    alt="Icon"
-                    loading="lazy"
-                  />
-                  <span class="ml-2 text-xs lg:text-sm font-medium"
-                    >Fill Out Your Service Profile</span
-                  >
-                </a>
-              </li> -->
 
               <li>
                 <a
@@ -143,7 +127,7 @@
 
               <li>
                 <a
-                  href="./visible-profile.html"
+                  href="./visible-profile-all.html"
                   class="flex items-center pl-6 py-3 lg:py-5 hover:text-clr_blue"
                 >
                   <img
@@ -187,7 +171,7 @@
               class="md:h-[12vh] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
             >
               <div class="flex justify-between">
-                <a href="./index.html">
+                <a href="/">
                   <figure class="w-full md:px-5 py-6">
                     <img
                       src="./utils/images/pair-time.svg"
@@ -200,14 +184,24 @@
 
                 <div class="user flex gap-5 items-center">
                   <a
-                    href="account.html"
-                    class="hover:shadow-btn hidden md:block"
+                    href="./account.html"
+                    class="hover:shadow-btn hidden md:block relative rounded-full"
                   >
-                    <img
-                      src="./utils/images/icon-17.svg"
-                      alt="Icon"
-                      loading="lazy"
-                    />
+                    <figure class="absolute top-[15%] left-[25%] z-10">
+                      <img
+                        src="./utils/images/icon-account-white.svg"
+                        alt="Icon"
+                        loading="lazy"
+                      />
+                    </figure>
+
+                    <figure>
+                      <img
+                        src="./utils/images/circle-blue.svg"
+                        alt=""
+                        class="h-12 w-12"
+                      />
+                    </figure>
                   </a>
                   <a
                     href="profile.html"
@@ -242,13 +236,13 @@
             </div>
 
             <div class="center pt-5 lg:pt-2 h-full">
-              <p class="text-clr_black text-xs lg:text-sm">
+              <p class="text-clr_blue_light text-xs lg:text-sm">
                 PairTime <span class="font-light">></span> Service Profile
               </p>
 
               <div class="mb-6">
                 <p
-                  class="text-clr_black text-base lg:text-xl font-semibold mt-2 mb-2 flex-1"
+                  class="text-clr_blue_light text-base lg:text-xl font-semibold mt-2 mb-2 flex-1"
                 >
                   Service Profile
                 </p>
@@ -301,29 +295,29 @@
 
                 <div class="flex items-center pt-7">
                   <p
-                    class="text-clr_black text-xl font-semibold mt-2 mb-3 flex-1"
+                    class="text-clr_blue_light text-xl font-semibold mt-2 mb-3 flex-1"
                   >
                     Availability
                   </p>
-                  <div class="flex gap-2">
-                    <div>
+                  <div class="md:flex w-[36%] gap-2">
+                    <div class="w-[9rem]">
                       <input
                         placeholder="Find Time Zone"
-                        class="placeholder:text-clr_gray_light placeholder:text-xs px-3 py-3 rounded-lg"
+                        class="placeholder:text-clr_gray_light placeholder:text-[11px] px-3 py-3 rounded-lg block w-full"
                       />
                     </div>
-                    <div class="w-[15rem] relative">
+                    <div class="relative flex-1">
                       <select
-                        class="py-4 px-3 rounded-lg text-xs text-[#191453] w-full appearance-none"
+                        class="py-[15.5px] px-3 rounded-lg text-[11px] text-clr_blue_light w-full appearance-none"
                       >
                         <option>Asia/Karachi (currently +5:00)</option>
                         <option>Asia/Karachi (currently +5:00)</option>
                         <option>Asia/Karachi (currently +5:00)</option>
                       </select>
                       <span
-                        class="drop-icon absolute right-2 top-[18%] bg-white px-2 pointer-events-none"
+                        class="drop-icon absolute right-[2%] top-[17%] bg-white px-2 pointer-events-none"
                       >
-                        <i class="fas fa-sort-down"></i>
+                        <i class="fas fa-sort-down text-sm"></i>
                       </span>
                     </div>
                   </div>
@@ -388,7 +382,7 @@
                           >
                             Start Time:
                           </p>
-                          <div class="relative w-[9rem] shadow-input">
+                          <div class="relative w-[9rem] shadow-input_two">
                             <input
                               type="text"
                               placeholder="1 : 45 AM"
@@ -417,7 +411,7 @@
                           >
                             Start Time:
                           </p>
-                          <div class="relative w-[9rem] shadow-input">
+                          <div class="relative w-[9rem] shadow-input_two">
                             <input
                               type="text"
                               placeholder="1 : 45 AM"
@@ -432,6 +426,7 @@
                         </div>
                       </div>
                     </div>
+
                     <div
                       class="time-slot mt-5 bg-[#FFFFFF] px-5 py-6 rounded-lg"
                     >
@@ -442,21 +437,17 @@
                         class="border-bottom w-full border-b-[0.5px] opacity-60"
                       ></div>
                       <div class="pt-5 flex justify-between">
-                        <div class="w-[40%]">
+                        <div class="w-[37%]">
                           <p
                             class="text-clr_blue_light text-xs font-semibold pb-5"
                           >
                             Repeat
                           </p>
                           <div
-                            style="
-                              border: 1px solid #f7f8fb;
-                              border-radius: 10px;
-                            "
-                            class="relative shadow-input"
+                            class="relative shadow-input border border-[#f7f8fb] rounded-lg"
                           >
                             <select
-                              class="block appearance-none w-full bg-white text-gray-700 text-xs px-3 py-3 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                              class="py-[15.5px] px-3 rounded-lg text-[11px] text-clr_blue_light w-full appearance-none"
                             >
                               <option>Every Day</option>
                               <option>Monday</option>
@@ -468,18 +459,14 @@
                               <option>Sunday</option>
                               <option>Never</option>
                             </select>
-                            <div
-                              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-clr_gray_light"
+                            <span
+                              class="drop-icon absolute right-[2%] top-[17%] bg-white px-2 pointer-events-none"
                             >
-                              <span
-                                class="drop-icon absolute right-1 top-[18%] bg-white px-2 pointer-events-none"
-                              >
-                                <i class="fas fa-sort-down"></i>
-                              </span>
-                            </div>
+                              <i class="fas fa-sort-down text-sm"></i>
+                            </span>
                           </div>
                         </div>
-                        <div class="w-[55%]">
+                        <div class="w-[58%]">
                           <p class="text-clr_blue_light text-xs font-bold pb-5">
                             For
                           </p>
@@ -489,34 +476,27 @@
                                 border: 1px solid #f7f8fb;
                                 border-radius: 10px;
                               "
-                              class="relative shadow-input"
+                              class="relative shadow-input w-[5rem]"
                             >
                               <select
-                                class="block appearance-none w-full bg-white text-gray-700 text-xs px-3 py-3 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                class="py-[15.5px] px-3 rounded-lg text-[11px] text-clr_blue_light w-full appearance-none"
                               >
-                                <option>Options</option>
+                                <option>Option</option>
                                 <option>Tom</option>
                                 <option>Ganni</option>
                                 <option>Flona</option>
                                 <option>Mike</option>
                               </select>
+
                               <div
-                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-clr_gray_light"
+                                class="absolute right-[5%] top-[25%] flex flex-col bg-white px-1 pointer-events-none"
                               >
-                                <span
-                                  class="drop-icon absolute right-1 top-[18%] bg-white px-2 pointer-events-none"
-                                >
-                                  <i class="fas fa-sort-down"></i>
+                                <span class="drop-icon block rotate-180">
+                                  <i class="fas fa-sort-down text-sm"></i>
                                 </span>
-                                <!-- <svg
-                                  class="fill-current h-4 w-4"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 20 20"
-                                >
-                                  <path
-                                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                                  />
-                                </svg> -->
+                                <span class="drop-ico block -mt-[1.4rem]">
+                                  <i class="fas fa-sort-down text-sm"></i>
+                                </span>
                               </div>
                             </div>
 
@@ -525,10 +505,10 @@
                                 border: 1px solid #f7f8fb;
                                 border-radius: 10px;
                               "
-                              class="relative shadow-input"
+                              class="relative shadow-input flex-1"
                             >
                               <select
-                                class="block appearance-none w-full bg-white text-gray-700 text-xs px-3 py-3 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                class="py-[15.5px] px-3 rounded-lg text-[11px] text-clr_blue_light w-full appearance-none"
                               >
                                 <option>Every</option>
                                 <option>Monday</option>
@@ -538,36 +518,19 @@
                                 <option>Friday</option>
                                 <option>Saturday</option>
                                 <option>Sunday</option>
+                                <option>Never</option>
                               </select>
-                              <div
-                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-clr_gray_light"
+                              <span
+                                class="drop-icon absolute right-[2%] top-[17%] bg-white px-2 pointer-events-none"
                               >
-                                <span
-                                  class="drop-icon absolute right-1 top-[18%] bg-white px-2 pointer-events-none"
-                                >
-                                  <i class="fas fa-sort-down"></i>
-                                </span>
-                                <!-- <svg
-                                  class="fill-current h-4 w-4"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 20 20"
-                                >
-                                  <path
-                                    d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                                  />
-                                </svg> -->
-                              </div>
+                                <i class="fas fa-sort-down text-sm"></i>
+                              </span>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <!-- <div
-                    class="half-circle absolute right-0 mt-12 animtaion-infinite"
-                  >
-                    <img src="./utils/images/half-circle.png" />
-                  </div> -->
                 </div>
 
                 <div class="flex items-center mt-8">
@@ -589,7 +552,7 @@
                   <div class="w-full md:w-[48%]">
                     <div>
                       <p
-                        class="text-clr_black text-base lg:text-xl font-semibold mt-2 pb-2 flex-1"
+                        class="text-clr_blue_light text-base lg:text-xl font-semibold mt-2 pb-2 flex-1"
                       >
                         Duration Preferences
                       </p>
@@ -640,7 +603,7 @@
                   <div class="w-full md:w-[48%] mt-2 md:mt-0">
                     <div>
                       <p
-                        class="text-clr_black text-base lg:text-xl font-semibold mt-2 pb-2 flex-1"
+                        class="text-clr_blue_light text-base lg:text-xl font-semibold mt-2 pb-2 flex-1"
                       >
                         Duration Preferences
                       </p>
@@ -675,7 +638,7 @@
                                 border: 1px solid #f7f8fb;
                                 border-radius: 10px;
                               "
-                              class="relative shadow-input"
+                              class="relative shadow-input_two"
                             >
                               <select
                                 class="block appearance-none w-full bg-white text-gray-700 text-xs px-3 py-4 pr-8 rounded-lg leading-tight"
@@ -687,7 +650,12 @@
                               <div
                                 class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-clr_gray_light"
                               >
-                                <svg
+                                <span
+                                  class="drop-icon absolute right-[2%] top-[17%] bg-white px-3 pointer-events-none"
+                                >
+                                  <i class="fas fa-sort-down text-sm"></i>
+                                </span>
+                                <!-- <svg
                                   class="fill-current h-4 w-4"
                                   xmlns="http://www.w3.org/2000/svg"
                                   viewBox="0 0 20 20"
@@ -695,7 +663,7 @@
                                   <path
                                     d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
                                   />
-                                </svg>
+                                </svg> -->
                               </div>
                             </div>
                             <div class="w-[58%]">
@@ -735,7 +703,7 @@
                 <div class="w-full md:w-[48%] pt-10">
                   <div>
                     <p
-                      class="text-clr_black text-base lg:text-xl font-semibold mt-2 mb-3 flex-1"
+                      class="text-clr_blue_light text-base lg:text-xl font-semibold mt-2 mb-3 flex-1"
                     >
                       Topics to subscribe
                     </p>

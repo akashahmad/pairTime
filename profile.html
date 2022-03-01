@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dashboard">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,7 +16,7 @@
     <title>Profile - PairTime</title>
   </head>
 
-  <body>
+  <body class="dashboard">
     <main class="min-h-screen bg-[#F7F8FB] overflow-hidden">
       <div class="flex">
         <aside
@@ -34,7 +34,7 @@
             class="w-[70%] bg-white h-full flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
           >
             <div class="flex justify-between items-center">
-              <a href="./index.html">
+              <a href="/">
                 <figure class="w-full px-3 py-6">
                   <img
                     src="./utils/images/pair-time.svg"
@@ -120,7 +120,7 @@
 
               <li>
                 <a
-                  href="./visible-profile.html"
+                  href="./visible-profile-all.html"
                   class="flex items-center pl-6 py-3 lg:py-5 hover:text-clr_blue"
                 >
                   <img
@@ -164,7 +164,7 @@
               class="md:h-[12vh] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
             >
               <div class="flex justify-between">
-                <a href="./index.html">
+                <a href="/">
                   <figure class="w-full md:px-5 py-6">
                     <img
                       src="./utils/images/pair-time.svg"
@@ -230,11 +230,11 @@
             </div>
 
             <div class="center pt-5 lg:pt-2 h-full pb-8">
-              <p class="text-clr_black text-xs lg:text-sm">
+              <p class="text-clr_blue_light text-xs lg:text-sm">
                 PairTime <span class="font-light">></span> Profile
               </p>
               <p
-                class="text-clr_black text-base lg:text-xl font-semibold mt-2 mb-10"
+                class="text-clr_blue_light text-base lg:text-xl font-semibold mt-2 mb-10"
               >
                 You can edit and update your profile
               </p>
@@ -243,7 +243,7 @@
                 <div class="left w-full md:w-fit">
                   <div class="input-group">
                     <label
-                      class="block text-xs text-clr_black font-semibold mb-2"
+                      class="block text-xs text-clr_blue_light font-semibold mb-2"
                       >Profile Photo</label
                     >
                     <div
@@ -268,7 +268,7 @@
                   <form class="w-full lg:w-[70%]">
                     <div class="input-group mb-6">
                       <label
-                        class="block text-xs text-clr_black mb-2 font-semibold"
+                        class="block text-xs text-clr_blue_light mb-2 font-semibold"
                         >The name you’ll show to others</label
                       >
                       <input
@@ -280,7 +280,7 @@
 
                     <div class="input-group mb-6">
                       <label
-                        class="text-xs text-clr_black mb-2 font-semibold flex justify-between"
+                        class="text-xs text-clr_blue_light mb-2 font-semibold flex justify-between"
                         >A short biography (optional)
                         <span class="text-[#5A5881] font-normal"
                           >You have 72/100 in Bio.</span
@@ -295,7 +295,7 @@
 
                     <div class="input-group mb-6">
                       <label
-                        class="block text-xs text-clr_black mb-2 font-semibold"
+                        class="block text-xs text-clr_blue_light mb-2 font-semibold"
                         >Default time zone (optional)
                       </label>
                       <div class="md:flex gap-2">
@@ -306,16 +306,16 @@
                         />
                         <div class="md:w-3/7 w-full relative">
                           <select
-                            class="py-3 px-3 rounded-lg text-xs text-clr_black w-full appearance-none"
+                            class="py-3 px-3 rounded-lg text-xs text-clr_blue_light w-full appearance-none"
                           >
                             <option>Asia/Karachi (currently +5:00)</option>
                             <option>Asia/Karachi (currently +5:00)</option>
                             <option>Asia/Karachi (currently +5:00)</option>
                           </select>
                           <span
-                            class="drop-icon absolute right-3 top-[12%] bg-white px-2 pointer-events-none"
+                            class="drop-icon absolute right-[2%] top-[12%] bg-white px-2 pointer-events-none"
                           >
-                            <i class="fas fa-sort-down"></i>
+                            <i class="fas fa-sort-down text-sm"></i>
                           </span>
                         </div>
                       </div>
@@ -324,7 +324,7 @@
                     <div class="btns flex gap-2 md:justify-end -mt-2 md:mt-10">
                       <a
                         href="./dashboard-update.html"
-                        class="bg-clr_blue text-sm py-2 px-5 text-white rounded-xl md:mr-2 font-semibold hover:shadow-btn w-1/2 md:w-auto"
+                        class="bg-clr_blue text-sm py-2 px-5 text-white rounded-xl md:mr-2 font-semibold hover:shadow-btn w-1/2 md:w-auto text-center"
                       >
                         Update
                       </a>

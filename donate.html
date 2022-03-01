@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dashboard">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,7 +16,7 @@
     <title>Donate - PairTime</title>
   </head>
 
-  <body>
+  <body class="dashboard">
     <main class="min-h-screen bg-[#F7F8FB]">
       <div class="h-screen mx-auto flex">
         <aside
@@ -34,7 +34,7 @@
             class="w-[70%] bg-white h-full flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
           >
             <div class="flex justify-between items-center">
-              <a href="./index.html">
+              <a href="/">
                 <figure class="w-full px-3 py-6">
                   <img
                     src="./utils/images/pair-time.svg"
@@ -120,7 +120,7 @@
 
               <li>
                 <a
-                  href="./visible-profile.html"
+                  href="./visible-profile-all.html"
                   class="flex items-center pl-6 py-3 lg:py-5 hover:text-clr_blue"
                 >
                   <img
@@ -166,7 +166,7 @@
               class="md:h-[12vh] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
             >
               <div class="flex justify-between">
-                <a href="./index.html">
+                <a href="/">
                   <figure class="w-full md:px-5 py-6">
                     <img
                       src="./utils/images/pair-time.svg"
@@ -179,14 +179,24 @@
 
                 <div class="user flex gap-5 items-center">
                   <a
-                    href="account.html"
-                    class="hover:shadow-btn hidden md:block"
+                    href="./account.html"
+                    class="hover:shadow-btn hidden md:block relative rounded-full"
                   >
-                    <img
-                      src="./utils/images/icon-17.svg"
-                      alt="Icon"
-                      loading="lazy"
-                    />
+                    <figure class="absolute top-[15%] left-[25%] z-10">
+                      <img
+                        src="./utils/images/icon-account-white.svg"
+                        alt="Icon"
+                        loading="lazy"
+                      />
+                    </figure>
+
+                    <figure>
+                      <img
+                        src="./utils/images/circle-blue.svg"
+                        alt=""
+                        class="h-12 w-12"
+                      />
+                    </figure>
                   </a>
                   <a
                     href="profile.html"
@@ -221,43 +231,44 @@
             </div>
 
             <div class="center pt-5 lg:pt-2 h-full pb-8">
-              <p class="text-clr_black text-xs lg:text-sm">
+              <p class="text-clr_blue_light text-xs lg:text-sm">
                 PairTime <span class="font-light">></span> Account
                 <span class="font-light">></span> Donate
               </p>
               <p
-                class="text-clr_black text-base lg:text-xl font-semibold mt-2 mb-4"
+                class="text-clr_blue_light text-base lg:text-xl font-semibold mt-2 mb-4"
               >
                 Donate to the scholarship pool.
               </p>
               <div class="border-b-[0.5px] opacity-60 lg:w-3/5"></div>
-              <p class="text-clr_black text-xs font-semibold mt-4 mb-5">
+              <p class="text-clr_blue_light text-xs font-semibold mt-4 mb-5">
                 Select Currency and you can directly donate the amount.
               </p>
 
               <div class="input-group mb-6">
-                <label class="block text-xs text-clr_black font-semibold mb-2"
+                <label
+                  class="block text-xs text-clr_blue_light font-semibold mb-2"
                   >Currency Type
                 </label>
                 <div class="md:flex gap-4">
                   <div class="md:w-2/5 lg:w-1/5 w-full relative">
                     <select
-                      class="py-3 px-4 rounded-lg text-xs placeholder-primary w-full mb-3 md:mb-0"
+                      class="py-3 px-3 rounded-lg text-xs placeholder-primary w-full mb-3 md:mb-0"
                     >
                       <option value="">USD</option>
                       <option value="">CAD</option>
                       <option value="">EUR</option>
                     </select>
                     <span
-                      class="drop-icon absolute right-3 top-[12%] bg-white px-2 pointer-events-none"
+                      class="drop-icon absolute right-[2%] top-[12%] bg-white px-2 pointer-events-none"
                     >
-                      <i class="fas fa-sort-down"></i>
+                      <i class="fas fa-sort-down text-sm"></i>
                     </span>
                   </div>
                   <input
                     type="text"
                     placeholder="$ 143.97"
-                    class="py-3 px-4 rounded-lg lg:w-2/5 md:w-3/5 w-full text-xs placeholder-primary font-semibold"
+                    class="py-3 px-3 rounded-lg lg:w-2/5 md:w-3/5 w-full text-xs placeholder-primary font-semibold"
                   />
                 </div>
               </div>

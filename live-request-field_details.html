@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dashboard">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,7 +20,7 @@
     <title>Live Request Field Details - Dashboard</title>
   </head>
 
-  <body>
+  <body class="dashboard">
     <main class="bg-[#F7F8FB] overflow-hidden">
       <div class="h-full flex">
         <aside
@@ -38,7 +38,7 @@
             class="w-[70%] bg-white h-full flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
           >
             <div class="flex justify-between items-center">
-              <a href="./index.html">
+              <a href="/">
                 <figure class="w-full px-3 py-6">
                   <img
                     src="./utils/images/pair-time.svg"
@@ -106,25 +106,28 @@
                 </a>
               </li>
 
-              <li>
-                <a
-                  href="./live-request.html"
-                  class="flex items-center pl-6 py-3 lg:py-5 hover:text-clr_blue"
-                >
-                  <img
-                    src="./utils/images/icon-12.svg"
-                    alt="Icon"
-                    loading="lazy"
-                  />
-                  <span class="ml-2 text-xs lg:text-sm font-medium"
-                    >Live Request</span
+              <li class="relative">
+                <a href="live-request.html">
+                  <div
+                    class="bg-clr_blue absolute top-1 -left-1 w-2 h-[80%] rounded-2xl"
+                  ></div>
+                  <button
+                    class="nav-post bg-clr_blue text-white text-xs md:text-sm font-semibold flex items-center py-3 px-2 ml-3 rounded-xl gap-1 md:gap-3 hover:shadow-btn w-[90%]"
                   >
+                    <img
+                      src="./utils/images/icon-12.svg"
+                      alt="Icon"
+                      loading="lazy"
+                      class="brightness-0 invert"
+                    />
+                    Live Request
+                  </button>
                 </a>
               </li>
 
               <li>
                 <a
-                  href="./visible-profile.html"
+                  href="./visible-profile-all.html"
                   class="flex items-center pl-6 py-3 lg:py-5 hover:text-clr_blue"
                 >
                   <img
@@ -164,7 +167,7 @@
               class="md:h-[12vh] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
             >
               <div class="flex justify-between">
-                <a href="./index.html">
+                <a href="/">
                   <figure class="w-full md:px-5 py-6">
                     <img
                       src="./utils/images/pair-time.svg"
@@ -219,7 +222,7 @@
             </div>
 
             <div class="center pt-5 lg:pt-2 h-full">
-              <p class="text-clr_black text-xs lg:text-sm">
+              <p class="text-clr_blue_light text-xs lg:text-sm">
                 PairTime <span class="font-light">></span> Live Requests
                 <span class="font-light">></span> ios
                 <span class="font-light">></span> How to redirect to an external
@@ -228,7 +231,7 @@
 
               <div class="mb-6">
                 <p
-                  class="text-clr_black text-base lg:text-xl font-semibold mt-2 mb-2 flex-1"
+                  class="text-clr_blue_light text-base lg:text-xl font-semibold mt-2 mb-2 flex-1"
                 >
                   how to redirect to an external URL in Korolev app
                 </p>
@@ -249,11 +252,11 @@
                       >
                         I have tried thing like
                       </h4>
-                      <h5
-                        class="flex text-xs text-clr_blue_light font-semibold"
-                      >
-                        tags: &nbsp;
-                        <p class="font-bold">
+                      <h5 class="flex text-xs">
+                        <span class="text-clr_blue_light font-semibold"
+                          >tags: &nbsp;
+                        </span>
+                        <p>
                           <span class="text-[#ff1d1d]">scala</span>,
                           <span class="text-[#ff1d1d]">korolev</span>,
                           <span class="text-[#ff1d1d]">html</span>
@@ -277,16 +280,16 @@
                         <h3 class="text-sm font-semibold">Budget</h3>
                         <div class="relative">
                           <select
-                            class="py-3 px-3 rounded-lg text-xs text-[#191453] w-[5.5rem] appearance-none"
+                            class="py-3 px-3 rounded-lg text-xs text-[#191453] w-[5rem] appearance-none"
                           >
                             <option>$ USD</option>
                             <option>& EUR</option>
                             <option>Rs PAK</option>
                           </select>
                           <span
-                            class="drop-icon absolute right-3 top-[12%] bg-white px-2 pointer-events-none"
+                            class="drop-icon absolute right-[2%] top-[12%] bg-white px-2 pointer-events-none"
                           >
-                            <i class="fas fa-sort-down"></i>
+                            <i class="fas fa-sort-down text-sm"></i>
                           </span>
                         </div>
                       </div>
@@ -308,7 +311,7 @@
                     </div>
 
                     <div
-                      class="flex-1 flex flex-col gap-4 justify-center items-center"
+                      class="flex-1 flex flex-col px-4 gap-4 justify-center items-center"
                     >
                       <img
                         src="./utils/images/deselect.svg"
@@ -332,29 +335,29 @@
 
                 <div class="flex items-center pt-7">
                   <p
-                    class="text-clr_black text-xl font-semibold mt-2 mb-3 flex-1"
+                    class="text-clr_blue_light text-xl font-semibold mt-2 mb-3 flex-1"
                   >
                     Availability
                   </p>
-                  <div class="flex gap-2">
-                    <div>
+                  <div class="md:flex w-[40%] gap-2">
+                    <div class="w-[12rem]">
                       <input
                         placeholder="Find Time Zone"
-                        class="placeholder:text-clr_gray_light placeholder:text-xs px-3 py-3 rounded-lg"
+                        class="placeholder:text-clr_gray_light placeholder:text-[11px] px-3 py-3 rounded-lg block w-full"
                       />
                     </div>
-                    <div class="w-[15rem] relative">
+                    <div class="relative flex-1">
                       <select
-                        class="py-4 px-3 rounded-lg text-xs text-[#191453] w-full appearance-none"
+                        class="py-[15.5px] px-3 rounded-lg text-[11px] text-clr_blue_light w-full appearance-none"
                       >
                         <option>Asia/Karachi (currently +5:00)</option>
                         <option>Asia/Karachi (currently +5:00)</option>
                         <option>Asia/Karachi (currently +5:00)</option>
                       </select>
                       <span
-                        class="drop-icon absolute right-2 top-[18%] bg-white px-2 pointer-events-none"
+                        class="drop-icon absolute right-[2%] top-[17%] bg-white px-2 pointer-events-none"
                       >
-                        <i class="fas fa-sort-down"></i>
+                        <i class="fas fa-sort-down text-sm"></i>
                       </span>
                     </div>
                   </div>

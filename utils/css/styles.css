@@ -132,7 +132,7 @@ button {
 
 /* ///////////////////////// STYLING APPLICABLE TO DASHBOARD ///////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////////////////////////////// */
-html.dashboard body {
+body.dashboard {
   font-family: "Poppins", sans-serif;
 }
 
@@ -225,20 +225,20 @@ select {
 .services-listing::-webkit-scrollbar-thumb,
 .editor::-webkit-scrollbar-thumb,
 .chat::-webkit-scrollbar-thumb {
-  background: #efefef;
+  background: #e6e4e4;
   border-radius: 10px;
 }
 
 .chat::-webkit-scrollbar,
 .chat::-webkit-scrollbar-track,
 .chat::-webkit-scrollbar-thumb {
-  display: none;
+  visibility: hidden;
 }
 
 .chat-box:hover .chat::-webkit-scrollbar,
 .chat-box:hover .chat::-webkit-scrollbar-track,
 .chat-box:hover .chat::-webkit-scrollbar-thumb {
-  display: block;
+  visibility: visible;
 }
 
 #demo-desktop-day-view {

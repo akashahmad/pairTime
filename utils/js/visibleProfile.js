@@ -6,13 +6,14 @@ const showAllLink = document.getElementById("show-profiles-link");
 const serviceEl = document.getElementById("service-number");
 
 showAllBtn.addEventListener("click", (e) => {
-  if (e.target.textContent === "Show All") {
+  console.log(e.target);
+  if (e.target.textContent.trim() === "Show All") {
     allServicesContainer.style.display = "block";
     showAllBtn.textContent = "Show Less";
     circleEl.style.display = "none";
     showAllLink.style.display = "block";
     serviceEl.style.display = "block";
-  } else if (e.target.textContent === "Show Less") {
+  } else {
     allServicesContainer.style.display = "none";
     showAllBtn.textContent = "Show All";
     circleEl.style.display = "block";
