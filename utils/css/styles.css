@@ -209,14 +209,16 @@ select {
 /* width */
 .services-listing::-webkit-scrollbar,
 .editor::-webkit-scrollbar,
-.chat::-webkit-scrollbar {
+.chat::-webkit-scrollbar,
+.fc-scroller::-webkit-scrollbar {
   width: 7px;
 }
 
 /* Track */
 .services-listing::-webkit-scrollbar-track,
 .editor::-webkit-scrollbar-track,
-.chat::-webkit-scrollbar-track {
+.chat::-webkit-scrollbar-track,
+.fc-scroller::-webkit-scrollbar {
   background: transparent;
   border-radius: 10px;
 }
@@ -224,7 +226,8 @@ select {
 /* Handle */
 .services-listing::-webkit-scrollbar-thumb,
 .editor::-webkit-scrollbar-thumb,
-.chat::-webkit-scrollbar-thumb {
+.chat::-webkit-scrollbar-thumb,
+.fc-scroller::-webkit-scrollbar-thumb {
   background: #e6e4e4;
   border-radius: 10px;
 }
@@ -241,8 +244,104 @@ select {
   visibility: visible;
 }
 
-#demo-desktop-day-view {
+/* #demo-desktop-day-view {
   height: 620px !important;
+} */
+
+/* ////////// Calendar Styling //////////////// */
+.fc-header-toolbar {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1rem;
+  color: #191453;
+  font-weight: medium;
+  padding-left: 7px;
+}
+
+.fc .fc-toolbar-title::after {
+  content: "(asia/Karachi)";
+  color: #5a5881;
+  font-size: 11px;
+  margin-left: 7px;
+}
+
+.fc .fc-prev-button,
+.fc .fc-next-button {
+  background-color: #250ced;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 10px;
+}
+
+.fc .fc-prev-button:hover,
+.fc .fc-next-button:hover,
+.fc .fc-prev-button:active:focus,
+.fc .fc-next-button:active:focus {
+  background-color: #250ced;
+  box-shadow: 0px 10px 30px rgba(86, 59, 255, 0.26);
+  border: none;
+}
+
+.fc .fc-today-button:disabled,
+.fc .fc-today-button:disabled:hover {
+  background-color: transparent;
+  color: #250ced;
+  border: none;
+  padding: 0;
+}
+
+.fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
+  margin-left: 10px;
+}
+
+.fc .fc-today-button:not(:disabled),
+.fc .fc-today-button:not(:disabled):active:focus {
+  font-style: capitalize;
+  background-color: transparent;
+  color: #250ced;
+  border: none;
+  padding: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+.fc .fc-today-button:not(:disabled):hover {
+  color: #220bd49f;
+}
+
+.fc-col-header {
+  background-color: #fff;
+}
+
+.fc-col-header:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+.fc-col-header-cell-cushion {
+  font-size: 12px;
+  color: #5a5881;
+  font-weight: normal;
+}
+
+/* Making calendar day links non-linkable */
+.fc a[data-navlink] {
+  pointer-events: none;
+}
+
+/* calendar time styling */
+.fc-timegrid-slot-label-cushion {
+  font-size: 11px;
+  padding: 0;
+}
+
+.fc .fc-view-harness {
+  height: 90vh !important;
+  border: none;
 }
 
 @tailwind base;
