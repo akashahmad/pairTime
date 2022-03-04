@@ -7,19 +7,19 @@ var FullCalendar = (function (exports) {
   "use strict";
 
   /*! *****************************************************************************
-      Copyright (c) Microsoft Corporation.
-  
-      Permission to use, copy, modify, and/or distribute this software for any
-      purpose with or without fee is hereby granted.
-  
-      THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-      REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-      AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-      INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-      LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-      OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-      PERFORMANCE OF THIS SOFTWARE.
-      ***************************************************************************** */
+    Copyright (c) Microsoft Corporation.
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+    ***************************************************************************** */
   /* global Reflect, Promise */
 
   var extendStatics = function (d, b) {
@@ -1380,7 +1380,7 @@ var FullCalendar = (function (exports) {
     return String(guidNumber);
   }
   /* FullCalendar-specific DOM Utilities
-      ----------------------------------------------------------------------------------------------------------------------*/
+    ----------------------------------------------------------------------------------------------------------------------*/
   // Make the mouse cursor express that an event is not allowed in the current area
   function disableCursor() {
     document.body.classList.add("fc-not-allowed");
@@ -1390,7 +1390,7 @@ var FullCalendar = (function (exports) {
     document.body.classList.remove("fc-not-allowed");
   }
   /* Selection
-      ----------------------------------------------------------------------------------------------------------------------*/
+    ----------------------------------------------------------------------------------------------------------------------*/
   function preventSelection(el) {
     el.classList.add("fc-unselectable");
     el.addEventListener("selectstart", preventDefault);
@@ -1400,7 +1400,7 @@ var FullCalendar = (function (exports) {
     el.removeEventListener("selectstart", preventDefault);
   }
   /* Context Menu
-      ----------------------------------------------------------------------------------------------------------------------*/
+    ----------------------------------------------------------------------------------------------------------------------*/
   function preventContextMenu(el) {
     el.addEventListener("contextmenu", preventDefault);
   }
@@ -1469,7 +1469,7 @@ var FullCalendar = (function (exports) {
     return a - b;
   }
   /* String Utilities
-      ----------------------------------------------------------------------------------------------------------------------*/
+    ----------------------------------------------------------------------------------------------------------------------*/
   function padStart(val, len) {
     var s = String(val);
     return "000".substr(0, len - s.length) + s;
@@ -1487,7 +1487,7 @@ var FullCalendar = (function (exports) {
     return fallbackText;
   }
   /* Number Utilities
-      ----------------------------------------------------------------------------------------------------------------------*/
+    ----------------------------------------------------------------------------------------------------------------------*/
   function compareNumbers(a, b) {
     return a - b;
   }
@@ -1495,7 +1495,7 @@ var FullCalendar = (function (exports) {
     return n % 1 === 0;
   }
   /* FC-specific DOM dimension stuff
-      ----------------------------------------------------------------------------------------------------------------------*/
+    ----------------------------------------------------------------------------------------------------------------------*/
   function computeSmallestCellWidth(cellEl) {
     var allWidthEl = cellEl.querySelector(".fc-scrollgrid-shrink-frame");
     var contentWidthEl = cellEl.querySelector(".fc-scrollgrid-shrink-cushion");
@@ -1840,8 +1840,8 @@ var FullCalendar = (function (exports) {
     return true;
   }
   /*
-      assumed "true" equality for handler names like "onReceiveSomething"
-      */
+    assumed "true" equality for handler names like "onReceiveSomething"
+    */
   function isObjValsEqual(val0, val1, comparator) {
     if (val0 === val1 || comparator === true) {
       return true;
@@ -1936,8 +1936,8 @@ var FullCalendar = (function (exports) {
     return { defs: defs, instances: instances };
   }
   /*
-      Event MUST have a recurringDef
-      */
+    Event MUST have a recurringDef
+    */
   function expandRecurringRanges(
     eventDef,
     duration,
@@ -2696,12 +2696,12 @@ var FullCalendar = (function (exports) {
   }
 
   /*
-      TODO: fix the terminology of "formatter" vs "formatting func"
-      */
+    TODO: fix the terminology of "formatter" vs "formatting func"
+    */
   /*
-      At the time of instantiation, this object does not know which cmd-formatting system it will use.
-      It receives this at the time of formatting, as a setting.
-      */
+    At the time of instantiation, this object does not know which cmd-formatting system it will use.
+    It receives this at the time of formatting, as a setting.
+    */
   var CmdFormatter = /** @class */ (function () {
     function CmdFormatter(cmdStr) {
       this.cmdStr = cmdStr;
@@ -3357,9 +3357,9 @@ var FullCalendar = (function (exports) {
     );
   }
   /*
-      Will NOT populate extendedProps with the leftover properties.
-      Will NOT populate date-related props.
-      */
+    Will NOT populate extendedProps with the leftover properties.
+    Will NOT populate date-related props.
+    */
   function parseEventDef(refined, extra, sourceId, allDay, hasEnd, context) {
     var def = {
       title: refined.title || "",
@@ -3458,7 +3458,7 @@ var FullCalendar = (function (exports) {
   }
 
   /* Date stuff that doesn't belong in datelib core
-      ----------------------------------------------------------------------------------------------------------------------*/
+    ----------------------------------------------------------------------------------------------------------------------*/
   // given a timed range, computes an all-day range that has the same exact duration,
   // but whose start time is aligned with the start of the day.
   function computeAlignedDayRange(timedRange) {
@@ -3624,8 +3624,8 @@ var FullCalendar = (function (exports) {
   }
 
   /*
-      Specifying nextDayThreshold signals that all-day ranges should be sliced.
-      */
+    Specifying nextDayThreshold signals that all-day ranges should be sliced.
+    */
   function sliceEventStore(
     eventStore,
     eventUiBases,
@@ -3962,9 +3962,9 @@ var FullCalendar = (function (exports) {
     return span;
   }
   /*
-      TODO: somehow combine with parseRange?
-      Will return null if the start/end props were present but parsed invalidly.
-      */
+    TODO: somehow combine with parseRange?
+    Will return null if the start/end props were present but parsed invalidly.
+    */
   function parseOpenDateSpan(raw, dateEnv) {
     var _a = refineProps(raw, STANDARD_PROPS),
       standardProps = _a.refined,
@@ -4813,8 +4813,8 @@ var FullCalendar = (function (exports) {
       this._instance = instance || null;
     }
     /*
-          TODO: make event struct more responsible for this
-          */
+        TODO: make event struct more responsible for this
+        */
     EventApi.prototype.setProp = function (name, val) {
       var _a, _b;
       if (name in EVENT_DATE_REFINERS) {
@@ -5723,9 +5723,9 @@ var FullCalendar = (function (exports) {
       );
     };
     /*
-          DUMB: the omitTime arg is dumb. if we omit the time, we want to omit the timezone offset. and if we do that,
-          might as well use buildIsoString or some other util directly
-          */
+        DUMB: the omitTime arg is dumb. if we omit the time, we want to omit the timezone offset. and if we do that,
+        might as well use buildIsoString or some other util directly
+        */
     DateEnv.prototype.formatIso = function (marker, extraOptions) {
       if (extraOptions === void 0) {
         extraOptions = {};
@@ -5950,8 +5950,8 @@ var FullCalendar = (function (exports) {
     groupId: "_businessHours", // so multiple defs get grouped
   };
   /*
-      TODO: pass around as EventDefHash!!!
-      */
+    TODO: pass around as EventDefHash!!!
+    */
   function parseBusinessHours(input, context) {
     return parseEvents(refineInputs(input), null, context);
   }
@@ -6579,10 +6579,10 @@ var FullCalendar = (function (exports) {
   }
 
   /*
-      Records offset information for a set of elements, relative to an origin element.
-      Can record the left/right OR the top/bottom OR both.
-      Provides methods for querying the cache by position.
-      */
+    Records offset information for a set of elements, relative to an origin element.
+    Can record the left/right OR the top/bottom OR both.
+    Provides methods for querying the cache by position.
+    */
   var PositionCache = /** @class */ (function () {
     function PositionCache(originEl, els, isHorizontal, isVertical) {
       this.els = els;
@@ -6664,10 +6664,10 @@ var FullCalendar = (function (exports) {
 
   /* eslint max-classes-per-file: "off" */
   /*
-      An object for getting/setting scroll-related information for an element.
-      Internally, this is done very differently for window versus DOM element,
-      so this object serves as a common interface.
-      */
+    An object for getting/setting scroll-related information for an element.
+    Internally, this is done very differently for window versus DOM element,
+    so this object serves as a common interface.
+    */
   var ScrollController = /** @class */ (function () {
     function ScrollController() {}
     ScrollController.prototype.getMaxScrollTop = function () {
@@ -6986,12 +6986,12 @@ var FullCalendar = (function (exports) {
   }
 
   /*
-      an INTERACTABLE date component
-  
-      PURPOSES:
-      - hook up to fg, fill, and mirror renderers
-      - interface for dragging and hits
-      */
+    an INTERACTABLE date component
+
+    PURPOSES:
+    - hook up to fg, fill, and mirror renderers
+    - interface for dragging and hits
+    */
   var DateComponent = /** @class */ (function (_super) {
     __extends(DateComponent, _super);
     function DateComponent() {
@@ -7770,7 +7770,7 @@ var FullCalendar = (function (exports) {
       this.initHiddenDays();
     }
     /* Date Range Computation
-          ------------------------------------------------------------------------------------------------------------------*/
+        ------------------------------------------------------------------------------------------------------------------*/
     // Builds a structure with info about what the dates/ranges will be for the "prev" view.
     DateProfileGenerator.prototype.buildPrev = function (
       currentDateProfile,
@@ -8057,7 +8057,7 @@ var FullCalendar = (function (exports) {
       return null;
     };
     /* Hidden Days
-          ------------------------------------------------------------------------------------------------------------------*/
+        ------------------------------------------------------------------------------------------------------------------*/
     // Initializes internal variables related to calculating hidden days-of-week
     DateProfileGenerator.prototype.initHiddenDays = function () {
       var hiddenDays = this.props.hiddenDays || []; // array of day-of-week indices that are hidden
@@ -8688,8 +8688,8 @@ var FullCalendar = (function (exports) {
     };
   }
   /*
-      BAD: querying icons and text here. should be done at render time
-      */
+    BAD: querying icons and text here. should be done at render time
+    */
   function parseSection(
     sectionStr,
     calendarOptions, // defaults+overrides, then refined
@@ -9057,8 +9057,8 @@ var FullCalendar = (function (exports) {
     },
   });
   /*
-      BUG: if `event` was supplied, all previously-given `eventSources` will be wiped out
-      */
+    BUG: if `event` was supplied, all previously-given `eventSources` will be wiped out
+    */
   function handleEventSources(inputs, context) {
     var unfoundSources = hashValuesToArray(
       context.getCurrentData().eventSources
@@ -9116,9 +9116,9 @@ var FullCalendar = (function (exports) {
   }
 
   /*
-      this array is exposed on the root namespace so that UMD plugins can add to it.
-      see the rollup-bundles script.
-      */
+    this array is exposed on the root namespace so that UMD plugins can add to it.
+    see the rollup-bundles script.
+    */
   var globalPlugins = [
     arrayEventSourcePlugin,
     funcEventSourcePlugin,
@@ -10091,9 +10091,9 @@ var FullCalendar = (function (exports) {
 
   // HELPERS
   /*
-      if nextDayThreshold is specified, slicing is done in an all-day fashion.
-      you can get nextDayThreshold from context.nextDayThreshold
-      */
+    if nextDayThreshold is specified, slicing is done in an all-day fashion.
+    you can get nextDayThreshold from context.nextDayThreshold
+    */
   function sliceEvents(props, allDay) {
     return sliceEventStore(
       props.eventStore,
@@ -10427,18 +10427,18 @@ var FullCalendar = (function (exports) {
   var interactionSettingsStore = {};
 
   /*
-      An abstraction for a dragging interaction originating on an event.
-      Does higher-level things than PointerDragger, such as possibly:
-      - a "mirror" that moves with the pointer
-      - a minimum number of pixels or other criteria for a true drag to begin
-  
-      subclasses must emit:
-      - pointerdown
-      - dragstart
-      - dragmove
-      - pointerup
-      - dragend
-      */
+    An abstraction for a dragging interaction originating on an event.
+    Does higher-level things than PointerDragger, such as possibly:
+    - a "mirror" that moves with the pointer
+    - a minimum number of pixels or other criteria for a true drag to begin
+
+    subclasses must emit:
+    - pointerdown
+    - dragstart
+    - dragmove
+    - pointerup
+    - dragend
+    */
   var ElementDragging = /** @class */ (function () {
     function ElementDragging(el, selector) {
       this.emitter = new Emitter();
@@ -10461,9 +10461,9 @@ var FullCalendar = (function (exports) {
   var config = {};
 
   /*
-      Information about what will happen when an external element is dragged-and-dropped
-      onto a calendar. Contains information for creating an event.
-      */
+    Information about what will happen when an external element is dragged-and-dropped
+    onto a calendar. Contains information for creating an event.
+    */
   var DRAG_META_REFINERS = {
     startTime: createDuration,
     duration: createDuration,
@@ -10700,8 +10700,8 @@ var FullCalendar = (function (exports) {
   })(BaseComponent);
 
   /*
-      Detects when the user clicks on an event within a DateComponent
-      */
+    Detects when the user clicks on an event within a DateComponent
+    */
   var EventClicking = /** @class */ (function (_super) {
     __extends(EventClicking, _super);
     function EventClicking(settings) {
@@ -10750,9 +10750,9 @@ var FullCalendar = (function (exports) {
   })(Interaction);
 
   /*
-      Triggers events and adds/removes core classNames when the user's pointer
-      enters/leaves event-elements of a component.
-      */
+    Triggers events and adds/removes core classNames when the user's pointer
+    enters/leaves event-elements of a component.
+    */
   var EventHovering = /** @class */ (function (_super) {
     __extends(EventHovering, _super);
     function EventHovering(settings) {
@@ -10869,8 +10869,8 @@ var FullCalendar = (function (exports) {
       return _this;
     }
     /*
-          renders INSIDE of an outer div
-          */
+        renders INSIDE of an outer div
+        */
     CalendarContent.prototype.render = function () {
       var props = this.props;
       var toolbarConfig = props.toolbarConfig,
@@ -11772,8 +11772,8 @@ var FullCalendar = (function (exports) {
       return segs;
     };
     /*
-          "complete" seg means it has component and eventRange
-          */
+        "complete" seg means it has component and eventRange
+        */
     Slicer.prototype.sliceEventRanges = function (eventRanges, extraArgs) {
       var segs = [];
       for (
@@ -11787,8 +11787,8 @@ var FullCalendar = (function (exports) {
       return segs;
     };
     /*
-          "complete" seg means it has component and eventRange
-          */
+        "complete" seg means it has component and eventRange
+        */
     Slicer.prototype.sliceEventRange = function (eventRange, extraArgs) {
       var dateRange = eventRange.range;
       // hack to make multi-day events that are being force-displayed as list-items to take up only one day
@@ -11813,10 +11813,10 @@ var FullCalendar = (function (exports) {
     return Slicer;
   })();
   /*
-      for incorporating slotMinTime/slotMaxTime if appropriate
-      TODO: should be part of DateProfile!
-      TimelineDateProfile already does this btw
-      */
+    for incorporating slotMinTime/slotMaxTime if appropriate
+    TODO: should be part of DateProfile!
+    TimelineDateProfile already does this btw
+    */
   function computeActiveRange(dateProfile, isComponentAllDay) {
     var range = dateProfile.activeRange;
     if (isComponentAllDay) {
@@ -12236,9 +12236,9 @@ var FullCalendar = (function (exports) {
   })(BaseComponent);
 
   /*
-      TODO: somehow infer OtherArgs from masterCallback?
-      TODO: infer RefType from masterCallback if provided
-      */
+    TODO: somehow infer OtherArgs from masterCallback?
+    TODO: infer RefType from masterCallback if provided
+    */
   var RefMap = /** @class */ (function () {
     function RefMap(masterCallback) {
       var _this = this;
@@ -12362,10 +12362,10 @@ var FullCalendar = (function (exports) {
   function renderMicroColGroup(cols, shrinkWidth) {
     var colNodes = [];
     /*
-          for ColProps with spans, it would have been great to make a single <col span="">
-          HOWEVER, Chrome was getting messing up distributing the width to <td>/<th> elements with colspans.
-          SOLUTION: making individual <col> elements makes Chrome behave.
-          */
+        for ColProps with spans, it would have been great to make a single <col span="">
+        HOWEVER, Chrome was getting messing up distributing the width to <td>/<th> elements with colspans.
+        SOLUTION: making individual <col> elements makes Chrome behave.
+        */
     for (var _i = 0, cols_1 = cols; _i < cols_1.length; _i++) {
       var colProps = cols_1[_i];
       var span = colProps.span || 1;
@@ -12390,7 +12390,7 @@ var FullCalendar = (function (exports) {
   }
   function sanitizeShrinkWidth(shrinkWidth) {
     /* why 4? if we do 0, it will kill any border, which are needed for computeSmallestCellWidth
-          4 accounts for 2 2-pixel borders. TODO: better solution? */
+        4 accounts for 2 2-pixel borders. TODO: better solution? */
     return shrinkWidth == null ? 4 : shrinkWidth;
   }
   function hasShrinkWidth(cols) {
@@ -12822,8 +12822,8 @@ var FullCalendar = (function (exports) {
       setElSeg(this.elRef.current, this.props.seg);
     };
     /*
-          need to re-assign seg to the element if seg changes, even if the element is the same
-          */
+        need to re-assign seg to the element if seg changes, even if the element is the same
+        */
     EventRoot.prototype.componentDidUpdate = function (prevProps) {
       var seg = this.props.seg;
       if (seg !== prevProps.seg) {
@@ -13682,18 +13682,18 @@ var FullCalendar = (function (exports) {
   var listenerCnt = 0;
   var isWindowTouchMoveCancelled = false;
   /*
-      Uses a "pointer" abstraction, which monitors UI events for both mouse and touch.
-      Tracks when the pointer "drags" on a certain element, meaning down+move+up.
-  
-      Also, tracks if there was touch-scrolling.
-      Also, can prevent touch-scrolling from happening.
-      Also, can fire pointermove events when scrolling happens underneath, even when no real pointer movement.
-  
-      emits:
-      - pointerdown
-      - pointermove
-      - pointerup
-      */
+    Uses a "pointer" abstraction, which monitors UI events for both mouse and touch.
+    Tracks when the pointer "drags" on a certain element, meaning down+move+up.
+
+    Also, tracks if there was touch-scrolling.
+    Also, can prevent touch-scrolling from happening.
+    Also, can fire pointermove events when scrolling happens underneath, even when no real pointer movement.
+
+    emits:
+    - pointerdown
+    - pointermove
+    - pointerup
+    */
   var PointerDragging = /** @class */ (function () {
     function PointerDragging(containerEl) {
       var _this = this;
@@ -13963,10 +13963,10 @@ var FullCalendar = (function (exports) {
   }
 
   /*
-      An effect in which an element follows the movement of a pointer across the screen.
-      The moving element is a clone of some other element.
-      Must call start + handleMove + stop.
-      */
+    An effect in which an element follows the movement of a pointer across the screen.
+    The moving element is a clone of some other element.
+    Must call start + handleMove + stop.
+    */
   var ElementMirror = /** @class */ (function () {
     function ElementMirror() {
       this.isVisible = false; // must be explicitly enabled
@@ -14088,13 +14088,13 @@ var FullCalendar = (function (exports) {
   })();
 
   /*
-      Is a cache for a given element's scroll information (all the info that ScrollController stores)
-      in addition the "client rectangle" of the element.. the area within the scrollbars.
-  
-      The cache can be in one of two modes:
-      - doesListening:false - ignores when the container is scrolled by someone else
-      - doesListening:true - watch for scrolling and update the cache
-      */
+    Is a cache for a given element's scroll information (all the info that ScrollController stores)
+    in addition the "client rectangle" of the element.. the area within the scrollbars.
+
+    The cache can be in one of two modes:
+    - doesListening:false - ignores when the container is scrolled by someone else
+    - doesListening:true - watch for scrolling and update the cache
+    */
   var ScrollGeomCache = /** @class */ (function (_super) {
     __extends(ScrollGeomCache, _super);
     function ScrollGeomCache(scrollController, doesListening) {
@@ -14212,11 +14212,11 @@ var FullCalendar = (function (exports) {
   // https://developer.mozilla.org/en-US/docs/Web/API/Performance
   var getTime = typeof performance === "function" ? performance.now : Date.now;
   /*
-      For a pointer interaction, automatically scrolls certain scroll containers when the pointer
-      approaches the edge.
-  
-      The caller must call start + handleMove + stop.
-      */
+    For a pointer interaction, automatically scrolls certain scroll containers when the pointer
+    approaches the edge.
+
+    The caller must call start + handleMove + stop.
+    */
   var AutoScroller = /** @class */ (function () {
     function AutoScroller() {
       var _this = this;
@@ -14435,11 +14435,11 @@ var FullCalendar = (function (exports) {
   })();
 
   /*
-      Monitors dragging on an element. Has a number of high-level features:
-      - minimum distance required before dragging
-      - minimum wait time ("delay") before dragging
-      - a mirror element that follows the pointer
-      */
+    Monitors dragging on an element. Has a number of high-level features:
+    - minimum distance required before dragging
+    - minimum wait time ("delay") before dragging
+    - a mirror element that follows the pointer
+    */
   var FeaturefulElementDragging = /** @class */ (function (_super) {
     __extends(FeaturefulElementDragging, _super);
     function FeaturefulElementDragging(containerEl, selector) {
@@ -14602,13 +14602,13 @@ var FullCalendar = (function (exports) {
   })(ElementDragging);
 
   /*
-      When this class is instantiated, it records the offset of an element (relative to the document topleft),
-      and continues to monitor scrolling, updating the cached coordinates if it needs to.
-      Does not access the DOM after instantiation, so highly performant.
-  
-      Also keeps track of all scrolling/overflow:hidden containers that are parents of the given element
-      and an determine if a given point is inside the combined clipping rectangle.
-      */
+    When this class is instantiated, it records the offset of an element (relative to the document topleft),
+    and continues to monitor scrolling, updating the cached coordinates if it needs to.
+    Does not access the DOM after instantiation, so highly performant.
+
+    Also keeps track of all scrolling/overflow:hidden containers that are parents of the given element
+    and an determine if a given point is inside the combined clipping rectangle.
+    */
   var OffsetTracker = /** @class */ (function () {
     function OffsetTracker(el) {
       this.origRect = computeRect(el);
@@ -14662,18 +14662,18 @@ var FullCalendar = (function (exports) {
   }
 
   /*
-      Tracks movement over multiple droppable areas (aka "hits")
-      that exist in one or more DateComponents.
-      Relies on an existing draggable.
-  
-      emits:
-      - pointerdown
-      - dragstart
-      - hitchange - fires initially, even if not over a hit
-      - pointerup
-      - (hitchange - again, to null, if ended over a hit)
-      - dragend
-      */
+    Tracks movement over multiple droppable areas (aka "hits")
+    that exist in one or more DateComponents.
+    Relies on an existing draggable.
+
+    emits:
+    - pointerdown
+    - dragstart
+    - hitchange - fires initially, even if not over a hit
+    - pointerup
+    - (hitchange - again, to null, if ended over a hit)
+    - dragend
+    */
   var HitDragging = /** @class */ (function () {
     function HitDragging(dragging, droppableStore) {
       var _this = this;
@@ -14870,9 +14870,9 @@ var FullCalendar = (function (exports) {
   }
 
   /*
-      Monitors when the user clicks on a specific date/time of a component.
-      A pointerdown+pointerup on the same "hit" constitutes a click.
-      */
+    Monitors when the user clicks on a specific date/time of a component.
+    A pointerdown+pointerup on the same "hit" constitutes a click.
+    */
   var DateClicking = /** @class */ (function (_super) {
     __extends(DateClicking, _super);
     function DateClicking(settings) {
@@ -14926,9 +14926,9 @@ var FullCalendar = (function (exports) {
   })(Interaction);
 
   /*
-      Tracks when the user selects a portion of time of a component,
-      constituted by a drag over date cells, with a possible delay at the beginning of the drag.
-      */
+    Tracks when the user selects a portion of time of a component,
+    constituted by a drag over date cells, with a possible delay at the beginning of the drag.
+    */
   var DateSelecting = /** @class */ (function (_super) {
     __extends(DateSelecting, _super);
     function DateSelecting(settings) {
@@ -15771,8 +15771,8 @@ var FullCalendar = (function (exports) {
       documentPointer.emitter.on("pointerdown", this.onDocumentPointerDown);
       documentPointer.emitter.on("pointerup", this.onDocumentPointerUp);
       /*
-              TODO: better way to know about whether there was a selection with the pointer
-              */
+            TODO: better way to know about whether there was a selection with the pointer
+            */
       context.emitter.on("select", this.onSelect);
     }
     UnselectAuto.prototype.destroy = function () {
@@ -15799,10 +15799,10 @@ var FullCalendar = (function (exports) {
   };
 
   /*
-      Given an already instantiated draggable object for one-or-more elements,
-      Interprets any dragging as an attempt to drag an events that lives outside
-      of a calendar onto a calendar.
-      */
+    Given an already instantiated draggable object for one-or-more elements,
+    Interprets any dragging as an attempt to drag an events that lives outside
+    of a calendar onto a calendar.
+    */
   var ExternalElementDragging = /** @class */ (function () {
     function ExternalElementDragging(dragging, suppliedDragMeta) {
       var _this = this;
@@ -16023,10 +16023,10 @@ var FullCalendar = (function (exports) {
   }
 
   /*
-      Makes an element (that is *external* to any calendar) draggable.
-      Can pass in data that determines how an event will be created when dropped onto a calendar.
-      Leverages FullCalendar's internal drag-n-drop functionality WITHOUT a third-party drag system.
-      */
+    Makes an element (that is *external* to any calendar) draggable.
+    Can pass in data that determines how an event will be created when dropped onto a calendar.
+    Leverages FullCalendar's internal drag-n-drop functionality WITHOUT a third-party drag system.
+    */
   var ExternalDraggable = /** @class */ (function () {
     function ExternalDraggable(el, settings) {
       var _this = this;
@@ -16081,11 +16081,11 @@ var FullCalendar = (function (exports) {
   })();
 
   /*
-      Detects when a *THIRD-PARTY* drag-n-drop system interacts with elements.
-      The third-party system is responsible for drawing the visuals effects of the drag.
-      This class simply monitors for pointer movements and fires events.
-      It also has the ability to hide the moving element (the "mirror") during the drag.
-      */
+    Detects when a *THIRD-PARTY* drag-n-drop system interacts with elements.
+    The third-party system is responsible for drawing the visuals effects of the drag.
+    This class simply monitors for pointer movements and fires events.
+    It also has the ability to hide the moving element (the "mirror") during the drag.
+    */
   var InferredElementDragging = /** @class */ (function (_super) {
     __extends(InferredElementDragging, _super);
     function InferredElementDragging(containerEl) {
@@ -16147,9 +16147,9 @@ var FullCalendar = (function (exports) {
   })(ElementDragging);
 
   /*
-      Bridges third-party drag-n-drop systems with FullCalendar.
-      Must be instantiated and destroyed by caller.
-      */
+    Bridges third-party drag-n-drop systems with FullCalendar.
+    Must be instantiated and destroyed by caller.
+    */
   var ThirdPartyDraggable = /** @class */ (function () {
     function ThirdPartyDraggable(containerOrSettings, settings) {
       var containerEl = document;
@@ -16194,7 +16194,7 @@ var FullCalendar = (function (exports) {
   });
 
   /* An abstract class for the daygrid views, as well as month view. Renders one or more rows of day cells.
-      ----------------------------------------------------------------------------------------------------------------------*/
+    ----------------------------------------------------------------------------------------------------------------------*/
   // It is a manager for a Table subcomponent, which does most of the heavy lifting.
   // It is responsible for managing width/height.
   var TableView = /** @class */ (function (_super) {
@@ -17261,9 +17261,9 @@ var FullCalendar = (function (exports) {
             }
           }
           /*
-                      known bug: events that are force to be list-item but span multiple days still take up space in later columns
-                      todo: in print view, for multi-day events, don't display title within non-start/end segs
-                      */
+                    known bug: events that are force to be list-item but span multiple days still take up space in later columns
+                    todo: in print view, for multi-day events, don't display title within non-start/end segs
+                    */
           nodes.push(
             createElement(
               "div",
@@ -17995,7 +17995,7 @@ var FullCalendar = (function (exports) {
         }
       };
       /* Header Render Methods
-              ------------------------------------------------------------------------------------------------------------------*/
+            ------------------------------------------------------------------------------------------------------------------*/
       _this.renderHeadAxis = function (rowKey, frameHeight) {
         if (frameHeight === void 0) {
           frameHeight = "";
@@ -18056,7 +18056,7 @@ var FullCalendar = (function (exports) {
         );
       };
       /* Table Component Render Methods
-              ------------------------------------------------------------------------------------------------------------------*/
+            ------------------------------------------------------------------------------------------------------------------*/
       // only a one-way height sync. we don't send the axis inner-content height to the DayGrid,
       // but DayGrid still needs to have classNames on inner elements in order to measure.
       _this.renderTableRowAxis = function (rowHeight) {
@@ -18143,27 +18143,27 @@ var FullCalendar = (function (exports) {
           },
         });
       }
-      //   if (allDayContent) {
-      //     sections.push({
-      //       type: "body",
-      //       key: "all-day",
-      //       chunk: { content: allDayContent },
-      //     });
-      //     sections.push({
-      //       type: "body",
-      //       key: "all-day-divider",
-      //       // TODO: rename to cellContent so don't need to define <tr>?
-      //       outerContent: createElement(
-      //         "tr",
-      //         { role: "presentation", className: "fc-scrollgrid-section" },
-      //         createElement("td", {
-      //           className:
-      //             "fc-timegrid-divider " +
-      //             context.theme.getClass("tableCellShaded"),
-      //         })
-      //       ),
-      //     });
-      //   }
+      if (allDayContent) {
+        sections.push({
+          type: "body",
+          key: "all-day",
+          chunk: { content: allDayContent },
+        });
+        sections.push({
+          type: "body",
+          key: "all-day-divider",
+          // TODO: rename to cellContent so don't need to define <tr>?
+          outerContent: createElement(
+            "tr",
+            { role: "presentation", className: "fc-scrollgrid-section" },
+            createElement("td", {
+              className:
+                "fc-timegrid-divider " +
+                context.theme.getClass("tableCellShaded"),
+            })
+          ),
+        });
+      }
       sections.push({
         type: "body",
         key: "body",
@@ -18399,7 +18399,7 @@ var FullCalendar = (function (exports) {
       );
     };
     /* Dimensions
-          ------------------------------------------------------------------------------------------------------------------*/
+        ------------------------------------------------------------------------------------------------------------------*/
     TimeColsView.prototype.getAllDayMaxEventProps = function () {
       var _a = this.context.options,
         dayMaxEvents = _a.dayMaxEvents,
@@ -18543,8 +18543,8 @@ var FullCalendar = (function (exports) {
   })(BaseComponent);
 
   /*
-      for the horizontal "slats" that run width-wise. Has a time axis on a side. Depends on RTL.
-      */
+    for the horizontal "slats" that run width-wise. Has a time axis on a side. Depends on RTL.
+    */
   var TimeColsSlats = /** @class */ (function (_super) {
     __extends(TimeColsSlats, _super);
     function TimeColsSlats() {
@@ -19583,7 +19583,7 @@ var FullCalendar = (function (exports) {
   }
 
   /* A component that renders one or more columns of vertical time slots
-      ----------------------------------------------------------------------------------------------------------------------*/
+    ----------------------------------------------------------------------------------------------------------------------*/
   var TimeCols = /** @class */ (function (_super) {
     __extends(TimeCols, _super);
     function TimeCols() {
@@ -20333,8 +20333,8 @@ var FullCalendar = (function (exports) {
   }
 
   /*
-      Responsible for the scroller, and forwarding event-related actions into the "grid".
-      */
+    Responsible for the scroller, and forwarding event-related actions into the "grid".
+    */
   var ListView = /** @class */ (function (_super) {
     __extends(ListView, _super);
     function ListView() {

@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -13,10 +12,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./utils/css/fullCalendar/main.min.css" />
+    <link rel="stylesheet" href="./utils/css/styles.css" />
+
     <script src="./utils/js/fullCalendar/main.js" defer></script>
     <script src="./utils/js/calendar.js" defer></script>
+    <script src="./utils/js/dashboard.js" defer></script>
 
-    <link rel="stylesheet" href="./utils/css/styles.css" />
     <title>Service Profile - Dashboard</title>
   </head>
 
@@ -765,32 +766,6 @@
           },
         },
       };
-
-      var inst = mobiscroll.eventcalendar("#demo-desktop-day-view", {
-        theme: "ios",
-        themeVariant: "light",
-        clickToCreate: true,
-        dragToCreate: true,
-        dragToMove: true,
-        dragToResize: true,
-        view: {
-          schedule: { type: "day" },
-        },
-        onEventClick: function (event, inst) {
-          mobiscroll.toast({
-            message: event.event.title,
-          });
-        },
-      });
-
-      mobiscroll.util.http.getJson(
-        "https://trial.mobiscroll.com/events/?vers=5",
-        function (events) {
-          inst.setEvents(events);
-        },
-        "jsonp"
-      );
     </script>
-    <script src="./utils/js/dashboard.js"></script>
   </body>
 </html>
