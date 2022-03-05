@@ -110,7 +110,7 @@
                     class="bg-clr_blue absolute top-1 -left-1 w-2 h-[80%] rounded-2xl"
                   ></div>
                   <button
-                    class="nav-post bg-clr_blue text-white text-xs md:text-sm font-semibold flex items-center py-3 px-2 ml-3 rounded-xl gap-1 md:gap-3 hover:shadow-btn w-[90%]"
+                    class="nav-post bg-clr_blue text-white text-xs md:text-sm font-semibold flex items-center lg:py-3 py-2 lg:px-4 px-2 ml-3 rounded-xl gap-1 md:gap-3 hover:shadow-btn w-[90%]"
                   >
                     <img
                       src="./utils/images/icon-12.svg"
@@ -173,16 +173,16 @@
         <section class="w-full relative md:ml-[12rem] lg:ml-64 min-h-screen">
           <div class="w-[95%] mx-auto">
             <div
-              class="md:h-[12vh] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
+              class="md:h-[5rem] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
             >
               <div class="flex justify-between">
-                <a href="/">
+                <a href="/" class="md:hidden">
                   <figure class="w-full md:px-5 py-6">
                     <img
                       src="./utils/images/pair-time.svg"
                       alt="Company Logo"
                       loading="lazy"
-                      class="sm:hidden w-24 cursor-pointer"
+                      class="w-24"
                     />
                   </figure>
                 </a>
@@ -206,7 +206,7 @@
                       src="./utils/images/user-photo.png"
                       alt="User Photo"
                       loaindg="lazy"
-                      class="lg:h-10 lg:w-10 h-8 w-8"
+                      class="h-10 w-10"
                     />
                   </a>
                   <button class="text-clr_blue md:hidden">
@@ -219,7 +219,7 @@
                 <input
                   type="text"
                   placeholder="Search Anything"
-                  class="sm:w-56 lg:w-72 w-full pl-9 pr-2 py-3 text-xs rounded-lg border-none outline-none placeholder-primary"
+                  class="lg:w-72 w-full pl-9 pr-2 py-3 text-xs rounded-lg border-none outline-none placeholder-primary"
                 />
                 <img
                   src="./utils/images/search.svg"
@@ -231,12 +231,12 @@
             </div>
 
             <div class="center pt-5 lg:pt-2 h-full pb-8">
-              <p class="text-clr_blue_light text-xs lg:text-sm">
-                PairTime <span class="font-light">></span> Live requests
-                <span class="font-light">></span> ios
+              <p class="text-clr_blue_light font-light text-xs lg:text-sm">
+                PairTime <span class="font-bold">></span> Live requests
+                <span class="font-bold">></span> ios
               </p>
               <div
-                class="flex flex-col md:flex-row justify-between items-center mt-4 md:mt-0"
+                class="sm:flex sm:justify-between sm:items-center mt-4 md:mt-0"
               >
                 <p
                   class="text-clr_blue_light text-base lg:text-xl font-bold mt-2 mb-4 flex-1"
@@ -265,7 +265,9 @@
                   class="flex justify-between flex-wrap items-center bg-white py-4 px-5 rounded-lg"
                 >
                   <div class="flex items-center gap-4">
-                    <span class="bg-clr_blue h-3 w-3 rounded-full"></span>
+                    <span
+                      class="hidden xl:block bg-clr_blue h-3 w-3 rounded-full"
+                    ></span>
                     <div>
                       <h4 class="text-sm font-semibold pb-1">
                         How to redirect to an external URL in Korolev App
@@ -277,7 +279,7 @@
                     </div>
                   </div>
                   <div
-                    class="flex justify-between items-center gap-16 pl-6 w-full xl:w-auto mt-3 xl:mt-auto"
+                    class="flex justify-between items-center sm:gap-16 w-full xl:w-auto mt-3 xl:mt-auto"
                   >
                     <div>
                       <p class="text-xs pb-1">
@@ -289,7 +291,7 @@
                     </div>
                     <a
                       href="./live-request-field_details.html"
-                      class="bg-clr_blue text-sm py-2 px-4 text-white rounded-lg hover:shadow-btn"
+                      class="bg-clr_blue text-sm py-2 px-4 text-white font-semibold rounded-lg hover:shadow-btn"
                     >
                       View Details
                     </a>
@@ -300,7 +302,9 @@
                   class="flex justify-between flex-wrap items-center bg-white py-4 px-5 rounded-lg"
                 >
                   <div class="flex items-center gap-4">
-                    <span class="bg-clr_blue h-3 w-3 rounded-full"></span>
+                    <span
+                      class="hidden xl:block bg-clr_blue h-3 w-3 rounded-full"
+                    ></span>
                     <div>
                       <h4 class="text-sm font-semibold pb-1">
                         How to redirect to an external URL in Korolev App
@@ -311,27 +315,33 @@
                       </p>
                     </div>
                   </div>
-                  <div>
-                    <p class="text-xs pb-1 font-normal">
-                      Price Range: <span class="font-light">€ -80/h</span>
-                    </p>
-                    <p class="text-xs">
-                      Price Range: <span class="font-light">$10- /h</span>
-                    </p>
-                  </div>
-                  <a
-                    href="./live-request-field_details.html"
-                    class="bg-clr_blue text-sm py-2 px-4 text-white rounded-lg hover:shadow-btn mt-6 md:mt-0"
+                  <div
+                    class="flex justify-between items-center sm:gap-16 w-full xl:w-auto mt-3 xl:mt-auto"
                   >
-                    View Details
-                  </a>
+                    <div>
+                      <p class="text-xs pb-1">
+                        Price Range: <span class="font-light">€ -80/h</span>
+                      </p>
+                      <p class="text-xs">
+                        Price Range: <span class="font-light">$10- /h</span>
+                      </p>
+                    </div>
+                    <a
+                      href="./live-request-field_details.html"
+                      class="bg-clr_blue text-sm py-2 px-4 text-white font-semibold rounded-lg hover:shadow-btn"
+                    >
+                      View Details
+                    </a>
+                  </div>
                 </div>
 
                 <div
                   class="flex justify-between flex-wrap items-center bg-white py-4 px-5 rounded-lg"
                 >
                   <div class="flex items-center gap-4">
-                    <span class="bg-clr_blue h-3 w-3 rounded-full"></span>
+                    <span
+                      class="hidden xl:block bg-clr_blue h-3 w-3 rounded-full"
+                    ></span>
                     <div>
                       <h4 class="text-sm font-semibold pb-1">
                         How to redirect to an external URL in Korolev App
@@ -342,27 +352,33 @@
                       </p>
                     </div>
                   </div>
-                  <div>
-                    <p class="text-xs pb-1">
-                      Price Range: <span class="font-light">€ -80/h</span>
-                    </p>
-                    <p class="text-xs">
-                      Price Range: <span class="font-light">$10- /h</span>
-                    </p>
-                  </div>
-                  <a
-                    href="./live-request-field_details.html"
-                    class="bg-clr_blue text-sm py-2 px-4 text-white rounded-lg hover:shadow-btn mt-6 md:mt-0"
+                  <div
+                    class="flex justify-between items-center sm:gap-16 w-full xl:w-auto mt-3 xl:mt-auto"
                   >
-                    View Details
-                  </a>
+                    <div>
+                      <p class="text-xs pb-1">
+                        Price Range: <span class="font-light">€ -80/h</span>
+                      </p>
+                      <p class="text-xs">
+                        Price Range: <span class="font-light">$10- /h</span>
+                      </p>
+                    </div>
+                    <a
+                      href="./live-request-field_details.html"
+                      class="bg-clr_blue text-sm py-2 px-4 text-white font-semibold rounded-lg hover:shadow-btn"
+                    >
+                      View Details
+                    </a>
+                  </div>
                 </div>
 
                 <div
                   class="flex justify-between flex-wrap items-center bg-white py-4 px-5 rounded-lg"
                 >
                   <div class="flex items-center gap-4">
-                    <span class="bg-clr_blue h-3 w-3 rounded-full"></span>
+                    <span
+                      class="hidden xl:block bg-clr_blue h-3 w-3 rounded-full"
+                    ></span>
                     <div>
                       <h4 class="text-sm font-semibold pb-1">
                         How to redirect to an external URL in Korolev App
@@ -373,27 +389,33 @@
                       </p>
                     </div>
                   </div>
-                  <div>
-                    <p class="text-xs pb-1">
-                      Price Range: <span class="font-light">€ -80/h</span>
-                    </p>
-                    <p class="text-xs">
-                      Price Range: <span class="font-light">$10- /h</span>
-                    </p>
-                  </div>
-                  <a
-                    href="./live-request-field_details.html"
-                    class="bg-clr_blue text-sm py-2 px-4 text-white rounded-lg hover:shadow-btn mt-6 md:mt-0"
+                  <div
+                    class="flex justify-between items-center sm:gap-16 w-full xl:w-auto mt-3 xl:mt-auto"
                   >
-                    View Details
-                  </a>
+                    <div>
+                      <p class="text-xs pb-1">
+                        Price Range: <span class="font-light">€ -80/h</span>
+                      </p>
+                      <p class="text-xs">
+                        Price Range: <span class="font-light">$10- /h</span>
+                      </p>
+                    </div>
+                    <a
+                      href="./live-request-field_details.html"
+                      class="bg-clr_blue text-sm py-2 px-4 text-white font-semibold rounded-lg hover:shadow-btn"
+                    >
+                      View Details
+                    </a>
+                  </div>
                 </div>
 
                 <div
                   class="flex justify-between flex-wrap items-center bg-white py-4 px-5 rounded-lg"
                 >
                   <div class="flex items-center gap-4">
-                    <span class="bg-clr_blue h-3 w-3 rounded-full"></span>
+                    <span
+                      class="hidden xl:block bg-clr_blue h-3 w-3 rounded-full"
+                    ></span>
                     <div>
                       <h4 class="text-sm font-semibold pb-1">
                         How to redirect to an external URL in Korolev App
@@ -404,27 +426,33 @@
                       </p>
                     </div>
                   </div>
-                  <div>
-                    <p class="text-xs pb-1">
-                      Price Range: <span class="font-light">€ -80/h</span>
-                    </p>
-                    <p class="text-xs">
-                      Price Range: <span class="font-light">$10- /h</span>
-                    </p>
-                  </div>
-                  <a
-                    href="./live-request-field_details.html"
-                    class="bg-clr_blue text-sm py-2 px-4 text-white rounded-lg hover:shadow-btn mt-6 md:mt-0"
+                  <div
+                    class="flex justify-between items-center sm:gap-16 w-full xl:w-auto mt-3 xl:mt-auto"
                   >
-                    View Details
-                  </a>
+                    <div>
+                      <p class="text-xs pb-1">
+                        Price Range: <span class="font-light">€ -80/h</span>
+                      </p>
+                      <p class="text-xs">
+                        Price Range: <span class="font-light">$10- /h</span>
+                      </p>
+                    </div>
+                    <a
+                      href="./live-request-field_details.html"
+                      class="bg-clr_blue text-sm py-2 px-4 text-white font-semibold rounded-lg hover:shadow-btn"
+                    >
+                      View Details
+                    </a>
+                  </div>
                 </div>
 
                 <div
                   class="flex justify-between flex-wrap items-center bg-white py-4 px-5 rounded-lg"
                 >
                   <div class="flex items-center gap-4">
-                    <span class="bg-clr_blue h-3 w-3 rounded-full"></span>
+                    <span
+                      class="hidden xl:block bg-clr_blue h-3 w-3 rounded-full"
+                    ></span>
                     <div>
                       <h4 class="text-sm font-semibold pb-1">
                         How to redirect to an external URL in Korolev App
@@ -435,27 +463,33 @@
                       </p>
                     </div>
                   </div>
-                  <div>
-                    <p class="text-xs pb-1">
-                      Price Range: <span class="font-light">€ -80/h</span>
-                    </p>
-                    <p class="text-xs">
-                      Price Range: <span class="font-light">$10- /h</span>
-                    </p>
-                  </div>
-                  <a
-                    href="./live-request-field_details.html"
-                    class="bg-clr_blue text-sm py-2 px-4 text-white rounded-lg hover:shadow-btn mt-6 md:mt-0"
+                  <div
+                    class="flex justify-between items-center sm:gap-16 w-full xl:w-auto mt-3 xl:mt-auto"
                   >
-                    View Details
-                  </a>
+                    <div>
+                      <p class="text-xs pb-1">
+                        Price Range: <span class="font-light">€ -80/h</span>
+                      </p>
+                      <p class="text-xs">
+                        Price Range: <span class="font-light">$10- /h</span>
+                      </p>
+                    </div>
+                    <a
+                      href="./live-request-field_details.html"
+                      class="bg-clr_blue text-sm py-2 px-4 text-white font-semibold rounded-lg hover:shadow-btn"
+                    >
+                      View Details
+                    </a>
+                  </div>
                 </div>
 
                 <div
                   class="flex justify-between flex-wrap items-center bg-white py-4 px-5 rounded-lg"
                 >
                   <div class="flex items-center gap-4">
-                    <span class="bg-clr_blue h-3 w-3 rounded-full"></span>
+                    <span
+                      class="hidden xl:block bg-clr_blue h-3 w-3 rounded-full"
+                    ></span>
                     <div>
                       <h4 class="text-sm font-semibold pb-1">
                         How to redirect to an external URL in Korolev App
@@ -466,20 +500,24 @@
                       </p>
                     </div>
                   </div>
-                  <div>
-                    <p class="text-xs pb-1">
-                      Price Range: <span class="font-light">€ -80/h</span>
-                    </p>
-                    <p class="text-xs">
-                      Price Range: <span class="font-light">$10- /h</span>
-                    </p>
-                  </div>
-                  <a
-                    href="./live-request-field_details.html"
-                    class="bg-clr_blue text-sm py-2 px-4 text-white rounded-lg hover:shadow-btn mt-6 md:mt-0"
+                  <div
+                    class="flex justify-between items-center sm:gap-16 w-full xl:w-auto mt-3 xl:mt-auto"
                   >
-                    View Details
-                  </a>
+                    <div>
+                      <p class="text-xs pb-1">
+                        Price Range: <span class="font-light">€ -80/h</span>
+                      </p>
+                      <p class="text-xs">
+                        Price Range: <span class="font-light">$10- /h</span>
+                      </p>
+                    </div>
+                    <a
+                      href="./live-request-field_details.html"
+                      class="bg-clr_blue text-sm py-2 px-4 text-white font-semibold rounded-lg hover:shadow-btn"
+                    >
+                      View Details
+                    </a>
+                  </div>
                 </div>
               </section>
             </div>

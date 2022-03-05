@@ -127,7 +127,7 @@
                     class="bg-clr_blue absolute top-1 -left-1 w-2 h-[80%] rounded-2xl"
                   ></div>
                   <button
-                    class="nav-post bg-clr_blue text-white text-xs md:text-sm font-semibold flex items-center py-3 px-4 ml-3 rounded-xl gap-1 md:gap-3 hover:shadow-btn w-[90%]"
+                    class="nav-post bg-clr_blue text-white text-xs md:text-sm font-semibold flex items-center lg:py-3 py-2 lg:px-4 px-2 ml-3 rounded-xl gap-1 md:gap-3 hover:shadow-btn w-[90%]"
                   >
                     <img
                       src="./utils/images/icon-13.svg"
@@ -179,16 +179,16 @@
         <section class="w-full relative h-screen overflow-hidden">
           <div class="w-[95%] mx-auto">
             <div
-              class="md:h-[12vh] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
+              class="md:h-[5rem] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
             >
               <div class="flex justify-between">
-                <a href="./index.html">
+                <a href="./" class="md:hidden">
                   <figure class="w-full md:px-5 py-6">
                     <img
                       src="./utils/images/pair-time.svg"
                       alt="Company Logo"
                       loading="lazy"
-                      class="sm:hidden w-24 cursor-pointer"
+                      class="w-24"
                     />
                   </figure>
                 </a>
@@ -212,7 +212,7 @@
                       src="./utils/images/user-photo.png"
                       alt="User Photo"
                       loaindg="lazy"
-                      class="lg:h-10 lg:w-10 h-8 w-8"
+                      class="h-10 w-10"
                     />
                   </a>
                   <button class="text-clr_blue md:hidden">
@@ -225,7 +225,7 @@
                 <input
                   type="text"
                   placeholder="Search Anything"
-                  class="sm:w-56 lg:w-72 w-full pl-9 pr-2 py-3 text-xs rounded-lg border-none outline-none placeholder-primary"
+                  class="lg:w-72 w-full pl-9 pr-2 py-3 text-xs rounded-lg border-none outline-none placeholder-primary"
                 />
                 <img
                   src="./utils/images/search.svg"
@@ -236,22 +236,24 @@
               </div>
             </div>
 
-            <div class="center pt-5 lg:pt-2 h-full pb-8">
-              <div class="lg:h-[13vh]">
-                <p class="text-clr_blue_light text-xs lg:text-sm flex gap-1">
-                  PairTime <span class="font-light">></span> Visible Profile
+            <div class="center h-[calc(100vh-5rem)]">
+              <div class="lg:h-[6rem] h-[10rem] pt-5 lg:pt-2">
+                <p
+                  class="text-clr_blue_light font-light text-xs lg:text-sm flex gap-1"
+                >
+                  PairTime <span class="font-bold">></span> Visible Profile
                   <span
                     class="hidden text-clr_blue_light"
                     id="show-profiles-link"
-                    ><b class="font-light">></b> Show All
+                    ><b class="font-bold">></b> Show All
                   </span>
                 </p>
 
                 <div
-                  class="lg:flex lg:justify-between lg:items-center mt-2 mb-6"
+                  class="lg:flex lg:justify-between lg:items-center pt-2 pb-6"
                 >
                   <p
-                    class="text-clr_blue_light text-base lg:text-xl font-semibold flex-1 mb-4 lg:mb-auto"
+                    class="text-clr_blue_light text-base lg:text-xl font-semibold flex-1 mb-4 lg:mb-0"
                   >
                     You have no services available!
                   </p>
@@ -291,7 +293,7 @@
 
               <!-- profile container -->
               <div
-                class="services-listing hidden h-[75vh] overflow-auto pr-[1%] pb-8 w-[101.5%]"
+                class="services-listing hidden h-[calc(100vh-5rem-10rem)] lg:h-[calc(100vh-5rem-6rem)] overflow-auto pr-[1%] pb-12 w-[101.5%]"
                 id="all-services-list"
               >
                 <div class="single-service bg-white rounded-lg px-[1.5%] py-4">

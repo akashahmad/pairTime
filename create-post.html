@@ -81,7 +81,7 @@
                     class="bg-clr_blue absolute top-1 -left-1 w-2 h-[80%] rounded-2xl"
                   ></div>
                   <button
-                    class="nav-post bg-clr_blue text-white text-xs md:text-sm font-semibold flex items-center py-3 px-4 ml-3 rounded-xl gap-1 md:gap-3 hover:shadow-btn w-[90%]"
+                    class="nav-post bg-clr_blue text-white text-xs md:text-sm font-semibold flex items-center lg:py-3 py-2 lg:px-4 px-2 ml-3 rounded-xl gap-1 md:gap-3 hover:shadow-btn w-[90%]"
                   >
                     <img
                       src="./utils/images/icon-10.svg"
@@ -169,16 +169,16 @@
         <section class="w-full relative md:ml-[12rem] lg:ml-64 min-h-screen">
           <div class="w-[95%] mx-auto">
             <div
-              class="md:h-[12vh] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
+              class="md:h-[5rem] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
             >
               <div class="flex justify-between">
-                <a href="/">
+                <a href="/" class="md:hidden">
                   <figure class="w-full md:px-5 py-6">
                     <img
                       src="./utils/images/pair-time.svg"
                       alt="Company Logo"
                       loading="lazy"
-                      class="sm:hidden w-24 cursor-pointer"
+                      class="w-24"
                     />
                   </figure>
                 </a>
@@ -212,7 +212,7 @@
                       src="./utils/images/user-photo.png"
                       alt="User Photo"
                       loaindg="lazy"
-                      class="lg:h-10 lg:w-10 h-8 w-8"
+                      class="h-10 w-10"
                     />
                   </a>
                   <button class="text-clr_blue md:hidden">
@@ -225,7 +225,7 @@
                 <input
                   type="text"
                   placeholder="Search Anything"
-                  class="sm:w-56 lg:w-72 w-full pl-9 pr-2 py-3 text-xs rounded-lg border-none outline-none placeholder-primary"
+                  class="lg:w-72 w-full pl-9 pr-2 py-3 text-xs rounded-lg border-none outline-none placeholder-primary"
                 />
                 <img
                   src="./utils/images/search.svg"
@@ -237,8 +237,8 @@
             </div>
 
             <div class="center pt-5 lg:pt-2 h-full pb-8">
-              <p class="text-clr_blue_light text-xs lg:text-sm">
-                PairTime <span class="font-semibold">></span> Post a request
+              <p class="text-clr_blue_light font-light text-xs lg:text-sm">
+                PairTime <span class="font-bold">></span> Post a request
               </p>
 
               <div class="md:flex md:justify-between md:items-center">
@@ -309,9 +309,10 @@
                     >No predicitions yet</span
                   >
                 </p>
+
                 <div class="md:flex items-center pt-7">
                   <p
-                    class="text-clr_blue_light text-xl font-semibold mt-2 mb-3 flex-1"
+                    class="text-clr_blue_light text-base lg:text-xl font-semibold mt-2 mb-3 flex-1"
                   >
                     Scheduling
                   </p>
@@ -324,7 +325,7 @@
                     </div>
                     <div class="relative flex-1">
                       <select
-                        class="py-[15.5px] px-3 rounded-lg text-[11px] text-clr_blue_light w-full appearance-none"
+                        class="bg-white py-[15.5px] px-3 rounded-lg text-[11px] text-clr_blue_light w-full appearance-none"
                       >
                         <option>Asia/Karachi (currently +5:00)</option>
                         <option>Asia/Karachi (currently +5:00)</option>
@@ -343,13 +344,12 @@
                   class="border-bottom w-full border-b-[0.5px] opacity-60 mt-5"
                 ></div>
 
-                <div class="xl:flex xl:justify-between pt-8">
+                <div class="xl:flex xl:justify-between pt-5 lg:pt-8">
                   <div class="schedular w-full xl:w-[61%]">
                     <div
-                      class="schedular-calendar"
+                      class="schedular-calendar h-full"
                       id="schedular-calendar"
                     ></div>
-                    <!-- <Calendar {plugins} {options} /> -->
                   </div>
 
                   <div class="right-side w-full xl:w-[36%] pt-2">
@@ -468,7 +468,7 @@
                             class="relative shadow-input border border-[#f7f8fb] rounded-lg"
                           >
                             <select
-                              class="py-[15.5px] px-3 rounded-lg text-[11px] text-clr_blue_light w-full appearance-none"
+                              class="bg-white py-[15.5px] px-3 rounded-lg text-[11px] text-clr_blue_light w-full appearance-none"
                             >
                               <option>Every Day</option>
                               <option>Monday</option>
@@ -500,7 +500,7 @@
                               class="relative shadow-input w-[5rem]"
                             >
                               <select
-                                class="py-[15.5px] px-3 rounded-lg text-[11px] text-clr_blue_light w-full appearance-none"
+                                class="bg-white py-[15.5px] px-3 rounded-lg text-[11px] text-clr_blue_light w-full appearance-none"
                               >
                                 <option>Option</option>
                                 <option>Tom</option>
@@ -529,7 +529,7 @@
                               class="relative shadow-input flex-1"
                             >
                               <select
-                                class="py-[15.5px] px-3 rounded-lg text-[11px] text-clr_blue_light w-full appearance-none"
+                                class="bg-white py-[15.5px] px-3 rounded-lg text-[11px] text-clr_blue_light w-full appearance-none"
                               >
                                 <option>Every</option>
                                 <option>Monday</option>
@@ -555,7 +555,7 @@
                 </div>
                 <div class="mt-10">
                   <p
-                    class="text-clr_blue_light text-xl font-semibold pb-5 flex-1"
+                    class="text-clr_blue_light text-base lg:text-xl font-semibold pb-5 flex-1"
                   >
                     Post a Request
                   </p>
@@ -587,7 +587,7 @@
                 </div>
                 <div class="mt-12">
                   <p
-                    class="text-clr_blue_light text-xl font-semibold mt-2 pb-5 flex-1"
+                    class="text-clr_blue_light text-base lg:text-xl font-semibold mt-2 pb-5 flex-1"
                   >
                     Budget
                   </p>

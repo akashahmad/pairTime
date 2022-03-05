@@ -37,7 +37,7 @@
             class="w-[70%] bg-white h-screen flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
           >
             <div class="flex justify-between items-center">
-              <a href="/">
+              <a href="./index.html">
                 <figure class="w-full px-5 py-6">
                   <img
                     src="./utils/images/pair-time.svg"
@@ -127,7 +127,7 @@
                     class="bg-clr_blue absolute top-1 -left-1 w-2 h-[80%] rounded-2xl"
                   ></div>
                   <button
-                    class="nav-post bg-clr_blue text-white text-xs md:text-sm font-semibold flex items-center py-3 px-4 ml-3 rounded-xl gap-1 md:gap-3 hover:shadow-btn w-[90%]"
+                    class="nav-post bg-clr_blue text-white text-xs md:text-sm font-semibold flex items-center lg:py-3 py-2 lg:px-4 px-2 ml-3 rounded-xl gap-1 md:gap-3 hover:shadow-btn w-[90%]"
                   >
                     <img
                       src="./utils/images/icon-13.svg"
@@ -139,6 +139,22 @@
                   </button>
                 </a>
               </li>
+
+              <!-- <li>
+                <a
+                  href="./visible-profile-all.html"
+                  class="flex items-center pl-6 py-3 lg:py-5 hover:text-clr_blue"
+                >
+                  <img
+                    src="./utils/images/icon-13.svg"
+                    alt="Icon"
+                    loading="lazy"
+                  />
+                  <span class="ml-2 text-xs lg:text-sm font-medium"
+                    >Visible Profiles</span
+                  >
+                </a>
+              </li> -->
 
               <li class="flex-1 flex items-end mb-5">
                 <a
@@ -163,16 +179,16 @@
         <section class="w-full relative h-screen overflow-hidden">
           <div class="w-[95%] mx-auto">
             <div
-              class="md:h-[12vh] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
+              class="md:h-[5rem] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
             >
               <div class="flex justify-between">
-                <a href="/">
+                <a href="./" class="md:hidden">
                   <figure class="w-full md:px-5 py-6">
                     <img
                       src="./utils/images/pair-time.svg"
                       alt="Company Logo"
                       loading="lazy"
-                      class="sm:hidden w-24 cursor-pointer"
+                      class="w-24"
                     />
                   </figure>
                 </a>
@@ -196,7 +212,7 @@
                       src="./utils/images/user-photo.png"
                       alt="User Photo"
                       loaindg="lazy"
-                      class="lg:h-10 lg:w-10 h-8 w-8"
+                      class="h-10 w-10"
                     />
                   </a>
                   <button class="text-clr_blue md:hidden">
@@ -209,7 +225,7 @@
                 <input
                   type="text"
                   placeholder="Search Anything"
-                  class="sm:w-56 lg:w-72 w-full pl-9 pr-2 py-3 text-xs rounded-lg border-none outline-none placeholder-primary"
+                  class="lg:w-72 w-full pl-9 pr-2 py-3 text-xs rounded-lg border-none outline-none placeholder-primary"
                 />
                 <img
                   src="./utils/images/search.svg"
@@ -220,28 +236,30 @@
               </div>
             </div>
 
-            <div class="center pt-5 lg:pt-2 pb-8">
-              <div class="h-[13vh]">
-                <p class="text-clr_blue_light text-xs lg:text-sm flex gap-1">
-                  PairTime <span class="font-light">></span> Visible Profile
-                  <span class="text-clr_blue_light">
-                    <b class="font-light">></b> Search
-                    <b class="font-light">></b> Zhenhao Li
+            <div class="center h-[calc(100vh-5rem)]">
+              <div class="lg:h-[6rem] h-[10rem] pt-5 lg:pt-2">
+                <p
+                  class="text-clr_blue_light font-light text-xs lg:text-sm flex gap-1"
+                >
+                  PairTime <span class="font-bold">></span> Visible Profile
+                  <span
+                    class="hidden text-clr_blue_light"
+                    id="show-profiles-link"
+                    ><b class="font-bold">></b> Show All
                   </span>
                 </p>
 
-                <div class="flex justify-between items-center mt-2 mb-6">
+                <div
+                  class="lg:flex lg:justify-between lg:items-center pt-2 pb-6"
+                >
                   <p
-                    class="text-clr_blue_light text-base lg:text-xl font-semibold flex-1"
+                    class="text-clr_blue_light text-base lg:text-xl font-semibold flex-1 mb-4 lg:mb-0"
                   >
                     You have no services available!
                   </p>
 
-                  <p class="mr-4 text-xs hidden" id="service-number">
-                    You have <span class="font-bold">(124)</span> services
-                    available in this action
-                  </p>
-                  <!-- <button class="bg-clr_blue text-sm py-2 px-4 text-white rounded-2xl hover:shadow-btn mt-6 md:mt-0"
+                  <div class="lg:flex lg:flex-row-reverse lg:items-center">
+                    <!-- <button class="bg-clr_blue text-sm py-2 px-4 text-white rounded-2xl hover:shadow-btn mt-6 md:mt-0"
                     onclick="displayToggle([`all-services-list`,`show-profiles-link`])
                     displayNone(`bubble-yellow`)">
                     <a>
@@ -249,21 +267,37 @@
                     </a>
                   </button> -->
 
-                  <button
-                    class="bg-clr_blue text-xs lg:text-sm py-2 px-3 lg:px-4 font-semibold text-white rounded-2xl hover:shadow-btn mt-6 md:mt-0"
-                  >
-                    Show All
-                  </button>
+                    <!-- <button
+                      class="bg-clr_blue text-sm py-2 px-4 font-semibold text-white rounded-2xl hover:shadow-btn mt-6 md:mt-0"
+                      id="show-all-btn"
+                    >
+                      Show All
+                    </button> -->
+
+                    <button
+                      class="bg-clr_blue text-sm py-2 px-4 font-semibold text-white rounded-2xl hover:shadow-btn w-full md:w-auto"
+                      id="show-all-btn"
+                    >
+                      Show All
+                    </button>
+                    <p
+                      class="mr-4 mt-3 lg:mt-0 text-xs hidden"
+                      id="service-number"
+                    >
+                      You have <span class="font-bold">(124)</span> services
+                      available in this action
+                    </p>
+                  </div>
                 </div>
               </div>
 
               <!-- profile container -->
               <div
-                class="services-listing h-[75vh] overflow-auto pr-[1%] pb-8 w-[101.5%]"
+                class="services-listing hidden h-[calc(100vh-5rem-10rem)] lg:h-[calc(100vh-5rem-6rem)] overflow-auto pr-[1%] pb-12 w-[101.5%]"
                 id="all-services-list"
               >
-                <div class="single-service bg-white rounded-lg px-6 py-4">
-                  <div class="flex justify-between gap-8">
+                <div class="single-service bg-white rounded-lg px-[1.5%] py-4">
+                  <div class="lg:flex lg:justify-between gap-8">
                     <div class="flex">
                       <div>
                         <img
@@ -273,9 +307,9 @@
                         />
                       </div>
                       <div class="pl-5 w-[100%]">
-                        <p>
+                        <p class="text-clr_blue_light font-semibold text-sm">
                           <span
-                            class="text-clr_blue_light text-xs font-semibold opacity-40 pr-1"
+                            class="text-clr_blue_light text-xs opacity-40 pr-1"
                             >Username: </span
                           ><a
                             href=""
@@ -283,14 +317,14 @@
                             >Zhenhao Li</a
                           >
                         </p>
-                        <div class="flex">
-                          <p>
-                            <span
-                              class="text-clr_blue_light font-extrabold opacity-40 pr-1 text-xs"
-                              >Bio:</span
-                            >
-                          </p>
-                          <p class="text-sm text-clr_blue_light capitalize">
+                        <div class="md:flex">
+                          <span
+                            class="text-clr_blue_light font-extrabold opacity-40 pr-1 text-xs"
+                            >Bio:</span
+                          >
+                          <p
+                            class="text-xs lg:text-sm text-clr_blue_light capitalize"
+                          >
                             <a
                               href=""
                               class="text-clr_blue underline opacity-90"
@@ -306,47 +340,55 @@
                         </div>
                       </div>
                     </div>
-                    <div class="min-w-max">
+                    <div class="min-w-max pt-3 pb-2">
                       <a href="./search-detail.html">
                         <button
-                          class="bg-clr_blue text-sm py-3 px-4 text-white font-semibold rounded-lg hover:shadow-btn"
+                          class="bg-clr_blue text-sm py-3 px-4 text-white font-semibold rounded-lg hover:shadow-btn w-full md:w-auto"
                         >
                           Request a Pairing session
                         </button>
                       </a>
                     </div>
                   </div>
-                  <div class="text-sm text-clr_blue_light capitalize pt-2">
-                    In 2015,
-                    <a href="" class="text-clr_blue underline opacity-90"
-                      >Zhenhao </a
-                    >dropped out of his PhD program in mathematical logic to
-                    explore the tech world.
+                  <div
+                    class="text-xs lg:text-sm text-clr_blue_light capitalize pt-2"
+                  >
+                    <p>
+                      In 2015,
+                      <a href="" class="text-clr_blue underline opacity-90"
+                        >Zhenhao
+                      </a>
+                      dropped out of his PhD program in mathematical logic to
+                      explore the tech world.
+                    </p>
+                    <p>
+                      He worked as a junior consultant at Accenture for 1.5
+                      years, helping clients with their data challenges using
+                      Spark, Flink, and Kafka. Then, he worked as a data
+                      scientist and data engineer at Connecterra, an AI startup
+                      in Amsterdam, for more than 2 years, putting ML models
+                      into production and building ETL pipelines and feature
+                      engineering pipelines.
+                    </p>
                   </div>
-                  <p>
-                    He worked as a junior consultant at Accenture for 1.5 years,
-                    helping clients with their data challenges using Spark,
-                    Flink, and Kafka. Then, he worked as a data scientist and
-                    data engineer at Connecterra, an AI startup in Amsterdam,
-                    for more than 2 years, putting ML models into production and
-                    building ETL pipelines and feature engineering pipelines.
-                  </p>
-                  <p class="text-sm text-clr_blue_light capitalize pt-4">
+                  <p
+                    class="text-xs lg:text-sm text-clr_blue_light capitalize pt-4"
+                  >
                     In 2019,
-                    <a href="" class="text-clr_blue underline opacity-90">
-                      Zhenhao</a
-                    >
+                    <a href="" class="text-clr_blue underline opacity-90"
+                      >Zhenhao
+                    </a>
                     became an independent consultant to bootstrap his startup
                     project PairTime, the product you are using now.
                   </p>
-                  <ul class="text-sm text-clr_blue_light capitalize pt-4 pl-10">
+                  <ul
+                    class="text-xs lg:text-sm text-clr_blue_light capitalize pt-4 pl-10"
+                  >
                     <p>
-                      Areas that<a
-                        href=""
-                        class="text-clr_blue underline opacity-90"
-                      >
-                        Zhenhao</a
-                      >
+                      Areas that
+                      <a href="" class="text-clr_blue underline opacity-90"
+                        >Zhenhao
+                      </a>
                       can help you with:
                     </p>
                     <li>1. big data tech such as Spark, Flink, and Kafka</li>
@@ -359,8 +401,10 @@
                   </ul>
                 </div>
 
-                <div class="single-service bg-white rounded-lg px-6 py-4 mt-5">
-                  <div class="flex justify-between gap-8">
+                <div
+                  class="single-service bg-white rounded-lg px-[1.5%] py-4 mt-4"
+                >
+                  <div class="lg:flex lg:justify-between gap-8">
                     <div class="flex">
                       <div>
                         <img
@@ -370,74 +414,60 @@
                         />
                       </div>
                       <div class="pl-5 w-[100%]">
-                        <p>
+                        <p class="text-clr_blue_light font-semibold text-sm">
                           <span
-                            class="text-clr_blue_light text-xs font-semibold opacity-40 pr-1"
+                            class="text-clr_blue_light text-xs opacity-40 pr-1"
                             >Username: </span
                           >Robert Hensing
                         </p>
-                        <div class="flex">
-                          <p>
-                            <span
-                              class="text-clr_blue_light font-extrabold opacity-40 pr-1 text-xs"
-                              >Bio:</span
-                            >
-                          </p>
-                          <p class="text-sm text-clr_blue_light capitalize">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Deleniti officiis veritatis voluptatum eveniet
-                            quo tenetur repellat consequatur error nobis eaque
-                            cumque alias doloribus architecto, ipsam numquam
-                            quis impedit earum iste consequuntur qui!
+                        <div class="md:flex">
+                          <span
+                            class="text-clr_blue_light font-extrabold opacity-40 pr-1 text-xs"
+                            >Bio:</span
+                          >
+                          <p
+                            class="text-xs lg:text-sm text-clr_blue_light capitalize"
+                          >
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s
                           </p>
                         </div>
                       </div>
                     </div>
-                    <div class="min-w-max">
+                    <div class="min-w-max pt-3 pb-2">
                       <a href="./search-detail.html">
                         <button
-                          class="bg-clr_blue text-sm py-3 px-4 text-white font-semibold rounded-lg hover:shadow-btn"
+                          class="bg-clr_blue text-sm py-3 px-4 text-white font-semibold rounded-lg hover:shadow-btn w-full md:w-auto"
                         >
                           Request a Pairing session
                         </button>
                       </a>
                     </div>
                   </div>
-                  <p class="text-sm text-clr_blue_light capitalize pt-2">
+                  <div
+                    class="text-xs lg:text-sm text-clr_blue_light capitalize pt-2"
+                  >
                     when an unknown printer took a
                     <a href="" class="text-clr_blue underline opacity-90"
-                      >Zhenhao</a
-                    >
+                      >Zhenhao
+                    </a>
                     of type and scrambled it to make a type specimen book. It
                     has survived not only five centuries, but also the leap into
-                    electronic typesetting, remaining essentially unchanged.
+                    electronic typesetting, remaining essentially unchanged. It
+                    was popularised in the 1960s with the release of Letraset
+                  </div>
+                  <p
+                    class="text-xs lg:text-sm text-clr_blue_light capitalize pt-4"
+                  >
+                    In 2019, Robert became an independent consultant to
+                    bootstrap his startup project PairTime, the product you are
+                    using now.
                   </p>
-                  <p>
-                    He worked as a junior consultant at Accenture for 1.5 years,
-                    helping clients with their data challenges using Spark,
-                    Flink, and Kafka. Then, he worked as a data scientist and
-                    data engineer at Connecterra, an AI startup in Amsterdam,
-                    for more than 2 years, putting ML models into production and
-                    building ETL pipelines and feature engineering pipelines.
-                  </p>
-                  <p class="text-sm text-clr_blue_light capitalize pt-4">
-                    In 2019,
-                    <a href="" class="text-clr_blue underline opacity-90"
-                      >Robert</a
-                    >
-                    became an independent consultant to bootstrap his startup
-                    project PairTime, the product you are using now.
-                  </p>
-                  <ul class="text-sm text-clr_blue_light capitalize pt-4 pl-10">
-                    <p>
-                      Areas that<a
-                        href=""
-                        class="text-clr_blue underline opacity-90"
-                      >
-                        Robert</a
-                      >
-                      can help you with:
-                    </p>
+                  <ul
+                    class="text-xs lg:text-sm text-clr_blue_light capitalize pt-4 pl-10"
+                  >
+                    <p>Areas that Robert can help you with:</p>
                     <li>1. big data tech such as Spark, Flink, and Kafka</li>
                     <li>2. machine learning applications</li>
                     <li>3. domain driven design</li>
@@ -455,10 +485,10 @@
             <div
               class="circle-1 absolute left-5 bottom-[6.2rem] bg-[#33D9EF] w-5 h-5 rounded-full"
             ></div>
-            <!-- <div
+            <div
               class="circle-1 bg-[#F48C06] w-28 h-28 relative z-10 rounded-full"
               id="big-circle"
-            ></div> -->
+            ></div>
           </div>
         </section>
       </div>

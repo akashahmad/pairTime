@@ -159,22 +159,24 @@
         <section class="w-full relative md:ml-[12rem] lg:ml-64 min-h-screen">
           <div class="w-[95%] mx-auto">
             <div
-              class="md:h-[12vh] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
+              class="md:h-[5rem] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
             >
               <div class="flex justify-between">
-                <a href="/">
+                <a href="/" class="md:hidden">
                   <figure class="w-full md:px-5 py-6">
                     <img
                       src="./utils/images/pair-time.svg"
                       alt="Company Logo"
                       loading="lazy"
-                      class="sm:hidden w-24 cursor-pointer"
+                      class="w-24"
                     />
                   </figure>
                 </a>
 
                 <div class="user flex gap-6 items-center">
-                  <h4 class="text-sm font-light">€2.77 $20.00</h4>
+                  <h4 class="md:block hidden text-sm font-light">
+                    €2.77 $20.00
+                  </h4>
                   <a
                     href="account.html"
                     class="hover:shadow-btn hidden md:block"
@@ -193,7 +195,7 @@
                       src="./utils/images/user-photo.png"
                       alt="User Photo"
                       loaindg="lazy"
-                      class="lg:h-10 lg:w-10 h-8 w-8"
+                      class="h-10 w-10"
                     />
                   </a>
                   <button class="text-clr_blue md:hidden">
@@ -206,7 +208,7 @@
                 <input
                   type="text"
                   placeholder="Search Anything"
-                  class="sm:w-56 lg:w-72 w-full pl-9 pr-2 py-3 text-xs rounded-lg border-none outline-none placeholder-primary"
+                  class="lg:w-72 w-full pl-9 pr-2 py-3 text-xs rounded-lg border-none outline-none placeholder-primary"
                 />
                 <img
                   src="./utils/images/search.svg"
@@ -222,15 +224,15 @@
                 Dashboard
               </p>
               <div
-                class="flex flex-col md:flex-row justify-between items-center mt-4 md:mt-0"
+                class="md:flex md:justify-between md:items-center mt-4 md:mt-0"
               >
-                <p class="ftext-base lg:text-xl mt-2 mb-4 flex-1">
+                <p class="text-base lg:text-xl mt-2 mb-4 flex-1">
                   Welcome back,
                   <strong class="text-clr_light_blue font-semibold"
                     >Zhenhao!</strong
                   >
                 </p>
-                <div class="search-bar relative">
+                <div class="filter-bar relative">
                   <input
                     type="text"
                     placeholder="Search Pairs"
@@ -246,8 +248,10 @@
               </div>
             </div>
 
-            <div class="content flex justify-between flex-wrap">
-              <div class="w-[18.3rem] text-center">
+            <div
+              class="content flex justify-evenly xl:justify-between flex-wrap"
+            >
+              <div class="w-[18.3rem] text-center mb-14 lg:mb-0">
                 <h3 class="text-sm font-semibold">Pair to get help</h3>
                 <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-8">
                   <p class="text-xs font-semibold mb-2">
@@ -274,7 +278,7 @@
                 </button>
               </div>
 
-              <div class="w-[18.3rem] text-center">
+              <div class="w-[18.3rem] text-center mb-14 lg:mb-0">
                 <h3 class="text-sm font-semibold">
                   My direct pairing requests
                 </h3>
@@ -303,7 +307,9 @@
                 </button>
               </div>
 
-              <div class="w-[18.3rem] text-center">
+              <div
+                class="w-[18.3rem] text-center mb-14 lg:mb-0 lg:mt-14 xl:mt-0"
+              >
                 <h3 class="text-sm font-semibold">Pair to get help</h3>
                 <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-8">
                   <p class="text-xs font-semibold mb-2">

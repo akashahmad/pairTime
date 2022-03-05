@@ -131,7 +131,7 @@
                     class="bg-clr_blue absolute top-1 -left-1 w-2 h-[80%] rounded-2xl"
                   ></div>
                   <button
-                    class="nav-post bg-clr_blue text-white text-xs md:text-sm font-semibold flex items-center py-3 px-4 ml-3 rounded-xl gap-1 md:gap-3 hover:shadow-btn w-[90%]"
+                    class="nav-post bg-clr_blue text-white text-xs md:text-sm font-semibold flex items-center lg:py-3 py-2 lg:px-4 px-2 ml-3 rounded-xl gap-1 md:gap-3 hover:shadow-btn w-[90%]"
                   >
                     <img
                       src="./utils/images/icon-13.svg"
@@ -171,16 +171,16 @@
         <section class="w-full relative md:ml-[12rem] lg:ml-64 min-h-screen">
           <div class="w-[95%] mx-auto">
             <div
-              class="md:h-[12vh] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
+              class="md:h-[5rem] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
             >
               <div class="flex justify-between">
-                <a href="/">
+                <a href="/" class="md:hidden">
                   <figure class="w-full md:px-5 py-6">
                     <img
                       src="./utils/images/pair-time.svg"
                       alt="Company Logo"
                       loading="lazy"
-                      class="sm:hidden w-24 cursor-pointer"
+                      class="w-24"
                     />
                   </figure>
                 </a>
@@ -204,7 +204,7 @@
                       src="./utils/images/user-photo.png"
                       alt="User Photo"
                       loaindg="lazy"
-                      class="lg:h-10 lg:w-10 h-8 w-8"
+                      class="h-10 w-10"
                     />
                   </a>
                   <button class="text-clr_blue md:hidden">
@@ -217,7 +217,7 @@
                 <input
                   type="text"
                   placeholder="Search Anything"
-                  class="sm:w-56 lg:w-72 w-full pl-9 pr-2 py-3 text-xs rounded-lg border-none outline-none placeholder-primary"
+                  class="lg:w-72 w-full pl-9 pr-2 py-3 text-xs rounded-lg border-none outline-none placeholder-primary"
                 />
                 <img
                   src="./utils/images/search.svg"
@@ -229,14 +229,14 @@
             </div>
 
             <div class="center pt-5 lg:pt-2 h-full">
-              <p class="text-clr_blue_light text-xs lg:text-sm">
-                PairTime <span class="font-light">></span> Visible Profile
-                <span class="font-light">></span> Search
-                <span class="font-light">></span> Zhenhao Li
-                <span class="font-light">></span> Details
+              <p class="text-clr_blue_light font-light text-xs lg:text-sm">
+                PairTime <span class="font-bold">></span> Visible Profile
+                <span class="font-bold">></span> Search
+                <span class="font-bold">></span> Zhenhao Li
+                <span class="font-bold">></span> Details
               </p>
 
-              <div class="flex justify-between flex-wrap items-center">
+              <div class="sm:flex sm:justify-between flex-wrap items-center">
                 <p
                   class="text-clr_blue_light text-base lg:text-xl font-semibold mt-2 mb-4 flex-1"
                 >
@@ -244,7 +244,7 @@
                 </p>
 
                 <button
-                  class="text-clr_blue bg-transparent text-sm py-2 px-5 rounded-2xl border-2 border-blue-700 hover:shadow-btn font-semibold transition-all ease-in"
+                  class="text-clr_blue bg-transparent text-sm py-2 px-5 rounded-2xl border-2 border-blue-700 hover:shadow-btn font-semibold transition-all ease-in w-full sm:w-auto"
                   id="preview-btn"
                 >
                   <a> Preview </a>
@@ -254,8 +254,8 @@
                 class="border-bottom w-full border-b-[0.5px] opacity-60 mt-2"
               ></div>
 
-              <div class="w-full flex justify-between gap-6 mt-6">
-                <div class="w-full md:w-[61%]">
+              <div class="w-full lg:flex lg:justify-between gap-6 mt-6">
+                <div class="w-full lg:w-[61%] mb-8 lg:mb-0">
                   <div class="mb-4">
                     <label
                       class="block text-xs text-clr_blue_light font-semibold mb-2"
@@ -299,7 +299,7 @@
                   </p>
                 </div>
 
-                <div class="w-full md:w-[36%]">
+                <div class="w-full lg:w-[36%]">
                   <div class="flex justify-between flex-wrap items-center mb-4">
                     <h2 class="text-base font-semibold">Zhenhao Li</h2>
                     <p class="flex gap-1 text-xs font-semibold">
@@ -358,14 +358,14 @@
               </div>
 
               <div class="search-detail pt-6 pb-16">
-                <div class="flex items-center pt-7">
+                <div class="md:flex items-center pt-4 lg:pt-7">
                   <p
-                    class="text-clr_blue_light text-xl font-semibold mt-2 mb-3 flex-1"
+                    class="text-clr_blue_light text-base lg:text-xl font-semibold mt-2 mb-3 flex-1"
                   >
                     Scheduling
                   </p>
-                  <div class="md:flex w-[36%] gap-2">
-                    <div class="w-[9rem]">
+                  <div class="md:flex lg:w-[36%] gap-2">
+                    <div class="w-full md:w-[9rem] mb-3 md:mb-0">
                       <input
                         placeholder="Find Time Zone"
                         class="placeholder:text-clr_gray_light placeholder:text-[11px] px-3 py-3 rounded-lg block w-full"
@@ -373,7 +373,7 @@
                     </div>
                     <div class="relative flex-1">
                       <select
-                        class="py-[15.5px] px-3 rounded-lg text-[11px] text-clr_blue_light w-full appearance-none"
+                        class="bg-white py-[15.5px] px-3 rounded-lg text-[11px] text-clr_blue_light w-full appearance-none"
                       >
                         <option>Asia/Karachi (currently +5:00)</option>
                         <option>Asia/Karachi (currently +5:00)</option>
@@ -392,17 +392,15 @@
                   class="border-bottom w-full border-b-[0.5px] opacity-60 mt-5"
                 ></div>
 
-                <div
-                  class="flex flex-col md:flex-row justify-between gap-6 pt-8"
-                >
-                  <div class="schedular w-full md:w-[61%]">
+                <div class="lg:flex lg:justify-between gap-6 pt-5 lg:pt-8">
+                  <div class="schedular w-full lg:w-[61%]">
                     <div
-                      class="schedular-calendar"
+                      class="schedular-calendar h-full"
                       id="schedular-calendar"
                     ></div>
                   </div>
 
-                  <div class="right-side w-full md:w-[36%] pt-2">
+                  <div class="right-side lg:w-[36%] pt-6 lg:pt-2">
                     <div class="py-4 bg-[#F7F8FB] rounded-lg">
                       <h3 class="mb-6 text-sm font-semibold">Pricing</h3>
 
@@ -421,14 +419,14 @@
                     </div>
 
                     <div
-                      class="make-offer mt-10 bg-[#FFFFFF] px-5 py-6 rounded-lg"
+                      class="make-offer mt-5 lg:mt-10 bg-[#FFFFFF] px-5 py-6 rounded-lg"
                     >
                       <p
                         class="flex justify-between items-center text-clr_blue_light text-sm font-semibold mb-5"
                       >
                         Make an offer
                         <button
-                          class="bg-clr_blue text-xs py-2 px-3 text-white font-semibold rounded-lg hover:shadow-btn w-full sm:w-auto"
+                          class="bg-clr_blue text-xs py-2 px-3 text-white font-semibold rounded-lg hover:shadow-btn"
                         >
                           Send Offer
                         </button>
@@ -483,7 +481,7 @@
         id="modal"
       >
         <div
-          class="container bg-white w-3/5 h-3/5 rounded-lg px-6 py-5 flex flex-col relative"
+          class="container bg-white md:w-3/5 w-[95%] h-3/5 rounded-lg px-6 py-5 flex flex-col relative"
         >
           <figure
             class="absolute right-4 top-3 h-4 w-4 flex justify-center items-center rounded-full bg-red-600 cursor-pointer"
