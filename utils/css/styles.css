@@ -207,6 +207,7 @@ select {
 }
 
 /* width */
+.preview-content::-webkit-scrollbar,
 .services-listing::-webkit-scrollbar,
 .editor::-webkit-scrollbar,
 .chat::-webkit-scrollbar,
@@ -215,6 +216,7 @@ select {
 }
 
 /* Track */
+.preview-content::-webkit-scrollbar-track,
 .services-listing::-webkit-scrollbar-track,
 .editor::-webkit-scrollbar-track,
 .chat::-webkit-scrollbar-track,
@@ -224,6 +226,7 @@ select {
 }
 
 /* Handle */
+.preview-content::-webkit-scrollbar-thumb,
 .services-listing::-webkit-scrollbar-thumb,
 .editor::-webkit-scrollbar-thumb,
 .chat::-webkit-scrollbar-thumb,
@@ -247,6 +250,39 @@ select {
 /* #demo-desktop-day-view {
   height: 620px !important;
 } */
+
+/* /////////////// Stars Styling in search-details page in preview modal/popup ///////////////////////*/
+.rating {
+  display: flex;
+  transform: rotate(180deg);
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  display: block;
+  transform: rotate(180deg);
+}
+
+.rating label::before {
+  font-family: "Font Awesome 5 Free"; /* updated font-family */
+  font-weight: 900; /* regular style/weight */
+  content: "\f005";
+  font-size: 1.2rem;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.rating label:hover::before,
+.rating label:hover ~ label::before {
+  color: #ffc224;
+}
+
+input:checked ~ label::before {
+  color: #ffc224;
+}
 
 /* ////////// Calendar Styling //////////////// */
 .fc-header-toolbar {
@@ -399,6 +435,116 @@ th.fc-timegrid-axis::before {
   border-left: none;
 }
 
+/* //////////// CALENDAR EVENTS STYLING /////////////////// */
+.fc-timegrid-event .fc-event-time {
+  white-space: normal;
+  padding: 3px 3px 0;
+  width: 4rem;
+}
+
+.fc-timegrid-slots table tbody tr:nth-child(5) .fc-timegrid-slot-label-frame {
+  background-color: #250ced;
+  color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.fc-timegrid-slots
+  table
+  tbody
+  tr:nth-child(5)
+  .fc-timegrid-slot-label-frame::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: 140%;
+  width: 830%;
+  height: 2px;
+  background-color: #250ced;
+}
+
+.fc-timegrid-slots
+  table
+  tbody
+  tr:nth-child(5)
+  .fc-timegrid-slot-label-frame::after {
+  content: "01:30";
+  position: absolute;
+  top: -95%;
+  left: 950%;
+  width: 4rem;
+  height: 1.8rem;
+  background-color: #250ced;
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.fc-v-event {
+  background-color: #fff;
+  border-right: 0.6rem solid #250ced;
+  position: relative;
+  font-size: 0.75rem;
+}
+
+.fc-v-event::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 104%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 3px solid transparent;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid transparent;
+}
+
+/* .fc-event-time::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 60%;
+  width: 8px;
+  height: 4px;
+  background-color: #fff;
+  z-index: 100;
+} */
+
+.fc-event-time {
+  color: #250ced;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fc-event-time::before {
+  content: "🕓";
+  position: absolute;
+  top: 15%;
+  left: 72%;
+  font-size: 0.5rem;
+  cursor: pointer;
+  filter: sepia(100%) hue-rotate(190deg) saturate(700%);
+}
+
+.fc-event-time::after {
+  content: "🕑";
+  position: absolute;
+  top: 60%;
+  left: 72%;
+  font-size: 0.5rem;
+  cursor: pointer;
+  filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+}
+
+/* .fc-timegrid-event-harness {
+  background-color: yellow;
+  width: 60%;
+} */
+
 @media only screen and (max-width: 37.5em) {
   .fc .fc-prev-button,
   .fc .fc-next-button {
@@ -427,6 +573,36 @@ th.fc-timegrid-axis::before {
   .fc .fc-today-button:disabled,
   .fc .fc-today-button:not(:disabled) {
     font-size: 14px;
+  }
+
+  .fc-v-event {
+    font-size: 0.4rem;
+    border-right: 3px solid #250ced;
+  }
+
+  .fc-timegrid-slots
+    table
+    tbody
+    tr:nth-child(5)
+    .fc-timegrid-slot-label-frame::before {
+    width: 530%;
+  }
+
+  .fc-timegrid-slots
+    table
+    tbody
+    tr:nth-child(5)
+    .fc-timegrid-slot-label-frame::after {
+    left: 550%;
+  }
+
+  .fc-timegrid-event .fc-event-time {
+    width: auto;
+  }
+
+  .fc-event-time::before,
+  .fc-event-time::after {
+    display: none;
   }
 }
 

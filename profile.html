@@ -22,7 +22,7 @@
     <main class="min-h-screen bg-[#F7F8FB] overflow-hidden">
       <div class="flex">
         <aside
-          class="h-screen absolute top-0 -left-full z-50 w-full bg-[#00000080] md:fixed md:top-0 md:left-0 md:w-[12rem] lg:w-64 transition-all ease-in"
+          class="h-screen -left-full z-50 w-full bg-[#00000080] fixed top-0 md:left-0 md:w-[12rem] lg:w-64 transition-all ease-in"
           id="sidebar"
         >
           <button
@@ -36,7 +36,7 @@
             class="w-[70%] bg-white h-full flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
           >
             <div class="flex justify-between items-center">
-              <a href="/">
+              <a href="./dashboard.html">
                 <figure class="w-full px-3 py-6">
                   <img
                     src="./utils/images/pair-time.svg"
@@ -166,7 +166,7 @@
               class="md:h-[12vh] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
             >
               <div class="flex justify-between">
-                <a href="/" class="md:hidden">
+                <a href="./dashboard.html" class="md:hidden">
                   <figure class="w-full md:px-5 py-6">
                     <img
                       src="./utils/images/pair-time.svg"
@@ -233,7 +233,10 @@
 
             <div class="center pt-5 lg:pt-2 h-full pb-8">
               <p class="text-clr_blue_light font-light text-xs lg:text-sm">
-                PairTime <span class="font-bold">></span> Profile
+                <a href="./dashboard.html" class="hover:text-clr_blue"
+                  >PairTime</a
+                >
+                <span class="font-bold">></span> Profile
               </p>
               <p
                 class="text-clr_blue_light text-base lg:text-xl font-semibold mt-2 mb-10"
@@ -324,12 +327,11 @@
                     </div>
 
                     <div class="btns flex gap-2 md:justify-end -mt-2 md:mt-10">
-                      <a
-                        href="./dashboard-update.html"
+                      <button
                         class="bg-clr_blue text-sm py-2 px-5 text-white rounded-xl md:mr-2 font-semibold hover:shadow-btn w-1/2 md:w-auto text-center"
                       >
                         Update
-                      </a>
+                      </button>
                       <button
                         class="bg-[#ECECEC] text-sm py-2 px-5 text-[#A6A6A6] rounded-xl font-semibold hover:shadow-btn w-1/2 md:w-auto"
                       >

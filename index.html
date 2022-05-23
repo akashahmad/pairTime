@@ -80,13 +80,13 @@
             <li class="md:text-sm text-lg hover:text-orange-500">
               <a href="">User Group Slack</a>
             </li>
-            <a href="./dashboard.html">
+            <button class="cursor-pointer" id="login-home-btn">
               <li
                 class="rounded-[3rem] md:px-8 px-10 py-1 sm:py-2 bg-[#F48C06] text-white md:text-sm text-lg shadow-lg hover:scale-105 active:scale-[0.8] transition ease-in-out"
               >
                 Login
               </li>
-            </a>
+            </button>
           </ul>
         </nav>
 
@@ -148,6 +148,7 @@
                   <a
                     href="#"
                     class="text-[#250CED] underline hover:no-underline"
+                    id="login-form-btn"
                     >Log in.</a
                   >
                 </p>
@@ -197,7 +198,7 @@
               class="shadow-card lg:w-[45%] xl:w-2/5 w-full px-5 md:px-8 pb-8 pt-10 sm:pt-16 rounded-2xl relative bg-white mt-[4rem] mb-[2rem] lg:mb-0 lg:mt-[16rem]"
             >
               <figure
-                class="h-20 sm:h-24 absolute -top-10 left-0 animtaion-infinite"
+                class="h-20 sm:h-24 absolute -top-10 left-2 animtaion-infinite"
               >
                 <img
                   src="./utils/images/icon-1.svg"
@@ -252,7 +253,7 @@
                 1
               </div>
               <figure
-                class="h-11 sm:h-14 absolute -top-6 left-8 animtaion-infinite"
+                class="h-11 sm:h-14 absolute -top-6 left-7 animtaion-infinite"
               >
                 <img
                   src="./utils/images/icon-4.svg"
@@ -315,7 +316,7 @@
 
       <!--------------------- Facilities Section Starts Here ---------------------->
       <!------------------------------------------------------------------------->
-      <section>
+      <section class="overflow-hidden">
         <div class="w-[70rem] max-w-[90%] mx-auto lg:py-20 py-0">
           <h2
             class="font-bold text-2xl md:text-3xl mb-6 text-center lg:text-left"
@@ -606,16 +607,28 @@
               </div>
             </div>
 
-            <div class="flex-1 flex justify-center -mb-8 lg:mb-0">
-              <div data-aos="fade-right">
-                <figure class="h-[90%] lg:h-[70%] lg:w-[90%] w-[18rem]">
+            <div class="flex-1 flex justify-center -mb-8 lg:mb-0 lg:mt-12">
+              <div data-aos="fade-right relative">
+                <figure class="h-[90%] lg:h-[60%] lg:w-[90%] w-[18rem]">
                   <img
-                    src="./utils/images/laughing-girl.png"
+                    src="./utils/images/laughing-girl-2.png"
                     alt="Girl Smiling"
                     loading="lazy"
                     class="h-full w-full"
                   />
                 </figure>
+
+                <div class="absolute left-[75%] bottom-0 lg:bottom-[35%]">
+                  <figure class="lg:w-28 w-20 animtaion-infinite">
+                    <img src="./utils/images/icon-16.svg" alt="" />
+                  </figure>
+                </div>
+
+                <div class="absolute left-0 -top-10">
+                  <figure class="lg:w-28 w-20 animtaion-infinite">
+                    <img src="./utils/images/icon-15.svg" alt="" />
+                  </figure>
+                </div>
               </div>
             </div>
           </div>
@@ -637,16 +650,16 @@
               <div class="build-info-img relative">
                 <div class="flex items-center md:translate-y-64 translate-y-40">
                   <div>
-                    <button
+                    <!-- <button
                       data-aos="zoom-in"
-                      class="bg-[#3465E1] text-xs sm:text-base font-bold text-white rounded-[5rem] tracking-wider sm:w-[123px] w-[5rem] py-2 cursor-pointer mr-1 sm:mr-3 hover:border-[0.375rem] hover:scale-105 transition ease-in-out float-left transform-gpu"
+                      class="bg-[#3465E1] text-xs sm:text-base font-bold text-white rounded-[5rem] tracking-wider sm:w-[123px] w-[5rem] py-1 cursor-pointer mr-1 sm:mr-3 border-[0.375rem] border-transparent hover:border-[#F2C6D0] hover:scale-105 float-left box-content"
                       id="present-btn"
                     >
                       Present
                     </button>
                     <button
                       data-aos="zoom-in"
-                      class="bg-[#E13468] text-xs sm:text-base font-bold text-white rounded-[5rem] tracking-wider sm:w-[123px] w-[5rem] py-2 flex justify-center items-center cursor-pointer hover:border-[0.375rem] hover:border-[#F2C6D0] hover:scale-105 transition ease-in-out"
+                      class="bg-[#E13468] text-xs sm:text-base font-bold text-white rounded-[5rem] tracking-wider sm:w-[123px] w-[5rem] py-1 flex justify-center items-center cursor-pointer border-[0.375rem] border-transparent hover:border-[#F2C6D0] hover:scale-105 box-content"
                       id="call-btn"
                     >
                       <img
@@ -657,12 +670,17 @@
                         class="mr-2 sm:mr-4"
                       />
                       Cal
-                    </button>
-                  </div>
-                  <!-- <div>
+                    </button> -->
                     <button
                       data-aos="zoom-in"
-                      class="bg-[#E13468] text-xs sm:text-base font-bold text-white rounded-[5rem] tracking-wider sm:w-[123px] w-[5rem] py-2 flex justify-center items-center cursor-pointer hover:border-[0.375rem] hover:border-[#F2C6D0] hover:scale-105 transition ease-in-out"
+                      class="bg-[#3465E1] text-xs sm:text-base font-bold text-white rounded-full px-6 sm:px-8 py-2 outline outline-[6px] outline-transparent hover:outline-[#4a66ad73] hover:scale-105 float-left mr-2 sm:mr-4"
+                      id="present-btn"
+                    >
+                      Present
+                    </button>
+                    <button
+                      data-aos="zoom-in"
+                      class="bg-[#E13468] text-xs sm:text-base font-bold text-white rounded-full px-6 sm:px-8 py-2 outline outline-[6px] outline-transparent hover:outline-[#F2C6D0] hover:scale-105 flex justify-between items-center"
                       id="call-btn"
                     >
                       <img
@@ -670,11 +688,11 @@
                         src="./utils/images/vector_14.png"
                         alt="Vector Curve"
                         loading="lazy"
-                        class="mr-2 sm:mr-4"
+                        class="mr-2"
                       />
-                      Cal
+                      Call
                     </button>
-                  </div> -->
+                  </div>
                 </div>
               </div>
             </div>
@@ -895,6 +913,91 @@
           </div>
         </div>
       </section>
+
+      <!-- ---------------Login Modal ---------------- -->
+      <section
+        class="modal bg-[#00000050] flex justify-center items-center h-[100vh] fixed inset-0 z-50 opacity-0 transition-all ease-linear pointer-events-none"
+        id="login-modal"
+      >
+        <div
+          class="container bg-white w-[30rem] max-w-[95%] rounded-lg px-2 sm:px-6 py-8 flex flex-col relative"
+          id="login-container"
+        >
+          <form id="login-form">
+            <h2
+              class="font-extrabold text-xl pl-3 mb-4"
+              id="login-modal-heading"
+            >
+              Login
+            </h2>
+            <div>
+              <input
+                type="email"
+                placeholder="Enter Email"
+                class="py-3 px-4 rounded-lg w-full text-sm font-light placeholder-primary shadow-input"
+                id="email"
+              />
+            </div>
+            <div class="input-group relative my-2">
+              <input
+                type="password"
+                placeholder="Enter Password"
+                class="py-3 pl-4 pr-16 rounded-lg w-full text-sm font-light placeholder-primary shadow-input"
+                id="password"
+              />
+              <button
+                type="button"
+                class="show-btn absolute top-3 right-3 text-sm font-light cursor-pointer"
+                id="show-btn-password"
+              >
+                Show?
+              </button>
+            </div>
+
+            <div class="input-group hidden relative" id="confirm-password">
+              <input
+                type="password"
+                placeholder="Enter Confirmation-Password"
+                class="py-3 pl-4 pr-16 rounded-lg w-full text-sm font-light placeholder-primary shadow-input"
+              />
+              <button
+                type="button"
+                class="show-btn absolute top-3 right-3 text-sm font-light cursor-pointer"
+                id="show-btn-confirm-password"
+              >
+                Show?
+              </button>
+            </div>
+
+            <div class="text-sm flex justify-between items-center gap-4 mt-5">
+              <p class="pl-1 flex-1">
+                Don't have an account?
+                <button
+                  type="button"
+                  class="text-clr_blue underline font-medium"
+                  id="register-now"
+                >
+                  Register now
+                </button>
+              </p>
+
+              <button
+                type="button"
+                class="text-clr_blue underline font-medium"
+                id="forget-password"
+              >
+                Forget Password?
+              </button>
+              <button
+                class="bg-clr_blue text-xs py-3 px-5 text-white font-semibold rounded-lg hover:shadow-btn w-full sm:w-auto"
+                id="login-modal-btn"
+              >
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
 
     <!--------------------- Footer Section Starts Here ---------------------->
@@ -904,7 +1007,7 @@
       <div class="w-[70rem] max-w-[90%] mx-auto">
         <div
           data-aos="zoom-in-up"
-          data-aos-duration="500"
+          data-aos-duration="700"
           class="flex justify-between gap-6 flex-wrap sm:my-24 my-10"
         >
           <div

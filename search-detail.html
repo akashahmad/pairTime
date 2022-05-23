@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <link rel="stylesheet" href="./utils/css/fullCalendar/main.min.css" />
     <link rel="stylesheet" href="./utils/css/styles.css" />
@@ -27,7 +31,7 @@
     <main class="bg-[#F7F8FB] overflow-hidden">
       <div class="h-full flex">
         <aside
-          class="h-screen absolute top-0 -left-full z-50 w-full bg-[#00000080] md:fixed md:top-0 md:left-0 md:w-[12rem] lg:w-64 transition-all ease-in"
+          class="h-screen -left-full z-50 w-full bg-[#00000080] fixed top-0 md:left-0 md:w-[12rem] lg:w-64 transition-all ease-in"
           id="sidebar"
         >
           <button
@@ -41,7 +45,7 @@
             class="w-[70%] bg-white h-full flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
           >
             <div class="flex justify-between items-center">
-              <a href="/">
+              <a href="./dashboard.html">
                 <figure class="w-full px-3 py-6">
                   <img
                     src="./utils/images/pair-time.svg"
@@ -174,7 +178,7 @@
               class="md:h-[5rem] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
             >
               <div class="flex justify-between">
-                <a href="/" class="md:hidden">
+                <a href="./dashboard.html" class="md:hidden">
                   <figure class="w-full md:px-5 py-6">
                     <img
                       src="./utils/images/pair-time.svg"
@@ -228,12 +232,21 @@
               </div>
             </div>
 
-            <div class="center pt-5 lg:pt-2 h-full">
+            <div class="center pt-5 lg:pt-2 h-full relative z-30">
               <p class="text-clr_blue_light font-light text-xs lg:text-sm">
-                PairTime <span class="font-bold">></span> Visible Profile
+                <a href="./dashboard.html" class="hover:text-clr_blue"
+                  >PairTime</a
+                >
+                <span class="font-bold">></span>
+                <a href="./visible-profile-all.html" class="hover:text-clr_blue"
+                  >Visible Profile</a
+                >
                 <span class="font-bold">></span> Search
                 <span class="font-bold">></span> Zhenhao Li
                 <span class="font-bold">></span> Details
+                <span class="hidden text-clr_blue_light" id="show-preview-text"
+                  ><b class="font-bold">></b> Preview
+                </span>
               </p>
 
               <div class="sm:flex sm:justify-between flex-wrap items-center">
@@ -247,7 +260,7 @@
                   class="text-clr_blue bg-transparent text-sm py-2 px-5 rounded-2xl border-2 border-blue-700 hover:shadow-btn font-semibold transition-all ease-in w-full sm:w-auto"
                   id="preview-btn"
                 >
-                  <a> Preview </a>
+                  Preview
                 </button>
               </div>
               <div class="border-bottom w-full border-b opacity-60 mt-2"></div>
@@ -285,19 +298,77 @@
                       type="text"
                       placeholder="comma-sparated"
                       class="placeholder:text-clr_gray_light placeholder:text-xs w-full px-3 py-3 rounded-lg"
+                      id="tag-input"
                     />
                   </div>
                   <p class="text-xs pb-2">
                     <span class="font-semibold text-clr_blue_light"
                       >Recommended Tags:</span
                     >
-                    <span class="text-clr_gray_light ml-3"
+                    <!-- <span class="text-clr_gray_light ml-3"
                       >No predicitions yet</span
-                    >
+                    > -->
                   </p>
+
+                  <div class="tag-btns" id="tag-btns">
+                    <button
+                      class="tag-btn flex-1 bg-clr_blue text-sm py-2 px-3 text-white rounded-lg hover:shadow-btn font-semibold mb-2 mb-md-0"
+                      type="button"
+                    >
+                      javascript
+                    </button>
+                    <button
+                      class="tag-btn flex-1 bg-clr_blue text-sm py-2 px-3 text-white rounded-lg hover:shadow-btn font-semibold"
+                      type="button"
+                    >
+                      java
+                    </button>
+                    <button
+                      class="tag-btn flex-1 bg-clr_blue text-sm py-2 px-3 text-white rounded-lg hover:shadow-btn font-semibold"
+                      type="button"
+                    >
+                      jquery
+                    </button>
+                    <button
+                      class="tag-btn flex-1 bg-clr_blue text-sm py-2 px-3 text-white rounded-lg hover:shadow-btn font-semibold"
+                      type="button"
+                    >
+                      html
+                    </button>
+                    <button
+                      class="tag-btn flex-1 bg-clr_blue text-sm py-2 px-3 text-white rounded-lg hover:shadow-btn font-semibold"
+                      type="button"
+                    >
+                      arrays
+                    </button>
+                    <button
+                      class="tag-btn flex-1 bg-clr_blue text-sm py-2 px-3 text-white rounded-lg hover:shadow-btn font-semibold"
+                      type="button"
+                    >
+                      css
+                    </button>
+                    <button
+                      class="tag-btn flex-1 bg-clr_blue text-sm py-2 px-3 text-white rounded-lg hover:shadow-btn font-semibold"
+                      type="button"
+                    >
+                      php
+                    </button>
+                    <button
+                      class="tag-btn flex-1 bg-clr_blue text-sm py-2 px-3 text-white rounded-lg hover:shadow-btn font-semibold"
+                      type="button"
+                    >
+                      c
+                    </button>
+                    <button
+                      class="tag-btn flex-1 bg-clr_blue text-sm py-2 px-3 text-white rounded-lg hover:shadow-btn font-semibold"
+                      type="button"
+                    >
+                      form
+                    </button>
+                  </div>
                 </div>
 
-                <div class="w-full lg:w-[36%]">
+                <div class="w-full lg:w-[36%] px-2 lg:px-0">
                   <div class="flex justify-between flex-wrap items-center mb-4">
                     <h2 class="text-base font-semibold">Zhenhao Li</h2>
                     <p class="flex gap-1 text-xs font-semibold">
@@ -425,6 +496,7 @@
                         Make an offer
                         <button
                           class="bg-clr_blue text-xs py-2 px-3 text-white font-semibold rounded-lg hover:shadow-btn"
+                          id="send-offer-btn"
                         >
                           Send Offer
                         </button>
@@ -464,26 +536,160 @@
                       </div>
                     </div>
                   </div>
-                  <div
-                    class="half-circle bg-[#F48C06] w-24 h-24 fixed top-[50%] -right-20 lg:-right-20 rounded-full animtaion-infinite"
-                  ></div>
                 </div>
               </div>
             </div>
           </div>
+
+          <div
+            class="half-circle hidden lg:block bg-[#F48C06] w-24 h-24 fixed top-[50%] -right-20 rounded-full animtaion-infinite"
+          ></div>
         </section>
       </div>
 
+      <!-- Preview Btn Click Modal -->
       <section
-        class="modal bg-[#00000050] flex justify-center items-center h-[100vh] fixed inset-0 z-50 scale-0 transition-all ease-in"
-        id="modal"
+        class="modal bg-[#00000050] flex justify-center items-center h-[100vh] fixed inset-0 z-50 opacity-0 pointer-events-none transition-all ease-linear"
+        id="preview-modal"
+      >
+        <div
+          class="container bg-white lg:w-2/5 md:w-3/5 w-[95%] rounded-lg px-6 py-5 flex flex-col relative"
+        >
+          <h4 class="text-sm font-semibold mb-8">
+            After archiving, you will not be able to have new pairing sessions
+            here nor send new messages to your pair.
+          </h4>
+
+          <div>
+            <h4 class="font-semibold mb-4 text-sm">I confirmed that</h4>
+            <div class="input-group flex gap-2 items-center mb-2">
+              <input type="radio" name="goal" checked />
+              <p class="text-xs font-medium">
+                Zhenhao helped me archive my goal completely.
+              </p>
+            </div>
+
+            <div class="input-group flex gap-2 items-center mb-2">
+              <input type="radio" name="goal" />
+              <p class="text-xs font-medium">
+                Zhenhao helped me archive my goal partially.
+              </p>
+            </div>
+
+            <div class="input-group flex gap-2 items-center mb-2">
+              <input type="radio" name="goal" />
+              <p class="text-xs font-medium">
+                Zhenhao did not help me in any way.
+              </p>
+            </div>
+
+            <div class="input-group flex gap-2 items-center mb-2">
+              <input type="radio" name="goal" />
+              <p class="text-xs font-medium">Zhenhao didn’t show up.</p>
+            </div>
+          </div>
+
+          <div class="flex-1">
+            <h3 class="font-semibold text-sm mt-4">
+              Leave your review (optional):
+            </h3>
+
+            <div class="review-wrapper pl-5 mt-3">
+              <div class="review flex justify-between items-center mb-3">
+                <p class="text-xs font-semibold w-2/5 sm:w-auto">
+                  Knowledge and expertise
+                </p>
+                <div class="rating flex gap-1">
+                  <input type="radio" name="star" id="star1" />
+                  <label for="star1"></label>
+                  <input type="radio" name="star" id="star2" />
+                  <label for="star2"></label>
+                  <input type="radio" name="star" id="star3" />
+                  <label for="star3"></label>
+                  <input type="radio" name="star" id="star4" />
+                  <label for="star4"></label>
+                  <input type="radio" name="star" id="star5" />
+                  <label for="star5"></label>
+                </div>
+              </div>
+
+              <div class="review flex justify-between items-center mb-3">
+                <p class="text-xs font-semibold w-2/5 sm:w-auto">
+                  Communication and interaction style
+                </p>
+                <div class="rating flex gap-1">
+                  <input type="radio" name="star2" id="star6" />
+                  <label for="star6"></label>
+                  <input type="radio" name="star2" id="star7" />
+                  <label for="star7"></label>
+                  <input type="radio" name="star2" id="star8" />
+                  <label for="star8"></label>
+                  <input type="radio" name="star2" id="star9" />
+                  <label for="star9"></label>
+                  <input type="radio" name="star2" id="star10" />
+                  <label for="star10"></label>
+                </div>
+              </div>
+
+              <div class="review flex justify-between items-center mb-3">
+                <p class="text-xs font-semibold w-2/5 sm:w-auto">
+                  Value for money
+                </p>
+                <div class="rating flex gap-1">
+                  <input type="radio" name="star3" id="star11" />
+                  <label for="star11"></label>
+                  <input type="radio" name="star3" id="star12" />
+                  <label for="star12"></label>
+                  <input type="radio" name="star3" id="star13" />
+                  <label for="star13"></label>
+                  <input type="radio" name="star3" id="star14" />
+                  <label for="star14"></label>
+                  <input type="radio" name="star3" id="star15" />
+                  <label for="star15"></label>
+                </div>
+              </div>
+
+              <div class="review flex justify-between mb-6">
+                <p class="text-xs font-semibold w-2/5 sm:w-auto">
+                  Write a public review
+                </p>
+                <textarea
+                  cols="46"
+                  rows="4"
+                  placeholder="Zhenhao helped me archive my goal completely."
+                  class="shadow-md rounded-lg text-xs p-3"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center gap-2">
+            <button
+              class="bg-[#B1B1B1] text-xs py-2 px-3 text-white font-semibold rounded-lg hover:shadow-btn w-full sm:w-auto self-center"
+              id="cancel-btn"
+            >
+              Cancel
+            </button>
+            <button
+              class="bg-clr_blue text-xs py-2 px-3 text-white font-semibold rounded-lg hover:shadow-btn w-full sm:w-auto self-center"
+              id="submit-btn"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section
+        class="modal bg-[#00000050] flex justify-center items-center h-[100vh] fixed inset-0 z-50 opacity-0 pointer-events-none transition-all ease-linear"
+        id="preview-modal"
       >
         <div
           class="container bg-white md:w-3/5 w-[95%] h-3/5 rounded-lg px-6 py-5 flex flex-col relative"
         >
           <figure
             class="absolute right-4 top-3 h-4 w-4 flex justify-center items-center rounded-full bg-red-600 cursor-pointer"
-            id="cross-btn"
+            id="preview-cross-btn"
           >
             <img
               src="./utils/images/cross-sign.png"
@@ -499,10 +705,10 @@
             class="bg-clr_blue text-xs py-2 px-3 text-white font-semibold rounded-lg hover:shadow-btn w-full sm:w-auto self-center"
             id="close-btn"
           >
-            Close
+            close
           </button>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <script>
@@ -518,6 +724,7 @@
               clr_blue: "#250CED",
               clr_blue_light: "#191453",
               clr_gray_light: "#5A5881",
+              clr_dark: "#34221d",
             },
             placeholderColor: {
               primary: "#5A5881",

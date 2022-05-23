@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./utils/css/styles.css" />
 
     <script src="./utils/js/dashboard.js" defer></script>
+    <script src="./utils/js/gotoMeeting.js" defer></script>
 
     <title>GoTo Meeting - PairTime</title>
   </head>
@@ -22,7 +23,7 @@
     <main class="min-h-screen bg-[#F7F8FB] overflow-hidden">
       <div class="flex">
         <aside
-          class="h-screen absolute top-0 -left-full z-50 w-full bg-[#00000080] md:fixed md:top-0 md:left-0 md:w-[12rem] lg:w-64 transition-all ease-in"
+          class="h-screen -left-full z-50 w-full bg-[#00000080] fixed top-0 md:left-0 md:w-[12rem] lg:w-64 transition-all ease-in"
           id="sidebar"
         >
           <button
@@ -36,7 +37,7 @@
             class="w-[70%] bg-white h-full flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
           >
             <div class="flex justify-between items-center">
-              <a href="/">
+              <a href="./dashboard.html">
                 <figure class="w-full px-3 py-6">
                   <img
                     src="./utils/images/pair-time.svg"
@@ -163,7 +164,7 @@
               class="md:h-[5rem] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
             >
               <div class="flex justify-between">
-                <a href="/" class="md:hidden">
+                <a href="./dashboard.html" class="md:hidden">
                   <figure class="w-full md:px-5 py-6">
                     <img
                       src="./utils/images/pair-time.svg"
@@ -222,7 +223,13 @@
 
             <div class="center pt-5 lg:pt-2 pb-8">
               <p class="text-clr_blue_light font-light text-xs lg:text-sm">
-                PairTime <span class="font-bold">></span> Dashboard
+                <a href="./dashboard.html" class="hover:text-clr_blue"
+                  >PairTime</a
+                >
+                <span class="font-bold">></span>
+                <a href="./dashboard-update.html" class="hover:text-clr_blue"
+                  >Dashboard</a
+                >
                 <span class="font-bold">></span> Go to meeting details
               </p>
               <p class="text-clr_blue_light text-base lg:text-xl mt-2 mb-4">
@@ -394,7 +401,8 @@
 
                     <div class="btns flex justify-center gap-2 mt-4">
                       <button
-                        class="bg-clr_blue text-xs py-3 sm:px-4 px-2 text-white font-semibold rounded-2xl hover:shadow-btn w-full sm:w-auto capitalize"
+                        class="bg-[#FF3D00] text-xs py-3 sm:px-4 px-2 text-white font-semibold rounded-2xl hover:shadow-btn w-full sm:w-auto capitalize"
+                        id="archive-meeting-btn"
                       >
                         Archive this meeting
                       </button>
@@ -514,6 +522,52 @@
           </div>
         </section>
       </div>
+
+      <!-- Archive Meeting Modal -->
+      <section
+        class="modal bg-[#00000050] flex justify-center items-center h-[100vh] fixed inset-0 z-50 opacity-0 pointer-events-none transition-all ease-linear"
+        id="archive-meeting-modal"
+      >
+        <div
+          class="container bg-white md:w-3/5 w-[95%] rounded-lg px-2 sm:px-5 py-5 flex flex-col relative"
+        >
+          <figure
+            class="absolute right-4 top-3 h-4 w-4 flex justify-center items-center rounded-full bg-red-600 cursor-pointer"
+          >
+            <img
+              src="./utils/images/cross-sign.png"
+              alt="Cross Sign"
+              loading="lazy"
+              id="cross-btn"
+            />
+          </figure>
+
+          <h4 class="text-sm font-semibold">Archive the Meeting</h4>
+          <div class="border-bottom w-full border-b opacity-60 my-5"></div>
+
+          <div class="md:flex md:justify-between md:items-center">
+            <p class="text-xs font-semibold" id="archive-message-el">
+              Are you sure you want to archive this meeting?
+            </p>
+
+            <div class="btns flex gap-2 mt-6 md:mt-0">
+              <button
+                class="bg-[#B1B1B1] text-xs py-2 px-6 text-white font-semibold rounded-lg hover:shadow-btn w-1/2"
+                id="no-btn"
+              >
+                No
+              </button>
+
+              <button
+                class="bg-clr_blue text-xs py-2 px-6 text-white font-semibold rounded-lg hover:shadow-btn w-1/2"
+                id="yes-btn"
+              >
+                Yes
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script>

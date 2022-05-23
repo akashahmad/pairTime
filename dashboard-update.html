@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./utils/css/styles.css" />
 
     <script src="./utils/js/dashboard.js" defer></script>
+    <script src="./utils/js/dashboardUpdate.js" defer></script>
 
     <title>Dashboard - PairTime</title>
   </head>
@@ -22,7 +23,7 @@
     <main class="bg-[#F7F8FB] overflow-hidden">
       <div class="h-full flex">
         <aside
-          class="h-screen absolute top-0 -left-full z-50 w-full bg-[#00000080] md:fixed md:top-0 md:left-0 md:w-[12rem] lg:w-64 transition-all ease-in"
+          class="h-screen -left-full z-50 w-full bg-[#00000080] fixed top-0 md:left-0 md:w-[12rem] lg:w-64 transition-all ease-in"
           id="sidebar"
         >
           <button
@@ -36,7 +37,7 @@
             class="w-[70%] bg-white h-full flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
           >
             <div class="flex justify-between items-center">
-              <a href="/">
+              <a href="./dashboard.html">
                 <figure class="w-full px-3 py-6">
                   <img
                     src="./utils/images/pair-time.svg"
@@ -162,7 +163,7 @@
               class="md:h-[5rem] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
             >
               <div class="flex justify-between">
-                <a href="/" class="md:hidden">
+                <a href="./dashboard.html" class="md:hidden">
                   <figure class="w-full md:px-5 py-6">
                     <img
                       src="./utils/images/pair-time.svg"
@@ -249,38 +250,198 @@
             </div>
 
             <div
-              class="content flex justify-evenly xl:justify-between flex-wrap"
+              class="content flex justify-evenly xl:justify-between flex-wrap pb-12"
             >
-              <div class="w-[18.3rem] text-center mb-14 lg:mb-0">
-                <h3 class="text-sm font-semibold">Pair to get help</h3>
-                <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-8">
-                  <p class="text-xs font-semibold mb-2">
-                    Can someone teach me type level Scala?
-                  </p>
-                  <p class="text-xs font-light mb-2">
-                    Planned to start at 2021-01-29T13:30:20Z[UTC]
-                  </p>
-                  <p class="text-xs font-light mb-2">Planed for 10 minutes</p>
-                  <p class="text-xs font-light mb-2">
-                    Your pair's hourly rate is EUR 0.00
-                  </p>
+              <div>
+                <div class="w-[18.3rem] text-center mb-14 lg:mb-0">
+                  <h3 class="text-sm font-semibold">Pair to get help</h3>
+                  <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-8">
+                    <p class="text-xs font-semibold mb-2">
+                      Can someone teach me type level Scala?
+                    </p>
+                    <p class="text-xs font-light mb-2">
+                      Planned to start at 2021-01-29T13:30:20Z[UTC]
+                    </p>
+                    <p class="text-xs font-light mb-2">Planed for 10 minutes</p>
+                    <p class="text-xs font-light mb-2">
+                      Your pair's hourly rate is EUR 0.00
+                    </p>
 
-                  <a href="./goto-meeting.html">
-                    <button
-                      class="bg-clr_blue w-[90%] text-xs py-2 px-5 mt-5 text-white rounded-xl hover:shadow-btn font-semibold"
-                    >
-                      Go to meeting details
-                    </button>
-                  </a>
-                </div>
+                    <a href="./goto-meeting.html">
+                      <button
+                        class="bg-clr_blue w-[90%] text-xs py-2 px-5 mt-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                      >
+                        Go to meeting details
+                      </button>
+                    </a>
+                  </div>
 
-                <a href="">
+                  <div
+                    class="cards-container hidden"
+                    id="pair-get-help-container-one"
+                  >
+                    <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-8">
+                      <p class="text-xs font-semibold mb-2">
+                        Can someone teach me type level Scala?
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Planned to start at 2021-01-29T13:30:20Z[UTC]
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Planed for 10 minutes
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Your pair's hourly rate is EUR 0.00
+                      </p>
+                      <a href="./goto-meeting.html">
+                        <button
+                          class="bg-clr_blue w-[90%] text-xs py-2 px-5 mt-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                        >
+                          Go to meeting details
+                        </button>
+                      </a>
+                    </div>
+
+                    <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-8">
+                      <p class="text-xs font-semibold mb-2">
+                        Can someone teach me type level Scala?
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Planned to start at 2021-01-29T13:30:20Z[UTC]
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Planed for 10 minutes
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Your pair's hourly rate is EUR 0.00
+                      </p>
+                      <a href="./goto-meeting.html">
+                        <button
+                          class="bg-clr_blue w-[90%] text-xs py-2 px-5 mt-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                        >
+                          Go to meeting details
+                        </button>
+                      </a>
+                    </div>
+
+                    <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-8">
+                      <p class="text-xs font-semibold mb-2">
+                        Can someone teach me type level Scala?
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Planned to start at 2021-01-29T13:30:20Z[UTC]
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Planed for 10 minutes
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Your pair's hourly rate is EUR 0.00
+                      </p>
+                      <a href="./goto-meeting.html">
+                        <button
+                          class="bg-clr_blue w-[90%] text-xs py-2 px-5 mt-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                        >
+                          Go to meeting details
+                        </button>
+                      </a>
+                    </div>
+
+                    <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-8">
+                      <p class="text-xs font-semibold mb-2">
+                        Can someone teach me type level Scala?
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Planned to start at 2021-01-29T13:30:20Z[UTC]
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Planed for 10 minutes
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Your pair's hourly rate is EUR 0.00
+                      </p>
+                      <a href="./goto-meeting.html">
+                        <button
+                          class="bg-clr_blue w-[90%] text-xs py-2 px-5 mt-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                        >
+                          Go to meeting details
+                        </button>
+                      </a>
+                    </div>
+
+                    <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-8">
+                      <p class="text-xs font-semibold mb-2">
+                        Can someone teach me type level Scala?
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Planned to start at 2021-01-29T13:30:20Z[UTC]
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Planed for 10 minutes
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Your pair's hourly rate is EUR 0.00
+                      </p>
+                      <a href="./goto-meeting.html">
+                        <button
+                          class="bg-clr_blue w-[90%] text-xs py-2 px-5 mt-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                        >
+                          Go to meeting details
+                        </button>
+                      </a>
+                    </div>
+
+                    <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-8">
+                      <p class="text-xs font-semibold mb-2">
+                        Can someone teach me type level Scala?
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Planned to start at 2021-01-29T13:30:20Z[UTC]
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Planed for 10 minutes
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Your pair's hourly rate is EUR 0.00
+                      </p>
+                      <a href="./goto-meeting.html">
+                        <button
+                          class="bg-clr_blue w-[90%] text-xs py-2 px-5 mt-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                        >
+                          Go to meeting details
+                        </button>
+                      </a>
+                    </div>
+
+                    <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-8">
+                      <p class="text-xs font-semibold mb-2">
+                        Can someone teach me type level Scala?
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Planned to start at 2021-01-29T13:30:20Z[UTC]
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Planed for 10 minutes
+                      </p>
+                      <p class="text-xs font-light mb-2">
+                        Your pair's hourly rate is EUR 0.00
+                      </p>
+                      <a href="./goto-meeting.html">
+                        <button
+                          class="bg-clr_blue w-[90%] text-xs py-2 px-5 mt-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                        >
+                          Go to meeting details
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+
                   <button
-                    class="bg-clr_blue text-xs py-2 px-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                    class="show-more-btn bg-clr_blue text-xs py-2 px-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                    id="show-more-btn"
                   >
                     Show More
                   </button>
-                </a>
+                </div>
               </div>
 
               <div class="w-[18.3rem] text-center mb-14 lg:mb-0">
@@ -290,7 +451,7 @@
                 <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-6">
                   <p class="text-xs font-semibold mb-4">My open posts</p>
 
-                  <a href="">
+                  <a href="./live-request-field.html">
                     <button
                       class="bg-clr_blue w-[90%] text-xs py-2 px-5 text-white rounded-xl hover:shadow-btn font-semibold"
                     >
@@ -299,7 +460,7 @@
                   </a>
                 </div>
 
-                <a href="">
+                <a href="./live-request-field-details.html">
                   <button
                     class="bg-clr_blue w-[90%] text-xs py-2 px-5 mb-8 text-white rounded-xl hover:shadow-btn font-semibold"
                   >
@@ -307,13 +468,85 @@
                   </button>
                 </a>
 
-                <a href="">
-                  <button
-                    class="bg-clr_blue text-xs py-2 px-5 text-white rounded-xl hover:shadow-btn font-semibold"
-                  >
-                    Show More
-                  </button>
-                </a>
+                <div class="cards-container hidden">
+                  <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-6">
+                    <p class="text-xs font-semibold mb-4">My open posts</p>
+
+                    <a href="./live-request-field.html">
+                      <button
+                        class="bg-clr_blue w-[90%] text-xs py-2 px-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                      >
+                        Scala type level programming
+                      </button>
+                    </a>
+                  </div>
+
+                  <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-6">
+                    <p class="text-xs font-semibold mb-4">My open posts</p>
+
+                    <a href="./live-request-field.html">
+                      <button
+                        class="bg-clr_blue w-[90%] text-xs py-2 px-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                      >
+                        Scala type level programming
+                      </button>
+                    </a>
+                  </div>
+
+                  <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-6">
+                    <p class="text-xs font-semibold mb-4">My open posts</p>
+
+                    <a href="./live-request-field.html">
+                      <button
+                        class="bg-clr_blue w-[90%] text-xs py-2 px-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                      >
+                        Scala type level programming
+                      </button>
+                    </a>
+                  </div>
+
+                  <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-6">
+                    <p class="text-xs font-semibold mb-4">My open posts</p>
+
+                    <a href="./live-request-field.html">
+                      <button
+                        class="bg-clr_blue w-[90%] text-xs py-2 px-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                      >
+                        Scala type level programming
+                      </button>
+                    </a>
+                  </div>
+
+                  <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-6">
+                    <p class="text-xs font-semibold mb-4">My open posts</p>
+
+                    <a href="./live-request-field.html">
+                      <button
+                        class="bg-clr_blue w-[90%] text-xs py-2 px-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                      >
+                        Scala type level programming
+                      </button>
+                    </a>
+                  </div>
+
+                  <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-6">
+                    <p class="text-xs font-semibold mb-4">My open posts</p>
+
+                    <a href="./live-request-field.html">
+                      <button
+                        class="bg-clr_blue w-[90%] text-xs py-2 px-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                      >
+                        Scala type level programming
+                      </button>
+                    </a>
+                  </div>
+                </div>
+
+                <button
+                  class="show-more-btn bg-clr_blue text-xs py-2 px-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                >
+                  Show More
+                </button>
               </div>
 
               <div
@@ -341,13 +574,117 @@
                   </a>
                 </div>
 
-                <a href="">
-                  <button
-                    class="bg-clr_blue text-xs py-2 px-5 text-white rounded-xl hover:shadow-btn font-semibold"
-                  >
-                    Show More
-                  </button>
-                </a>
+                <div
+                  class="cards-container hidden"
+                  id="pair-get-help-container-one"
+                >
+                  <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-8">
+                    <p class="text-xs font-semibold mb-2">
+                      Can someone teach me type level Scala?
+                    </p>
+                    <p class="text-xs font-light mb-2">
+                      Planned to start at 2021-01-29T13:30:20Z[UTC]
+                    </p>
+                    <p class="text-xs font-light mb-2">Planed for 10 minutes</p>
+                    <p class="text-xs font-light mb-2">
+                      Your pair's hourly rate is EUR 0.00
+                    </p>
+                    <a href="./goto-meeting.html">
+                      <button
+                        class="bg-clr_blue w-[90%] text-xs py-2 px-5 mt-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                      >
+                        Go to meeting details
+                      </button>
+                    </a>
+                  </div>
+
+                  <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-8">
+                    <p class="text-xs font-semibold mb-2">
+                      Can someone teach me type level Scala?
+                    </p>
+                    <p class="text-xs font-light mb-2">
+                      Planned to start at 2021-01-29T13:30:20Z[UTC]
+                    </p>
+                    <p class="text-xs font-light mb-2">Planed for 10 minutes</p>
+                    <p class="text-xs font-light mb-2">
+                      Your pair's hourly rate is EUR 0.00
+                    </p>
+                    <a href="./goto-meeting.html">
+                      <button
+                        class="bg-clr_blue w-[90%] text-xs py-2 px-5 mt-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                      >
+                        Go to meeting details
+                      </button>
+                    </a>
+                  </div>
+
+                  <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-8">
+                    <p class="text-xs font-semibold mb-2">
+                      Can someone teach me type level Scala?
+                    </p>
+                    <p class="text-xs font-light mb-2">
+                      Planned to start at 2021-01-29T13:30:20Z[UTC]
+                    </p>
+                    <p class="text-xs font-light mb-2">Planed for 10 minutes</p>
+                    <p class="text-xs font-light mb-2">
+                      Your pair's hourly rate is EUR 0.00
+                    </p>
+                    <a href="./goto-meeting.html">
+                      <button
+                        class="bg-clr_blue w-[90%] text-xs py-2 px-5 mt-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                      >
+                        Go to meeting details
+                      </button>
+                    </a>
+                  </div>
+
+                  <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-8">
+                    <p class="text-xs font-semibold mb-2">
+                      Can someone teach me type level Scala?
+                    </p>
+                    <p class="text-xs font-light mb-2">
+                      Planned to start at 2021-01-29T13:30:20Z[UTC]
+                    </p>
+                    <p class="text-xs font-light mb-2">Planed for 10 minutes</p>
+                    <p class="text-xs font-light mb-2">
+                      Your pair's hourly rate is EUR 0.00
+                    </p>
+                    <a href="./goto-meeting.html">
+                      <button
+                        class="bg-clr_blue w-[90%] text-xs py-2 px-5 mt-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                      >
+                        Go to meeting details
+                      </button>
+                    </a>
+                  </div>
+
+                  <div class="bg-white px-3 py-6 rounded-lg mt-4 mb-8">
+                    <p class="text-xs font-semibold mb-2">
+                      Can someone teach me type level Scala?
+                    </p>
+                    <p class="text-xs font-light mb-2">
+                      Planned to start at 2021-01-29T13:30:20Z[UTC]
+                    </p>
+                    <p class="text-xs font-light mb-2">Planed for 10 minutes</p>
+                    <p class="text-xs font-light mb-2">
+                      Your pair's hourly rate is EUR 0.00
+                    </p>
+                    <a href="./goto-meeting.html">
+                      <button
+                        class="bg-clr_blue w-[90%] text-xs py-2 px-5 mt-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                      >
+                        Go to meeting details
+                      </button>
+                    </a>
+                  </div>
+                </div>
+
+                <button
+                  class="show-more-btn bg-clr_blue text-xs py-2 px-5 text-white rounded-xl hover:shadow-btn font-semibold"
+                  id="show-more-btn"
+                >
+                  Show More
+                </button>
               </div>
             </div>
           </div>

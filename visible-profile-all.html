@@ -23,7 +23,7 @@
     <main class="bg-[#F7F8FB]">
       <div class="h-full flex">
         <aside
-          class="h-screen absolute top-0 -left-full z-50 w-full bg-[#00000080] md:relative md:top-0 md:left-0 md:w-[16rem] lg:w-80 transition-all ease-in"
+          class="h-screen -left-full z-50 w-full bg-[#00000080] fixed top-0 md:left-0 md:w-[12rem] lg:w-64 transition-all ease-in"
           id="sidebar"
         >
           <button
@@ -37,7 +37,7 @@
             class="w-[70%] bg-white h-screen flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
           >
             <div class="flex justify-between items-center">
-              <a href="./index.html">
+              <a href="./dashboard.html">
                 <figure class="w-full px-5 py-6">
                   <img
                     src="./utils/images/pair-time.svg"
@@ -140,25 +140,9 @@
                 </a>
               </li>
 
-              <!-- <li>
-                <a
-                  href="./visible-profile-all.html"
-                  class="flex items-center pl-6 py-3 lg:py-5 hover:text-clr_blue"
-                >
-                  <img
-                    src="./utils/images/icon-13.svg"
-                    alt="Icon"
-                    loading="lazy"
-                  />
-                  <span class="ml-2 text-xs lg:text-sm font-medium"
-                    >Visible Profiles</span
-                  >
-                </a>
-              </li> -->
-
               <li class="flex-1 flex items-end mb-5">
                 <a
-                  href="index.html"
+                  href="/"
                   class="flex items-center pl-6 py-5 hover:text-clr_blue"
                 >
                   <img
@@ -176,7 +160,9 @@
           </nav>
         </aside>
 
-        <section class="w-full relative h-screen overflow-hidden">
+        <section
+          class="w-full relative md:ml-[12rem] lg:ml-64 h-screen overflow-hidden"
+        >
           <div class="w-[95%] mx-auto">
             <div
               class="md:h-[5rem] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
@@ -241,7 +227,13 @@
                 <p
                   class="text-clr_blue_light font-light text-xs lg:text-sm flex gap-1"
                 >
-                  PairTime <span class="font-bold">></span> Visible Profile
+                  <a href="./dashboard.html" class="hover:text-clr_blue"
+                    >PairTime</a
+                  >
+                  <span class="font-bold">></span>
+                  <a href="./dashboard.html" class="hover:text-clr_blue"
+                    >Visible Profile</a
+                  >
                   <span
                     class="hidden text-clr_blue_light"
                     id="show-profiles-link"
@@ -491,25 +483,6 @@
           },
         },
       };
-
-      // const circleEl = document.getElementById('big-circle');
-      // console.log(circleEl);
-
-      // function displayToggle(value) {
-      //   console.log("Value", value)
-      //   for (let id of value) {
-      //     var element = document.getElementById(id);
-      //     element.classList.toggle("display-block");
-      //     circleEl.style.display = 'none';
-      //   }
-      // }
-      // function displayNone(value) {
-      //   console.log('display none callled')
-      //   var DisplayNone = document.getElementById(value);
-      //   DisplayNone.classList.toggle("display-none");
-      //   circleEl.style.display = 'block';
-      // }
     </script>
-    <!-- <script src="./utils/js/dashboard.js"></script> -->
   </body>
 </html>
