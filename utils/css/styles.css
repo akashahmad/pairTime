@@ -211,7 +211,8 @@ select {
 .services-listing::-webkit-scrollbar,
 .editor::-webkit-scrollbar,
 .chat::-webkit-scrollbar,
-.fc-scroller::-webkit-scrollbar {
+.fc-scroller::-webkit-scrollbar,
+.calendar-time::-webkit-scrollbar {
   width: 7px;
 }
 
@@ -220,7 +221,8 @@ select {
 .services-listing::-webkit-scrollbar-track,
 .editor::-webkit-scrollbar-track,
 .chat::-webkit-scrollbar-track,
-.fc-scroller::-webkit-scrollbar {
+.fc-scroller::-webkit-scrollbar,
+.calendar-time::-webkit-scrollbar {
   background: transparent;
   border-radius: 10px;
 }
@@ -230,7 +232,8 @@ select {
 .services-listing::-webkit-scrollbar-thumb,
 .editor::-webkit-scrollbar-thumb,
 .chat::-webkit-scrollbar-thumb,
-.fc-scroller::-webkit-scrollbar-thumb {
+.fc-scroller::-webkit-scrollbar-thumb,
+.calendar-time::-webkit-scrollbar-thumb {
   background: #e6e4e4;
   border-radius: 10px;
 }

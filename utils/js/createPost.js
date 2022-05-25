@@ -91,8 +91,6 @@ const titleField = document.getElementById(`title-input`);
 const previewCloseBtn = document.getElementById(`preview-close-btn`);
 const previewCrossBtn = document.getElementById(`preview-cross-btn`);
 
-console.log(tagInputEl.value);
-
 previewBtn.addEventListener(`click`, () => {
   previewModal.classList.remove(`opacity-0`);
   previewModal.classList.remove(`pointer-events-none`);

@@ -11,12 +11,12 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./utils/css/fullCalendar/main.min.css" />
+    <!-- <link rel="stylesheet" href="./utils/css/fullCalendar/main.min.css" /> -->
     <link rel="stylesheet" href="./utils/css/styles.css" />
 
     <!-- Script files -->
-    <script src="./utils/js/fullCalendar/main.js" defer></script>
-    <script src="./utils/js/calendar.js" defer></script>
+    <!-- <script src="./utils/js/fullCalendar/main.js" defer></script> -->
+    <!-- <script src="./utils/js/calendar.js" defer></script> -->
     <script src="./utils/js/serviceProfile.js" defer></script>
     <script src="./utils/js/dashboard.js" defer></script>
 
@@ -335,11 +335,612 @@
 
                 <div class="xl:flex xl:justify-between pt-5 lg:pt-8">
                   <div class="schedular w-full xl:w-[61%]">
-                    <div
+                    <!-- <div
                       class="schedular-calendar h-full"
                       id="schedular-calendar"
-                    ></div>
-                    <!-- <Calendar {plugins} {options} /> -->
+                    ></div> -->
+                    <div class="calendar h-full">
+                      <div
+                        class="calendar-title bg-white flex justify-between py-3 px-5 rounded-xl"
+                      >
+                        <div class="title">
+                          <h3 class="font-semibold">
+                            May 2022
+                            <span class="text-xs font-normal ml-1"
+                              >(Asia/Karachi)</span
+                            >
+                          </h3>
+                        </div>
+                        <div class="arrows flex justify-between">
+                          <i
+                            class="fa fa-angle-left text-white bg-clr_blue h-[1.4rem] w-[1.5rem] rounded-lg flex justify-center items-center cursor-pointer"
+                          ></i>
+                          <span class="text-blue-600 cursor-pointer mx-2"
+                            >Today</span
+                          >
+                          <i
+                            class="fa fa-angle-right text-white bg-clr_blue h-[1.4rem] w-[1.5rem] rounded-lg flex justify-center items-center cursor-pointer"
+                          ></i>
+                        </div>
+                      </div>
+
+                      <div class="calendar-days flex py-3 w-[97%] mt-[2px]">
+                        <h4
+                          class="bg-white mr-1 text-xs py-2 w-[3.5rem] text-center rounded-lg font-semibold"
+                        >
+                          Weekly
+                        </h4>
+                        <div
+                          class="days-grid flex-1 flex justify-around items-center text-xs bg-white rounded-lg"
+                        >
+                          <span class="text-center"
+                            >Sun <span class="block sm:inline">22</span>
+                          </span>
+                          <span class="text-center"
+                            >Mon <span class="block sm:inline">23</span></span
+                          >
+                          <span class="text-center"
+                            >Tue <span class="block sm:inline">24</span></span
+                          >
+                          <span class="text-center"
+                            >Wed <span class="block sm:inline">25</span></span
+                          >
+                          <span class="text-center"
+                            >Thu <span class="block sm:inline">26</span></span
+                          >
+                          <span class="text-center"
+                            >Fri <span class="block sm:inline">27</span></span
+                          >
+                          <span class="text-center"
+                            >Sat <span class="block sm:inline">28</span></span
+                          >
+                        </div>
+                      </div>
+
+                      <div
+                        class="calendar-time relative pr-2 flex-1 h-[20rem] md:h-[33.7rem] overflow-auto"
+                      >
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center rounded-t-lg"
+                          >
+                            00:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            01:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            <b class="bg-clr_blue text-white p-1 rounded-xl"
+                              >02:00</b
+                            >
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            03:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span
+                              class="relative border-r-8 border border-clr_blue text-[5px] md:text-[7px] lg:text-[10px] text-clr_blue flex flex-col justify-center pl-1 bg-white border-3 rounded-sm"
+                            >
+                              <p>
+                                02:30 AM
+                                <i
+                                  class="fa fa-clock hidden sm:inline ml-[2px]"
+                                ></i>
+                              </p>
+                              <p>
+                                03:30 AM
+                                <i
+                                  class="fa fa-clock hidden sm:inline ml-[2px]"
+                                ></i>
+                              </p>
+                              <p>
+                                <i
+                                  class="fa fa-angle-right absolute top-[50%] -right-[6px] translate-y-[-50%] text-white"
+                                ></i>
+                              </p>
+                            </span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            04:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            05:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span
+                              class="relative border-r-8 border border-clr_blue text-[5px] md:text-[7px] lg:text-[10px] text-clr_blue flex flex-col justify-center pl-1 bg-white border-3 rounded-sm"
+                            >
+                              <p>
+                                04:30 AM
+                                <i
+                                  class="fa fa-clock hidden sm:inline ml-[2px]"
+                                ></i>
+                              </p>
+                              <p>
+                                05:30 AM
+                                <i
+                                  class="fa fa-clock hidden sm:inline ml-[2px]"
+                                ></i>
+                              </p>
+                              <p>
+                                <i
+                                  class="fa fa-angle-right absolute top-[50%] -right-[6px] translate-y-[-50%] text-white"
+                                ></i>
+                              </p>
+                            </span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            06:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            07:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            08:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span
+                              class="relative border-r-8 border border-clr_blue text-[5px] md:text-[7px] lg:text-[10px] text-clr_blue flex flex-col justify-center pl-1 bg-white border-3 rounded-sm"
+                            >
+                              <p>
+                                07:30 AM
+                                <i
+                                  class="fa fa-clock hidden sm:inline ml-[2px]"
+                                ></i>
+                              </p>
+                              <p>
+                                08:30 AM
+                                <i
+                                  class="fa fa-clock hidden sm:inline ml-[2px]"
+                                ></i>
+                              </p>
+                              <p>
+                                <i
+                                  class="fa fa-angle-right absolute top-[50%] -right-[6px] translate-y-[-50%] text-white"
+                                ></i>
+                              </p>
+                            </span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            09:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            10:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            11:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            12:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            13:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            14:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            15:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            16:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            17:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            18:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            19:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            20:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            21:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            22:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center rounded-b-lg"
+                          >
+                            23:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="events">
+                          <div
+                            class="line absolute top-20 left-16 h-[2px] w-[53%] bg-clr_blue"
+                          ></div>
+                          <div
+                            class="time absolute top-16 left-[60%] h-[2rem] w-[4rem] bg-clr_blue text-white text-xs flex justify-center items-center rounded-xl"
+                          >
+                            02:00
+
+                            <p class="flex flex-col ml-1 h-[15px] text-[10px]">
+                              <i class="fa fa-sort-up"></i>
+                              <i class="fa fa-sort-down -mt-2"></i>
+                            </p>
+                          </div>
+
+                          <div
+                            class="time absolute top-16 left-[79%] md:left-[73%] lg:left-[71%] h-[2rem] w-[1.5rem] bg-clr_blue text-white text-xs flex justify-center items-center rounded-xl"
+                          >
+                            <i class="fa fa-check"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                   <div class="right-side w-full xl:w-[36%] pt-2">
