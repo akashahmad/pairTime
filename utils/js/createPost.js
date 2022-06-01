@@ -50,17 +50,17 @@ let tags = [];
 tagBtns.forEach((btn) => {
   btn.addEventListener(`click`, (e) => {
     tagBtns.forEach((btn) => {
-      if (!btn.classList.contains(`bg-[#ECECEC]`)) {
-        btn.classList.add(`bg-[#ECECEC]`, `text-[#A6A6A6]`);
+      if (!btn.classList.contains(`bg-[#250ced10]`)) {
+        btn.classList.add(`bg-[#250ced10]`);
       }
 
-      // if (btn.classList.contains(`bg-clr_blue`)) {
-      //   btn.classList.remove(`bg-clr_blue`);
-      // }
+      if (btn.classList.contains(`bg-[#250ced40]`)) {
+        btn.classList.remove(`bg-[#250ced40]`);
+      }
     });
 
-    e.target.classList.add(`bg-clr_blue`, `text-white`);
-    e.target.classList.remove(`bg-[#ECECEC]`, `text-[#A6A6A6]`);
+    e.target.classList.add(`bg-[#250ced40]`);
+    e.target.classList.remove(`bg-[#250ced10]`);
 
     /////// pushing the elements to tags array and then display it on input field
     tags.push(` ` + e.target.textContent.trim());
