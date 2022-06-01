@@ -52,6 +52,7 @@ function changeYesBtnContent() {
 
 ////////////////// Multiline Mode Functionality ////////////////////
 const multilineCheckBox = document.getElementById(`multiline-checkbox`);
+const multilineLabel = document.getElementById(`multiline-label`);
 const chatInputEl = document.getElementById(`input-chat`);
 const textareaEl = document.getElementById(`textarea-chat`);
 
@@ -59,8 +60,20 @@ multilineCheckBox.addEventListener(`change`, () => {
   if (multilineCheckBox.checked) {
     chatInputEl.classList.add(`hidden`);
     textareaEl.classList.remove(`hidden`);
+    multilineLabel.classList.remove(`text-[#808080]`);
   } else {
     chatInputEl.classList.remove(`hidden`);
     textareaEl.classList.add(`hidden`);
+    multilineLabel.classList.add(`text-[#808080]`);
   }
 });
+
+// multilineLabel.addEventListener(`mouseover`, () => {
+//   multilineCheckBox.disabled = false;
+//   multilineLabel.classList.remove(`text-[#808080]`);
+// });
+
+// multilineLabel.addEventListener(`mouseout`, () => {
+//   multilineCheckBox.disabled = true;
+//   multilineLabel.classList.add(`text-[#808080]`);
+// });

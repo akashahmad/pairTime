@@ -393,7 +393,7 @@
                             id="textarea-chat"
                             cols="30"
                             rows="3"
-                            class="hidden rounded-sm bg-[#F7F7FC] w-full py-2 px-3"
+                            class="hidden rounded-sm bg-[#F7F7FC] w-full py-2 px-3 resize-none"
                           ></textarea>
 
                           <button class="cursor-pointer">
@@ -406,12 +406,16 @@
                         </div>
 
                         <div class="flex justify-end mt-2 -mb-3 mr-12">
-                          <label class="text-xs flex items-center">
+                          <label
+                            class="multiline-label text-xs text-[#808080] flex items-center"
+                            id="multiline-label"
+                          >
                             <input
                               type="checkbox"
                               id="multiline-checkbox"
                               class="mr-1"
                             />
+                            <span class="checkmark"></span>
                             Multiline Mode
                           </label>
                         </div>
