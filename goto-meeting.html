@@ -387,7 +387,15 @@
                           <input
                             type="text"
                             class="rounded-sm bg-[#F7F7FC] w-full py-2 px-3"
+                            id="input-chat"
                           />
+                          <textarea
+                            id="textarea-chat"
+                            cols="30"
+                            rows="1"
+                            class="hidden rounded-sm bg-[#F7F7FC] w-full py-2 px-3 resize-none"
+                          ></textarea>
+
                           <button class="cursor-pointer">
                             <img
                               src="./utils/images/send.svg"
@@ -395,6 +403,17 @@
                               loading="lazy"
                             />
                           </button>
+                        </div>
+
+                        <div class="flex justify-end mt-2 -mb-3 mr-12">
+                          <label class="text-xs flex items-center">
+                            <input
+                              type="checkbox"
+                              id="multiline-checkbox"
+                              class="mr-1"
+                            />
+                            Multiline Mode
+                          </label>
                         </div>
                       </div>
                     </div>
@@ -406,11 +425,11 @@
                       >
                         Archive this meeting
                       </button>
-                      <button
+                      <!-- <button
                         class="bg-clr_blue text-xs py-3 sm:px-4 px-2 text-white font-semibold rounded-2xl hover:shadow-btn w-full sm:w-auto capitalize"
                       >
                         start multiline mode
-                      </button>
+                      </button> -->
                     </div>
                   </div>
                 </div>

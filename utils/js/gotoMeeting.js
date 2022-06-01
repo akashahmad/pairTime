@@ -49,3 +49,18 @@ function changeYesBtnContent() {
   archiveMessageEl.textContent =
     "Are you sure you want to archive this meeting?";
 }
+
+////////////////// Multiline Mode Functionality ////////////////////
+const multilineCheckBox = document.getElementById(`multiline-checkbox`);
+const chatInputEl = document.getElementById(`input-chat`);
+const textareaEl = document.getElementById(`textarea-chat`);
+
+multilineCheckBox.addEventListener(`change`, () => {
+  if (multilineCheckBox.checked) {
+    chatInputEl.classList.add(`hidden`);
+    textareaEl.classList.remove(`hidden`);
+  } else {
+    chatInputEl.classList.remove(`hidden`);
+    textareaEl.classList.add(`hidden`);
+  }
+});
