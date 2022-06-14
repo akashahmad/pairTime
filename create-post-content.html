@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="./utils/css/fullCalendar/main.min.css" /> -->
+    <link rel="stylesheet" href="./utils/css/styles.css" />
+
+    <!-- <script src="./utils/js/fullCalendar/main.js" defer></script> -->
+    <!-- <script src="./utils/js/calendar.js" defer></script> -->
+    <script src="./utils/js/dashboard.js" defer></script>
+
+    <title>Create a post</title>
+  </head>
+
+  <body class="dashboard">
+    <main class="bg-[#F7F8FB] overflow-hidden">
+      <div class="h-full flex">
+        <aside
+          class="h-screen -left-full z-50 w-full bg-[#00000080] fixed top-0 md:left-0 md:w-[12rem] lg:w-64 transition-all ease-in"
+          id="sidebar"
+        >
+          <button
+            class="text-clr_blue absolute right-4 top-4"
+            id="dashb-nav-closeBtn"
+          >
+            <i class="fas fa-times text-xl text-white"></i>
+          </button>
+
+          <nav
+            class="w-[70%] bg-white h-full flex flex-col rounded-r-2xl shadow-btn md:shadow-none md:w-full pr-5 md:pr-1 md:rounded-none"
+          >
+            <div class="flex justify-between items-center">
+              <a href="./dashboard.html">
+                <figure class="w-full px-3 py-6">
+                  <img
+                    src="./utils/images/pair-time.svg"
+                    alt="Company Logo"
+                    loading="lazy"
+                    class="sm:w-[80%] w-28 cursor-pointer"
+                  />
+                </figure>
+              </a>
+
+              <div class="flex gap-4 items-center md:gap-6 md:hidden">
+                <a href="account.html" class="hover:shadow-btn">
+                  <img
+                    src="./utils/images/icon-17.svg"
+                    alt="Icon"
+                    loading="lazy"
+                    class="md:w-20 w-6"
+                  />
+                </a>
+                <a href="profile.html" class="hover:shadow-btn rounded-full">
+                  <img
+                    src="./utils/images/user-photo.png"
+                    alt="User Photo"
+                    loaindg="lazy"
+                    class="h-8 md:w-12 w-8"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="border-bottom w-full border-b opacity-60 mb-6 hidden md:block"
+            ></div>
+
+            <ul class="flex-1 flex flex-col">
+              <li class="relative">
+                <a href="create-post.html" class="bg-green-600">
+                  <div
+                    class="bg-clr_blue absolute top-1 -left-1 w-2 h-[80%] rounded-2xl"
+                  ></div>
+                  <button
+                    class="nav-post bg-clr_blue text-white text-xs md:text-sm font-semibold flex items-center lg:py-3 py-2 lg:px-4 px-2 ml-3 rounded-xl gap-3 hover:shadow-btn w-[90%]"
+                  >
+                    <img
+                      src="./utils/images/icon-10.svg"
+                      alt="Icon"
+                      loading="lazy"
+                      class="brightness-0 invert"
+                    />
+                    Create A Post
+                  </button>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="./service-profile.html"
+                  class="flex items-center pl-6 py-3 lg:py-5 hover:text-clr_blue"
+                >
+                  <img
+                    src="./utils/images/icon-11.svg"
+                    alt="Icon"
+                    loading="lazy"
+                  />
+                  <span class="ml-2 text-xs lg:text-sm font-medium"
+                    >Fill Out Your Service Profile</span
+                  >
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="./live-request.html"
+                  class="flex items-center pl-6 py-3 lg:py-5 hover:text-clr_blue"
+                >
+                  <img
+                    src="./utils/images/icon-12.svg"
+                    alt="Icon"
+                    loading="lazy"
+                  />
+                  <span class="ml-2 text-xs lg:text-sm font-medium"
+                    >Live Request</span
+                  >
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="./visible-profile-all.html"
+                  class="flex items-center pl-6 py-3 lg:py-5 hover:text-clr_blue"
+                >
+                  <img
+                    src="./utils/images/icon-13.svg"
+                    alt="Icon"
+                    loading="lazy"
+                  />
+                  <span class="ml-2 text-xs lg:text-sm font-medium"
+                    >Visible Profiles</span
+                  >
+                </a>
+              </li>
+
+              <li class="flex-1 flex items-end mb-5">
+                <a
+                  href="index.html"
+                  class="flex items-center pl-6 py-5 hover:text-clr_blue"
+                >
+                  <img
+                    src="./utils/images/icon-14.svg"
+                    alt="Icon"
+                    loading="lazy"
+                  />
+                  <span
+                    class="ml-2 text-xs lg:text-sm font-medium text-[#FF5223]"
+                    >Logout</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div
+            class="absolute -z-10 -right-2 -bottom-1 bg-[#33D9EF] w-4 h-4 rounded-full animtaion-infinite"
+          ></div>
+        </aside>
+
+        <section class="w-full relative md:ml-[12rem] lg:ml-64 min-h-screen">
+          <div class="w-[95%] mx-auto">
+            <div
+              class="md:h-[5rem] md:flex md:flex-row-reverse md:justify-between md:items-center md:pt-4"
+            >
+              <div class="flex justify-between">
+                <a href="./dashboard.html" class="md:hidden">
+                  <figure class="w-full md:px-5 py-6">
+                    <img
+                      src="./utils/images/pair-time.svg"
+                      alt="Company Logo"
+                      loading="lazy"
+                      class="w-24"
+                    />
+                  </figure>
+                </a>
+
+                <div class="user flex gap-5 items-center">
+                  <a
+                    href="./account.html"
+                    class="hover:shadow-btn hidden md:block relative rounded-full"
+                  >
+                    <figure class="absolute top-[15%] left-[25%] z-10">
+                      <img
+                        src="./utils/images/icon-account-white.svg"
+                        alt="Icon"
+                        loading="lazy"
+                      />
+                    </figure>
+
+                    <figure>
+                      <img
+                        src="./utils/images/circle-blue.svg"
+                        alt=""
+                        class="h-12 w-12"
+                      />
+                    </figure>
+                  </a>
+                  <a
+                    href="profile.html"
+                    class="hover:shadow-btn rounded-full hidden md:block"
+                  >
+                    <img
+                      src="./utils/images/user-photo.png"
+                      alt="User Photo"
+                      loaindg="lazy"
+                      class="h-10 w-10"
+                    />
+                  </a>
+                  <button class="text-clr_blue md:hidden">
+                    <i class="fas fa-bars text-xl" id="dashb-nav-openBtn"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="search-bar relative">
+                <input
+                  type="text"
+                  placeholder="Search Anything"
+                  class="lg:w-72 w-full pl-9 pr-2 py-3 text-xs rounded-lg border-none outline-none placeholder-primary"
+                />
+                <img
+                  src="./utils/images/search.svg"
+                  alt="Search Icon"
+                  loading="lazy"
+                  class="absolute top-[30%] left-[3%] md:left-[5%]"
+                />
+              </div>
+            </div>
+
+            <div class="center pt-5 lg:pt-2 h-full pb-8 relative z-30">
+              <p class="text-clr_blue_light font-light text-xs lg:text-sm">
+                <a href="./dashboard.html" class="hover:text-clr_blue"
+                  >PairTime</a
+                >
+                <span class="font-bold">></span> Post a request
+              </p>
+
+              <div class="md:flex flex-wrap md:justify-between md:items-center">
+                <p
+                  class="text-clr_blue_light text-base lg:text-xl font-semibold mt-2 mb-4 flex-1"
+                >
+                  Content
+                </p>
+
+                <div class="sm:flex sm:justify-start grid gap-3 md:gap-2">
+                  <button
+                    class="text-[#250CED] bg-[#FFF] text-xs sm:text-sm py-2 px-4 rounded-2xl font-semibold hover:shadow-btn flex items-center justify-center"
+                    id="close-post-btn"
+                  >
+                    Copy link <img class="ml-2 w-[15px]" src="./utils/images/link-icon.svg" alt="Link" loading="lazy">
+                  </button>
+                  <button
+                    class="text-white bg-[#FF3D00] text-xs sm:text-sm py-2 px-4 sm:px-5 rounded-2xl font-semibold hover:shadow-btn"
+                    id="close-post-btn"
+                  >
+                    Close this post
+                  </button>
+                  <button
+                    class="bg-clr_blue text-xs sm:text-sm py-2 px-4 sm:px-5 text-white rounded-2xl hover:shadow-btn font-semibold"
+                    id="exclusive-request-btn"
+                  >
+                    Turn it to a exclusive request
+                  </button>
+                  <button
+                    class="bg-clr_blue text-xs sm:text-sm py-2 px-4 sm:px-5 text-white rounded-2xl hover:shadow-btn font-semibold"
+                    id="edit-btn"
+                  >
+                    Edit
+                  </button>
+                </div>
+              </div>
+              <div class="border-bottom w-full border-b opacity-60 mt-2"></div>
+              
+              <div class="create-post-form pt-6 pb-16">
+                <div class="mb-4">
+                  <label
+                    class="block text-xs text-clr_blue_light font-semibold mb-2"
+                    >Description
+                  </label>
+                  <textarea
+                    class="placeholder:text-clr_blue_light w-full px-3 py-3 text-xs font-normal rounded-lg"
+                    rows="6"
+                    placeholder="Test Descriptions"
+                    id="textarea"
+                  ></textarea>
+                </div>
+
+                <p class="inline mr-2 text-xs font-semibold text-clr_blue_light pb-2">
+                  Tags:
+                </p>
+                <div class="tag-btns inline">
+                  <button
+                    class="tag-btn flex-1 bg-[#250ced10] text-clr_blue text-sm py-2 px-3 rounded-lg hover:shadow-md font-semibold mb-2 mb-md-0 italic"
+                    type="button"
+                  >
+                    korolev
+                  </button>
+                  <button
+                    class="tag-btn flex-1 bg-[#250ced10] text-clr_blue text-sm py-2 px-3 rounded-lg hover:shadow-md font-semibold italic"
+                    type="button"
+                  >
+                    ios
+                  </button>
+                  <button
+                    class="tag-btn flex-1 bg-[#250ced10] text-clr_blue text-sm py-2 px-3 rounded-lg hover:shadow-md font-semibold italic"
+                    type="button"
+                  >
+                    HTML
+                  </button>
+                  <button
+                    class="tag-btn flex-1 bg-[#250ced10] text-clr_blue text-sm py-2 px-3 rounded-lg hover:shadow-md font-semibold italic"
+                    type="button"
+                  >
+                    Scala
+                  </button>
+                  <button
+                    class="tag-btn flex-1 bg-[#250ced10] text-clr_blue text-sm py-2 px-3 rounded-lg hover:shadow-md font-semibold italic"
+                    type="button"
+                  >
+                    FP
+                  </button>
+                  <button
+                    class="tag-btn flex-1 bg-[#250ced10] text-clr_blue text-sm py-2 px-3 rounded-lg hover:shadow-md font-semibold italic"
+                    type="button"
+                  >
+                    React
+                  </button>
+                  <button
+                    class="tag-btn flex-1 bg-[#250ced10] text-clr_blue text-sm py-2 px-3 rounded-lg hover:shadow-md font-semibold italic"
+                    type="button"
+                  >
+                    Objective C
+                  </button>
+                  <button
+                    class="tag-btn flex-1 bg-[#250ced10] text-clr_blue text-sm py-2 px-3 rounded-lg hover:shadow-md font-semibold italic"
+                    type="button"
+                  >
+                    Interaction
+                  </button>
+                </div>
+
+                <div class="md:flex items-center pt-7">
+                  <p
+                    class="text-clr_blue_light text-base lg:text-xl font-semibold mt-2 mb-3 flex-1"
+                  >
+                    Availaibility
+                  </p>
+                  <div class="md:flex lg:w-[36%] gap-2">
+                    <div class="w-full md:w-[9rem] mb-3 md:mb-0">
+                      <input
+                        placeholder="Find Time Zone"
+                        class="placeholder:text-clr_gray_light placeholder:text-[11px] px-3 py-3 rounded-lg block w-full"
+                      />
+                    </div>
+                    <div class="relative flex-1">
+                      <select
+                        class="bg-white py-[15.5px] px-3 rounded-lg text-[11px] text-clr_blue_light w-full appearance-none"
+                      >
+                        <option>Asia/Karachi (currently +5:00)</option>
+                        <option>Asia/Karachi (currently +5:00)</option>
+                        <option>Asia/Karachi (currently +5:00)</option>
+                      </select>
+                      <span
+                        class="drop-icon absolute right-[2%] top-[17%] bg-white px-2 pointer-events-none"
+                      >
+                        <i class="fas fa-sort-down text-sm"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="border-bottom w-full border-b opacity-60 mt-5"
+                ></div>
+
+                <div class="xl:flex xl:justify-between pt-5 lg:pt-8">
+                 <div class="schedular w-full xl:w-[61%]">
+                    <!-- <div
+                      class="schedular-calendar h-full"
+                      id="schedular-calendar"
+                    ></div> -->
+                    <div class="calendar h-full">
+                      <div
+                        class="calendar-title bg-white flex justify-between py-3 px-5 rounded-xl"
+                      >
+                        <div class="title">
+                          <h3 class="font-semibold">
+                            May 2022
+                            <span class="text-xs font-normal ml-1"
+                              >(Asia/Karachi)</span
+                            >
+                          </h3>
+                        </div>
+                        <div class="arrows flex justify-between">
+                          <i
+                            class="fa fa-angle-left text-white bg-clr_blue h-[1.4rem] w-[1.5rem] rounded-lg flex justify-center items-center cursor-pointer"
+                          ></i>
+                          <span class="text-blue-600 cursor-pointer mx-2"
+                            >Today</span
+                          >
+                          <i
+                            class="fa fa-angle-right text-white bg-clr_blue h-[1.4rem] w-[1.5rem] rounded-lg flex justify-center items-center cursor-pointer"
+                          ></i>
+                        </div>
+                      </div>
+
+                      <div class="calendar-days flex py-3 w-[97%] mt-[2px]">
+                        <h4
+                          class="bg-white mr-1 text-xs py-2 w-[3.5rem] text-center rounded-lg font-semibold"
+                        >
+                          Weekly
+                        </h4>
+                        <div
+                          class="days-grid flex-1 flex justify-around items-center text-xs bg-white rounded-lg"
+                        >
+                          <span class="text-center"
+                            >Sun <span class="block sm:inline">22</span>
+                          </span>
+                          <span class="text-center"
+                            >Mon <span class="block sm:inline">23</span></span
+                          >
+                          <span class="text-center"
+                            >Tue <span class="block sm:inline">24</span></span
+                          >
+                          <span class="text-center"
+                            >Wed <span class="block sm:inline">25</span></span
+                          >
+                          <span class="text-center"
+                            >Thu <span class="block sm:inline">26</span></span
+                          >
+                          <span class="text-center"
+                            >Fri <span class="block sm:inline">27</span></span
+                          >
+                          <span class="text-center"
+                            >Sat <span class="block sm:inline">28</span></span
+                          >
+                        </div>
+                      </div>
+
+                      <div
+                        class="calendar-time relative pr-2 flex-1 h-[20rem] md:h-[33.7rem] overflow-auto"
+                      >
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center rounded-t-lg"
+                          >
+                            00:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            01:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            <b class="bg-clr_blue text-white p-1 rounded-xl"
+                              >02:00</b
+                            >
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            03:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span
+                              class="relative border-r-8 border border-clr_blue text-[5px] md:text-[7px] lg:text-[10px] text-clr_blue flex flex-col justify-center pl-1 bg-white border-3 rounded-sm"
+                            >
+                              <p>
+                                02:30 AM
+                                <i
+                                  class="fa fa-clock hidden sm:inline ml-[2px]"
+                                ></i>
+                              </p>
+                              <p>
+                                03:30 AM
+                                <i
+                                  class="fa fa-clock hidden sm:inline ml-[2px]"
+                                ></i>
+                              </p>
+                              <p>
+                                <i
+                                  class="fa fa-angle-right absolute top-[50%] -right-[6px] translate-y-[-50%] text-white"
+                                ></i>
+                              </p>
+                            </span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            04:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            05:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span
+                              class="relative border-r-8 border border-clr_blue text-[5px] md:text-[7px] lg:text-[10px] text-clr_blue flex flex-col justify-center pl-1 bg-white border-3 rounded-sm"
+                            >
+                              <p>
+                                04:30 AM
+                                <i
+                                  class="fa fa-clock hidden sm:inline ml-[2px]"
+                                ></i>
+                              </p>
+                              <p>
+                                05:30 AM
+                                <i
+                                  class="fa fa-clock hidden sm:inline ml-[2px]"
+                                ></i>
+                              </p>
+                              <p>
+                                <i
+                                  class="fa fa-angle-right absolute top-[50%] -right-[6px] translate-y-[-50%] text-white"
+                                ></i>
+                              </p>
+                            </span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            06:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            07:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            08:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span
+                              class="relative border-r-8 border border-clr_blue text-[5px] md:text-[7px] lg:text-[10px] text-clr_blue flex flex-col justify-center pl-1 bg-white border-3 rounded-sm"
+                            >
+                              <p>
+                                07:30 AM
+                                <i
+                                  class="fa fa-clock hidden sm:inline ml-[2px]"
+                                ></i>
+                              </p>
+                              <p>
+                                08:30 AM
+                                <i
+                                  class="fa fa-clock hidden sm:inline ml-[2px]"
+                                ></i>
+                              </p>
+                              <p>
+                                <i
+                                  class="fa fa-angle-right absolute top-[50%] -right-[6px] translate-y-[-50%] text-white"
+                                ></i>
+                              </p>
+                            </span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            09:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            10:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            11:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            12:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            13:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            14:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            15:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            16:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            17:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            18:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            19:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            20:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            21:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center"
+                          >
+                            22:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7 border-b"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="row flex">
+                          <span
+                            class="bg-white mr-1 inline-block text-xs py-3 w-[3.5rem] text-center rounded-b-lg"
+                          >
+                            23:00
+                          </span>
+                          <div
+                            class="days-grid flex-1 text-xs grid grid-cols-7"
+                          >
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class="border-r"></span>
+                            <span class=""></span>
+                          </div>
+                        </div>
+
+                        <div class="events">
+                          <div
+                            class="line absolute top-20 left-16 h-[2px] w-[53%] bg-clr_blue"
+                          ></div>
+                          <div
+                            class="time absolute top-16 left-[60%] h-[2rem] w-[4rem] bg-clr_blue text-white text-xs flex justify-center items-center rounded-xl"
+                          >
+                            02:00
+
+                            <p class="flex flex-col ml-1 h-[15px] text-[10px]">
+                              <i class="fa fa-sort-up"></i>
+                              <i class="fa fa-sort-down -mt-2"></i>
+                            </p>
+                          </div>
+
+                          <div
+                            class="time absolute top-16 left-[79%] md:left-[73%] lg:left-[71%] h-[2rem] w-[1.5rem] bg-clr_blue text-white text-xs flex justify-center items-center rounded-xl"
+                          >
+                            <i class="fa fa-check"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="right-side w-full xl:w-[36%] pt-2">
+                    <p
+                      class="text-clr_blue_light text-lg font-semibold leading-6 mt-3 mb-4"
+                    >
+                      Meeting Preferences
+                    </p>
+
+                    <div
+                      class="px-4 py-4 bg-white rounded-lg w-full"
+                    >
+                      <div class="flex justify-between items-center">
+                        <h3 class="text-sm font-semibold">Budget</h3>
+                      </div>
+
+                      <div class="border-b opacity-60 mt-4 mb-6"></div>
+
+                      <div class="mb-6">
+                        <h5 class="text-xs font-semibold mb-2">Currency EUR</h5>
+                        <p
+                          class="flex justify-between text-xs font-medium capitalize mb-2"
+                        >
+                          minimum hourly rate:
+                          <span class="text-xs font-normal">EUR 0.00</span>
+                        </p>
+                        <p
+                          class="flex justify-between text-xs font-medium capitalize mb-2"
+                        >
+                          maximum hourly rate:
+                          <span class="text-xs font-normal">EUR 0.00</span>
+                        </p>
+                      </div>
+
+                      <div>
+                        <h5 class="text-xs font-semibold mb-2">Currency USD</h5>
+                        <p
+                          class="flex justify-between text-xs font-medium capitalize mb-2"
+                        >
+                          minimum hourly rate:
+                          <span class="text-xs font-normal">USD 0.00</span>
+                        </p>
+                        <p
+                          class="flex justify-between text-xs font-medium capitalize mb-2"
+                        >
+                          maximum hourly rate:
+                          <span class="text-xs font-normal">USD 0.00</span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="px-4 py-4 bg-white rounded-lg w-full mt-5"
+                    >
+                      <div class="flex justify-between items-center">
+                        <h3 class="text-sm font-semibold">Offer 1</h3>
+                      </div>
+
+                      <div class="border-b opacity-60 mt-4 mb-6"></div>
+
+                      <div>     
+                        <p
+                          class="flex justify-between text-xs font-medium capitalize mb-2"
+                        >
+                          Introduction message:
+                          <span class="text-xs font-normal">Some lorem Ipsum Text which </span>
+                        </p>
+                        <p
+                          class="flex justify-between text-xs font-medium capitalize mb-2"
+                        >
+                          Meeting start time:
+                          <span class="text-xs font-normal">2022-03-08 (20:45 UTC)</span>
+                        </p>
+                     
+                        <p
+                          class="flex justify-between text-xs font-medium capitalize mb-2"
+                        >
+                          Meeting is planed for:
+                          <span class="text-xs font-normal">60 minutes</span>
+                        </p>
+                        <p
+                          class="flex justify-between text-xs font-medium capitalize mb-2"
+                        >
+                          Hourly rate:
+                          <span class="text-xs font-normal">EUR 60.00</span>
+                        </p>
+                      </div>
+
+                      <button
+                        class="bg-clr_blue text-xs sm:text-sm py-2 px-4 sm:px-5 text-white rounded-2xl hover:shadow-btn font-semibold block mx-auto mt-8 mb-4"
+                        id="exclusive-request-btn"
+                      >
+                        View user Profile
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="half-circle hidden lg:block bg-[#F48C06] w-24 h-24 fixed top-[50%] -right-20 rounded-full animtaion-infinite"
+          ></div>
+        </section>
+      </div>
+
+      <!-- Post Btn Click Modal -->
+      <section
+        class="modal bg-[#00000050] flex justify-center items-center h-[100vh] fixed inset-0 z-50 opacity-0 transition-all ease-linear pointer-events-none"
+        id="post-modal"
+      >
+        <div
+          class="container bg-white md:w-3/5 w-[98%] rounded-lg px-2 sm:px-5 py-5 flex flex-col relative"
+        >
+          <figure
+            class="absolute right-4 top-3 h-4 w-4 flex justify-center items-center rounded-full bg-red-600 cursor-pointer"
+          >
+            <img
+              src="./utils/images/cross-sign.png"
+              alt="Cross Sign"
+              loading="lazy"
+              id="cross-btn"
+            />
+          </figure>
+
+          <h4 class="text-sm font-semibold">
+            We successfully processed your post!
+          </h4>
+          <div class="border-bottom w-full border-b opacity-60 my-5"></div>
+          <p class="text-xs font-semibold">
+            You can share this post publicly with this link:
+          </p>
+
+          <div class="flex justify-between gap-2 sm:gap-4 mt-5 mb-7">
+            <input
+              type="text"
+              class="flex-1 px-5 py-4 border border-[#f7f8fb] rounded-lg shadow-input_two"
+              id="copy-input"
+              readonly
+            />
+            <button
+              class="border border-[#f7f8fb] rounded-lg px-3 sm:px-5 py-4 shadow-input_two relative"
+              id="copy-post-link-btn"
+            >
+              <span
+                class="opacity-0 transition-all ease-in absolute -top-6 left-0 text-sm"
+                id="copied-message"
+                >copied</span
+              >
+              <img
+                src="./utils/images/files.svg"
+                alt="Two files on top of each other"
+                loading="lazy"
+              />
+            </button>
+          </div>
+
+          <div class="btns flex justify-between gap-2">
+            <button
+              class="bg-clr_blue text-xs py-2 px-5 text-white font-semibold rounded-lg hover:shadow-btn w-full sm:w-auto"
+              id="post-another-btn"
+            >
+              Post another one
+            </button>
+
+            <a href="/dashboard.html" class="w-full sm:w-auto">
+              <button
+                class="bg-clr_blue text-xs py-2 px-5 text-white font-semibold rounded-lg hover:shadow-btn w-full sm:w-auto"
+              >
+                Go To Home
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Preview Button Click Modal Open -->
+      <section
+        class="modal bg-[#00000050] flex justify-center items-center h-[100vh] fixed inset-0 z-50 opacity-0 pointer-events-none transition-all ease-linear"
+        id="preview-modal"
+      >
+        <div
+          class="container bg-white md:w-3/5 w-[95%] h-3/5 rounded-lg px-6 py-5 flex flex-col relative"
+        >
+          <figure
+            class="absolute right-4 top-3 h-4 w-4 flex justify-center items-center rounded-full bg-red-600 cursor-pointer"
+            id="preview-cross-btn"
+          >
+            <img
+              src="./utils/images/cross-sign.png"
+              alt="Cross Sign"
+              loading="lazy"
+            />
+          </figure>
+
+          <h4 class="text-sm font-semibold" id="preview-title">no title yet</h4>
+          <div class="border-bottom w-full border-b opacity-60 my-5"></div>
+          <p
+            class="preview-content flex-1 text-xs overflow-y-auto pr-1"
+            id="preview-content"
+          >
+            no content yet
+          </p>
+          <p class="text-xs my-2" id="preview-tags"></p>
+          <button
+            class="bg-clr_blue text-xs py-2 px-3 text-white font-semibold rounded-lg hover:shadow-btn w-full sm:w-auto self-center"
+            id="preview-close-btn"
+          >
+            close
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- date event popup -->
+    <!-- <div
+      id="date-popup"
+      class="flex justify-center items-center h-screen fixed inset-0 z-[50] opacity-0 pointer-events-none"
+    >
+      <div
+        class="h-[20rem] w-[20rem] bg-white p-8 rounded-lg border-blue-800 border-2"
+      >
+        <label class="text-sm">Enter Start Time</label>
+        <input
+          type="type"
+          id="date-start-input"
+          class="rounded-md h-[2rem] mb-3 w-full p-3 bg-[#F7F8FB]"
+        />
+        <label class="text-sm">Enter End Time</label>
+        <input
+          type="type"
+          id="date-end-input"
+          class="rounded-md h-[2rem] mb-3 w-full p-3 bg-[#F7F8FB]"
+        />
+        <button
+          id="date-btn"
+          class="text-sm bg-clr_blue text-white px-4 py-2 rounded-lg mt-3 w-full"
+        >
+          Add
+        </button>
+      </div> -->
+    </div>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            boxShadow: {
+              btn: "0px 10px 30px rgba(86, 59, 255, 0.26)",
+              input: "0px 0px 15px #F7F8FB",
+            },
+            colors: {
+              clr_black: "#191453",
+              clr_blue: "#250CED",
+              clr_blue_light: "#191453",
+              clr_gray_light: "#5A5881",
+              clr_dark: "#34221d",
+            },
+            placeholderColor: {
+              primary: "#5A5881",
+            },
+          },
+        },
+      };
+    </script>
+  </body>
+</html>
