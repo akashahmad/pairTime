@@ -273,7 +273,7 @@
                 </p>
 
                 <button
-                  class="text-clr_blue bg-transparent text-sm py-2 px-5 rounded-2xl border-2 border-blue-700 hover:shadow-btn font-semibold transition-all ease-in w-full sm:w-auto"
+                  class="text-clr_blue bg-transparent text-sm py-2 px-5 rounded-2xl border-2 border-blue-700 hover:shadow-btn font-semibold transition-all ease-in w-full xs:w-auto"
                   id="preview-btn"
                 >
                   Preview
@@ -1297,41 +1297,19 @@
           </div>
         </div>
       </section>
-
-      <!-- <section
-        class="modal bg-[#00000050] flex justify-center items-center h-[100vh] fixed inset-0 z-50 opacity-0 pointer-events-none transition-all ease-linear"
-        id="preview-modal"
-      >
-        <div
-          class="container bg-white md:w-3/5 w-[95%] h-3/5 rounded-lg px-6 py-5 flex flex-col relative"
-        >
-          <figure
-            class="absolute right-4 top-3 h-4 w-4 flex justify-center items-center rounded-full bg-red-600 cursor-pointer"
-            id="preview-cross-btn"
-          >
-            <img
-              src="./utils/images/cross-sign.png"
-              alt="Cross Sign"
-              loading="lazy"
-            />
-          </figure>
-
-          <h4 class="text-sm font-semibold">no title yet</h4>
-          <div class="border-bottom w-full border-b opacity-60 my-5"></div>
-          <p class="flex-1 text-xs">no content yet</p>
-          <button
-            class="bg-clr_blue text-xs py-2 px-3 text-white font-semibold rounded-lg hover:shadow-btn w-full sm:w-auto self-center"
-            id="close-btn"
-          >
-            close
-          </button>
-        </div>
-      </section> -->
     </main>
 
     <script>
       tailwind.config = {
         theme: {
+          screens: {
+            xs: "540px",
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+            "2xl": "1536px",
+          },
           extend: {
             boxShadow: {
               btn: "0px 10px 30px rgba(86, 59, 255, 0.26)",

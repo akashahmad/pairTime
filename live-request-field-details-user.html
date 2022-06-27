@@ -261,14 +261,14 @@
                 URL in Korolev App
               </p>
 
-              <div class="xl:flex xl:justify-between xl:items-center">
+              <div class="xl:flex justify-between items-center">
                 <p
                   class="text-clr_blue_light text-base lg:text-xl font-semibold mt-2 mb-4 flex-1"
                 >
                   how to redirect to an external URL in Korolev app
                 </p>
 
-                <div class="sm:flex sm:justify-start grid gap-3 md:gap-2">
+                <div class="flex flex-col xs:flex-row gap-3 md:gap-2">
                   <button
                     class="text-white bg-[#FF3D00] text-xs sm:text-sm py-2 px-4 sm:px-5 rounded-2xl font-semibold hover:shadow-btn"
                     id="close-post-btn"
@@ -442,6 +442,14 @@
     <script>
       tailwind.config = {
         theme: {
+          screens: {
+            xs: "540px",
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+            "2xl": "1536px",
+          },
           extend: {
             boxShadow: {
               btn: "0px 10px 30px rgba(86, 59, 255, 0.26)",

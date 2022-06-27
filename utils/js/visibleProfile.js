@@ -5,8 +5,9 @@ const circleEl = document.getElementById("big-circle");
 const showAllLink = document.getElementById("show-profiles-link");
 const serviceEl = document.getElementById("service-number");
 
+console.log(showAllBtn);
+
 showAllBtn.addEventListener("click", (e) => {
-  console.log(e.target);
   if (e.target.textContent.trim() === "Show All") {
     allServicesContainer.style.display = "block";
     showAllBtn.textContent = "Show Less";

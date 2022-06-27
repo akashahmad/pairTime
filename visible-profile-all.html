@@ -267,23 +267,8 @@
                   </p>
 
                   <div class="lg:flex lg:flex-row-reverse lg:items-center">
-                    <!-- <button class="bg-clr_blue text-sm py-2 px-4 text-white rounded-2xl hover:shadow-btn mt-6 md:mt-0"
-                    onclick="displayToggle([`all-services-list`,`show-profiles-link`])
-                    displayNone(`bubble-yellow`)">
-                    <a>
-                      Show All
-                    </a>
-                  </button> -->
-
-                    <!-- <button
-                      class="bg-clr_blue text-sm py-2 px-4 font-semibold text-white rounded-2xl hover:shadow-btn mt-6 md:mt-0"
-                      id="show-all-btn"
-                    >
-                      Show All
-                    </button> -->
-
                     <button
-                      class="bg-clr_blue text-sm py-2 px-4 font-semibold text-white rounded-2xl hover:shadow-btn w-full md:w-auto"
+                      class="bg-clr_blue text-sm py-2 px-4 font-semibold text-white rounded-2xl hover:shadow-btn w-full xs:w-auto"
                       id="show-all-btn"
                     >
                       Show All
@@ -341,7 +326,7 @@
                     <div class="min-w-max pt-3 pb-2">
                       <a href="./search-detail.html">
                         <button
-                          class="bg-clr_blue text-sm py-3 px-4 text-white font-semibold rounded-lg hover:shadow-btn w-full md:w-auto"
+                          class="bg-clr_blue text-sm py-3 px-4 text-white font-semibold rounded-lg hover:shadow-btn w-full xs:w-auto"
                         >
                           Request a Pairing session
                         </button>
@@ -423,7 +408,7 @@
                     <div class="min-w-max pt-3 pb-2">
                       <a href="./search-detail.html">
                         <button
-                          class="bg-clr_blue text-sm py-3 px-4 text-white font-semibold rounded-lg hover:shadow-btn w-full md:w-auto"
+                          class="bg-clr_blue text-sm py-3 px-4 text-white font-semibold rounded-lg hover:shadow-btn w-full xs:w-auto"
                         >
                           Request a Pairing session
                         </button>
@@ -487,6 +472,14 @@
     <script>
       tailwind.config = {
         theme: {
+          screens: {
+            xs: "540px",
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+            "2xl": "1536px",
+          },
           extend: {
             boxShadow: {
               btn: "0px 10px 30px rgba(86, 59, 255, 0.26)",

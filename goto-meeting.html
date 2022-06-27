@@ -273,7 +273,7 @@
                       class="flex flex-col justify-between items-center h-full"
                     >
                       <button
-                        class="bg-clr_blue text-xs py-2 px-3 text-white font-semibold rounded-xl hover:shadow-btn w-full sm:w-auto"
+                        class="bg-clr_blue text-xs py-2 px-3 text-white font-semibold rounded-xl hover:shadow-btn w-full xs:w-auto"
                       >
                         Join Now
                       </button>
@@ -440,7 +440,7 @@
 
                     <div class="btns flex justify-center gap-2 mt-4">
                       <button
-                        class="bg-[#FF3D00] text-xs py-3 sm:px-4 px-2 text-white font-semibold rounded-2xl hover:shadow-btn w-full sm:w-auto capitalize"
+                        class="bg-[#FF3D00] text-xs py-3 px-4 text-white font-semibold rounded-2xl hover:shadow-btn w-full xs:w-auto capitalize"
                         id="archive-meeting-btn"
                       >
                         Archive this meeting
@@ -584,12 +584,12 @@
           <h4 class="text-sm font-semibold">Archive the Meeting</h4>
           <div class="border-bottom w-full border-b opacity-60 my-5"></div>
 
-          <div class="md:flex md:justify-between md:items-center">
+          <div class="xs:flex justify-between items-center">
             <p class="text-xs font-semibold" id="archive-message-el">
               Are you sure you want to archive this meeting?
             </p>
 
-            <div class="btns flex gap-2 mt-6 md:mt-0">
+            <div class="btns flex gap-2 mt-4 xs:mt-0">
               <button
                 class="bg-[#B1B1B1] text-xs py-2 px-6 text-white font-semibold rounded-lg hover:shadow-btn w-1/2"
                 id="no-btn"
@@ -612,6 +612,14 @@
     <script>
       tailwind.config = {
         theme: {
+          screens: {
+            xs: "540px",
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+            "2xl": "1536px",
+          },
           extend: {
             boxShadow: {
               input: "0px 0px 15px #F7F8FB",

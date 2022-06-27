@@ -296,7 +296,7 @@
               </div>
 
               <button
-                class="bg-clr_blue text-sm py-2 px-5 text-white rounded-2xl hover:shadow-btn w-full sm:w-auto"
+                class="bg-clr_blue text-sm py-2 px-5 text-white rounded-2xl hover:shadow-btn w-full xs:w-auto"
               >
                 Donate
               </button>
@@ -314,6 +314,14 @@
     <script>
       tailwind.config = {
         theme: {
+          screens: {
+            xs: "540px",
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+            "2xl": "1536px",
+          },
           extend: {
             boxShadow: {
               btn: "0px 10px 30px rgba(86, 59, 255, 0.26)",

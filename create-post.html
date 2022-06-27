@@ -330,7 +330,9 @@
                   />
                 </div>
 
-                <p class="inline mr-2 text-xs font-semibold text-clr_blue_light pb-2">
+                <p
+                  class="inline mr-2 text-xs font-semibold text-clr_blue_light pb-2"
+                >
                   Recommended Tags:
                 </p>
                 <div class="tag-btns inline">
@@ -419,7 +421,7 @@
                 ></div>
 
                 <div class="xl:flex xl:justify-between pt-5 lg:pt-8">
-                 <div class="schedular w-full xl:w-[61%]">
+                  <div class="schedular w-full xl:w-[61%]">
                     <!-- <div
                       class="schedular-calendar h-full"
                       id="schedular-calendar"
@@ -1367,7 +1369,7 @@
         id="preview-modal"
       >
         <div
-          class="container bg-white md:w-3/5 w-[95%] h-3/5 rounded-lg px-6 py-5 flex flex-col relative"
+          class="container bg-white lg:w-3/5 w-[90%] h-3/5 rounded-lg px-6 py-5 flex flex-col relative"
         >
           <figure
             class="absolute right-4 top-3 h-4 w-4 flex justify-center items-center rounded-full bg-red-600 cursor-pointer"
@@ -1390,7 +1392,7 @@
           </p>
           <p class="text-xs my-2" id="preview-tags"></p>
           <button
-            class="bg-clr_blue text-xs py-2 px-3 text-white font-semibold rounded-lg hover:shadow-btn w-full sm:w-auto self-center"
+            class="bg-clr_blue text-xs py-2 px-3 text-white font-semibold rounded-lg hover:shadow-btn w-full xs:w-auto self-center"
             id="preview-close-btn"
           >
             close
@@ -1399,38 +1401,17 @@
       </section>
     </main>
 
-    <!-- date event popup -->
-    <!-- <div
-      id="date-popup"
-      class="flex justify-center items-center h-screen fixed inset-0 z-[50] opacity-0 pointer-events-none"
-    >
-      <div
-        class="h-[20rem] w-[20rem] bg-white p-8 rounded-lg border-blue-800 border-2"
-      >
-        <label class="text-sm">Enter Start Time</label>
-        <input
-          type="type"
-          id="date-start-input"
-          class="rounded-md h-[2rem] mb-3 w-full p-3 bg-[#F7F8FB]"
-        />
-        <label class="text-sm">Enter End Time</label>
-        <input
-          type="type"
-          id="date-end-input"
-          class="rounded-md h-[2rem] mb-3 w-full p-3 bg-[#F7F8FB]"
-        />
-        <button
-          id="date-btn"
-          class="text-sm bg-clr_blue text-white px-4 py-2 rounded-lg mt-3 w-full"
-        >
-          Add
-        </button>
-      </div> -->
-    </div>
-
-    <script>
+    <script type="module">
       tailwind.config = {
         theme: {
+          screens: {
+            xs: "540px",
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+            "2xl": "1536px",
+          },
           extend: {
             boxShadow: {
               btn: "0px 10px 30px rgba(86, 59, 255, 0.26)",
